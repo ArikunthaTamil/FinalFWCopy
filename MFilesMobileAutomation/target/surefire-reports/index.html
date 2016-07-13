@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-MFiles_Mobile_Access_-_Smoke">
+              <span class="suite-name border-failed">MFiles Mobile Access - Smoke</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-MFiles_Mobile_Access_-_Smoke">
+                    <span>D:\MFMA12\MFilesMobileAutomation\TestNgXML\MobileSmokeTest.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-MFiles_Mobile_Access_-_Smoke">
+                    <span class="test-stats">4 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-MFiles_Mobile_Access_-_Smoke">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-MFiles_Mobile_Access_-_Smoke">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-MFiles_Mobile_Access_-_Smoke">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-MFiles_Mobile_Access_-_Smoke">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-MFiles_Mobile_Access_-_Smoke">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MFiles_Mobile_Access_-_Smoke" class="hide-methods failed suite-MFiles_Mobile_Access_-_Smoke"> (hide)</a> <!-- hide-methods failed suite-MFiles_Mobile_Access_-_Smoke -->
+                      <a href="#" panel-name="suite-MFiles_Mobile_Access_-_Smoke" class="show-methods failed suite-MFiles_Mobile_Access_-_Smoke"> (show)</a> <!-- show-methods failed suite-MFiles_Mobile_Access_-_Smoke -->
+                    </span>
+                    <div class="method-list-content failed suite-MFiles_Mobile_Access_-_Smoke">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MFiles_Mobile_Access_-_Smoke" title="MFMA.Tests.SmokeTestCases" hash-for-method="SmokeCaseTest1_1">SmokeCaseTest1_1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MFiles_Mobile_Access_-_Smoke -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MFiles_Mobile_Access_-_Smoke" class="hide-methods passed suite-MFiles_Mobile_Access_-_Smoke"> (hide)</a> <!-- hide-methods passed suite-MFiles_Mobile_Access_-_Smoke -->
+                      <a href="#" panel-name="suite-MFiles_Mobile_Access_-_Smoke" class="show-methods passed suite-MFiles_Mobile_Access_-_Smoke"> (show)</a> <!-- show-methods passed suite-MFiles_Mobile_Access_-_Smoke -->
+                    </span>
+                    <div class="method-list-content passed suite-MFiles_Mobile_Access_-_Smoke">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MFiles_Mobile_Access_-_Smoke" title="MFMA.Tests.SmokeTestCases" hash-for-method="SmokeCaseTest1_1">SmokeCaseTest1_1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MFiles_Mobile_Access_-_Smoke" title="MFMA.Tests.SmokeTestCases" hash-for-method="SmokeCaseTest1_1">SmokeCaseTest1_1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MFiles_Mobile_Access_-_Smoke" title="MFMA.Tests.SmokeTestCases" hash-for-method="SmokeCaseTest1_1">SmokeCaseTest1_1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MFiles_Mobile_Access_-_Smoke -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-MFiles_Mobile_Access_-_Smoke" class="panel MFiles_Mobile_Access_-_Smoke">
+          <div class="suite-MFiles_Mobile_Access_-_Smoke-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MFMA.Tests.SmokeTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SmokeCaseTest1_1">
+                  </a> <!-- SmokeCaseTest1_1 -->
+                  <span class="method-name">SmokeCaseTest1_1</span>
+                  <div class="stack-trace">java.lang.Exception: Exception encountered in getDriver Method.A new session could not be created. (Original error: Command failed: C:\WINDOWS\system32\cmd.exe /s /c &quot;&quot;C:\Program Files (x86)\Android\android-sdk\platform-tools\adb.exe&quot; -s adb server is out of date.  killing...
+ wait-for-device&quot;
+error: could not install *smartsocket* listener: cannot bind to 127.0.0.1:5037: Only one usage of each socket address (protocol/network address/port) is normally permitted. (10048)
+could not read ok from ADB Server
+* could not start server *
+) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 13.50 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+	at genericLibrary.MobileDriverUtils.getDriver(MobileDriverUtils.java:74)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_1(SmokeTestCases.java:73)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Connect to invalid server)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MFiles_Mobile_Access_-_Smoke-class-failed -->
+          <div class="suite-MFiles_Mobile_Access_-_Smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">MFMA.Tests.SmokeTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SmokeCaseTest1_1">
+                  </a> <!-- SmokeCaseTest1_1 -->
+                  <span class="method-name">SmokeCaseTest1_1</span>
+                  <em>
+(Connect to invalid server)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SmokeCaseTest1_1">
+                  </a> <!-- SmokeCaseTest1_1 -->
+                  <span class="method-name">SmokeCaseTest1_1</span>
+                  <em>
+(Connect to invalid server)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SmokeCaseTest1_1">
+                  </a> <!-- SmokeCaseTest1_1 -->
+                  <span class="method-name">SmokeCaseTest1_1</span>
+                  <em>
+(Connect to invalid server)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MFiles_Mobile_Access_-_Smoke-class-passed -->
+        </div> <!-- panel MFiles_Mobile_Access_-_Smoke -->
+        <div panel-name="test-xml-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\MFMA12\MFilesMobileAutomation\TestNgXML\MobileSmokeTest.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;MFiles Mobile Access - Smoke&quot;&gt;
+  &lt;parameter name=&quot;UserName&quot; value=&quot;Alexk&quot;/&gt;
+  &lt;parameter name=&quot;driverPort&quot; value=&quot;4723&quot;/&gt;
+  &lt;parameter name=&quot;deviceHost&quot; value=&quot;127.0.0.1&quot;/&gt;
+  &lt;parameter name=&quot;VaultName&quot; value=&quot;Sample Vault&quot;/&gt;
+  &lt;parameter name=&quot;appName&quot; value=&quot;mFiles-production-release-Q2.apk&quot;/&gt;
+  &lt;parameter name=&quot;deviceName&quot; value=&quot;emulator-5554&quot;/&gt;
+  &lt;parameter name=&quot;UserFullName&quot; value=&quot;John Stewart&quot;/&gt;
+  &lt;parameter name=&quot;platform&quot; value=&quot;ANDROID&quot;/&gt;
+  &lt;parameter name=&quot;Password&quot; value=&quot;test&quot;/&gt;
+  &lt;test name=&quot;Mobile access - Smoke Test cases&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;MFMA.Tests.SmokeTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Mobile access - Smoke Test cases --&gt;
+  &lt;test name=&quot;Honor&quot;&gt;
+    &lt;parameter name=&quot;driverPort&quot; value=&quot;4723&quot;/&gt;
+    &lt;parameter name=&quot;deviceHost&quot; value=&quot;127.0.0.1&quot;/&gt;
+    &lt;parameter name=&quot;appName&quot; value=&quot;mFiles-production-release-Q2.apk&quot;/&gt;
+    &lt;parameter name=&quot;deviceName&quot; value=&quot;90671c7ea75c&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;ANDROID&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;MFMA.Tests.SmokeTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Honor --&gt;
+  &lt;test name=&quot;MiNote&quot;&gt;
+    &lt;parameter name=&quot;driverPort&quot; value=&quot;4733&quot;/&gt;
+    &lt;parameter name=&quot;deviceHost&quot; value=&quot;127.0.0.1&quot;/&gt;
+    &lt;parameter name=&quot;appName&quot; value=&quot;mFiles-production-release-Q2.apk&quot;/&gt;
+    &lt;parameter name=&quot;deviceName&quot; value=&quot;9fe142c2&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;ANDROID&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;MFMA.Tests.SmokeTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- MiNote --&gt;
+  &lt;test name=&quot;Moto&quot;&gt;
+    &lt;parameter name=&quot;driverPort&quot; value=&quot;4744&quot;/&gt;
+    &lt;parameter name=&quot;deviceHost&quot; value=&quot;127.0.0.1&quot;/&gt;
+    &lt;parameter name=&quot;appName&quot; value=&quot;mFiles-production-release-Q2.apk&quot;/&gt;
+    &lt;parameter name=&quot;deviceName&quot; value=&quot;ZY2225WC23&quot;/&gt;
+    &lt;parameter name=&quot;platform&quot; value=&quot;ANDROID&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;MFMA.Tests.SmokeTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Moto --&gt;
+&lt;/suite&gt; &lt;!-- MFiles Mobile Access - Smoke --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for MFiles Mobile Access - Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Mobile access - Smoke Test cases (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Honor (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">MiNote (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Moto (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for MFiles Mobile Access - Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for MFiles Mobile Access - Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_MFiles_Mobile_Access_-_Smoke');
+function tableData_MFiles_Mobile_Access_-_Smoke() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(4);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'SmokeCaseTest1_1')
+data.setCell(0, 2, 'MFMA.Tests.SmokeTestCases')
+data.setCell(0, 3, 16885);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'SmokeCaseTest1_1')
+data.setCell(1, 2, 'MFMA.Tests.SmokeTestCases')
+data.setCell(1, 3, 15115);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'SmokeCaseTest1_1')
+data.setCell(2, 2, 'MFMA.Tests.SmokeTestCases')
+data.setCell(2, 3, 14900);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'SmokeCaseTest1_1')
+data.setCell(3, 2, 'MFMA.Tests.SmokeTestCases')
+data.setCell(3, 3, 13749);
+window.suiteTableData['MFiles_Mobile_Access_-_Smoke']= { tableData: data, tableDiv: 'times-div-MFiles_Mobile_Access_-_Smoke'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-MFiles_Mobile_Access_-_Smoke">
+              </div> <!-- times-div-MFiles_Mobile_Access_-_Smoke -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for MFiles Mobile Access - Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SmokeCaseTest1_1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest001</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step-1: MFiles Mobile Application launched successfully!!</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step-2: Entered nothing in the server testbox</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Step-3: Verified Empty Error Message </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Step-3: Verified Empty Error Message&emsp;<a href=".\ScreenShot\SmokeCaseTest1_1_1.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SmokeCaseTest1_1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest001</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step-1: MFiles Mobile Application launched successfully!!</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step-2: Entered nothing in the server testbox</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Step-3: Verified Empty Error Message </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Step-3: Verified Empty Error Message&emsp;<a href=".\ScreenShot\SmokeCaseTest1_1_2.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SmokeCaseTest1_1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest001</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step-1: MFiles Mobile Application launched successfully!!</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Step-2: Entered nothing in the server testbox</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Step-3: Verified Empty Error Message </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Step-3: Verified Empty Error Message&emsp;<a href=".\ScreenShot\SmokeCaseTest1_1_3.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-MFiles_Mobile_Access_-_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">MFMA.Tests.SmokeTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">261 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SmokeCaseTest1_1</span>
+                <span class="method-start">266 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SmokeCaseTest1_1</span>
+                <span class="method-start">14032 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">14032 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">SmokeCaseTest1_1</span>
+                <span class="method-start">30922 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">30922 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">45825 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">SmokeCaseTest1_1</span>
+                <span class="method-start">45826 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">60943 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

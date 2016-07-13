@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [MFiles-WebAccess - Regression]">
+	<parameter name="driverType" value="IE" />
+	<parameter name="isRestore" value="No" />
+	<parameter name="Password" value="test" />
+	<parameter name="UserName" value="JohnS" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="VaultName" value="Sample Vault" />
+	<parameter name="productVersion" value="12.0.4405.0" />
+	<parameter name="ConfigurationURL"
+		value="http://172.24.114.132/M-Files_12.0.4481.0/Configuration.aspx" />
+	<parameter name="webSite"
+		value="http://172.24.114.132/M-Files_12.0.4481.0/Login.aspx" />
+	<parameter name="driverVerson" value="2.9" />
+	<parameter name="UserFullName" value="John Stewart" />
+	<parameter name="sprint" value="NA" />
+	<parameter name="reuseSession" value="false" />
+	<parameter name="isBackup" value="No" />
+	<parameter name="printconsoleoutput" value="true" />
+	<test name="Default test(failed)">
+		<classes>
+			<class name="MFClient.Tests.MFClientSmokeTests">
+				<methods>
+					<include name="TC_007" />
+					<include name="cleanScreenShots" />
+					<include name="init" />
+					<include name="initt" />
+				</methods>
+			</class> <!-- MFClient.Tests.MFClientSmokeTests -->
+		</classes>
+	</test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [MFiles-WebAccess - Regression] -->

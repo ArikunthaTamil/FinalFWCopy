@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MFiles Mobile Access - Smoke]">
+	<parameter name="UserName" value="JohnS" />
+	<parameter name="VaultName" value="Sample Vault" />
+	<parameter name="deviceName" value="emulator-5554" />
+	<parameter name="UserFullName" value="John Stewart" />
+	<parameter name="platform" value="ANDROID" />
+	<parameter name="Password" value="test" />
+	<test name="Mobile access - Smoke Test cases(failed)">
+		<classes>
+			<class name="MFMA.Tests.SmokeTestCases">
+				<methods>
+					<include name="onSuiteStart" />
+					<include name="AdvancedUseCaseTest1_1_10A" />
+					<include name="init" />
+				</methods>
+			</class> <!-- MFMA.Tests.SmokeTestCases -->
+		</classes>
+	</test> <!-- Mobile access - Smoke Test cases(failed) -->
+</suite> <!-- Failed suite [MFiles Mobile Access - Smoke] -->
