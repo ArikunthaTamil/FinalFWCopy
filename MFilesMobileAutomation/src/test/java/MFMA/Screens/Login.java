@@ -13,7 +13,7 @@ import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.testng.Assert;
 
-public class LoginPage extends LoadableComponent <LoginPage>{
+public class Login extends LoadableComponent <Login>{
 	
 	private boolean pageLoaded = false;
 	private final WebDriver driver;
@@ -30,7 +30,7 @@ public class LoginPage extends LoadableComponent <LoginPage>{
     @FindBy(id="login_log_in")
     WebElement btnLogin;
 
-    public LoginPage(WebDriver driver){
+    public Login(WebDriver driver){
 
     	this.driver = driver;
 		ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
@@ -100,34 +100,6 @@ public class LoginPage extends LoadableComponent <LoginPage>{
     		throw e;
     	}
     }
-    
-    /**
-	 * selectVault : selects the vault
-	 * @param vaultName Name of the vault
-	 * @throws Exception 
-	 */
-    public void selectVault(String vaultName) {
-    	
-    	try {
-    	
-	    	WebElement vaultList = this.driver.findElement(By.id("vault_selection_list"));
-	    	List<WebElement> vaults = vaultList.findElements(By.id("component_string_list_text"));
-	    	 
-	    	int count = 0;
-	    	 
-	    	while(count < vaults.size()){		
-	    		if(vaults.get(count).getText().contentEquals(vaultName)){
-	    			vaults.get(count).click();
-	    			break;
-	    		} //End If
-	    		count++;
-	    	} //End While
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-
-    } //End selectVault
 
     /**
 	 * setUserName : Sets the user name

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 
 import genericLibrary.Utils;
 
-public class AddServerPage extends LoadableComponent <AddServerPage>{
+public class AddServer extends LoadableComponent <AddServer>{
 	
 	RemoteWebDriver driver;
 	
@@ -36,7 +36,7 @@ public class AddServerPage extends LoadableComponent <AddServerPage>{
 	@FindBy(id="fragment_error_details")
 	WebElement btnInvalidErrorDetails;
 
-    public AddServerPage(RemoteWebDriver driver){
+    public AddServer(RemoteWebDriver driver){
 
         this.driver = driver;
         PageFactory.initElements(driver, this);

@@ -21,8 +21,8 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.NetworkMode;
 
-import MFMA.Screens.AddServerPage;
-import MFMA.Screens.LoginPage;
+import MFMA.Screens.AddServer;
+import MFMA.Screens.Login;
 import genericLibrary.BaseTest;
 import genericLibrary.DataProviderUtils;
 import genericLibrary.EmailReport;
@@ -73,7 +73,7 @@ public class SmokeTestCases extends BaseTest {
 		RemoteWebDriver driver = MobileDriverUtils.getDriver();
 		ExtentTest extentedReport = Log.testCaseInfo("MFMATest001", "Connect to invalid server", "MFMA_SmokeTest", "MFMA - AspireQA");
 		try {
-			AddServerPage addServerPage = new AddServerPage(driver);
+			AddServer addServerPage = new AddServer(driver);
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", extentedReport);
 			
 			addServerPage.connectToServer("");
