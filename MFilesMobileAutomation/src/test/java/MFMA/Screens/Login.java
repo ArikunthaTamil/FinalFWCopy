@@ -1,11 +1,15 @@
 package MFMA.Screens;
 import java.util.List;
 
+
 import genericLibrary.Log;
+import genericLibrary.Utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
@@ -15,8 +19,8 @@ import org.testng.Assert;
 
 public class Login extends LoadableComponent <Login>{
 	
-	private boolean pageLoaded = false;
-	private final WebDriver driver;
+	private boolean isPageLoaded = false;
+	private final RemoteWebDriver driver;
 	
     @FindBy(id="login_username")
     WebElement txtUsername;
@@ -30,19 +34,23 @@ public class Login extends LoadableComponent <Login>{
     @FindBy(id="login_log_in")
     WebElement btnLogin;
 
-    public Login(WebDriver driver){
+    public Login(RemoteWebDriver driver){
 
     	this.driver = driver;
 		ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
 		PageFactory.initElements(finder, this);
-
     }
     
-    final protected void isLoaded(){
-		if (!(driver.getCurrentUrl().toLowerCase().contains("/login.aspx") && driver.getTitle().contains("M-Files Web Access"))){
-			if (!pageLoaded)
-				Assert.fail();
-			Log.fail("Expected page was a WebAccess Home page, but current page is not a Login page." + "Current Page is: " + driver.getCurrentUrl(), driver); // Verify whether is Home page
+    @Override
+    final public void isLoaded(){
+    	if (!isPageLoaded) {
+			Assert.fail();
+		}
+		try {
+			isPageLoaded = Utils.waitForElement(driver, txtPassword);
+		}
+		catch (TimeoutException e) {
+			throw e;
 		}
 	}
 	
@@ -53,7 +61,7 @@ public class Login extends LoadableComponent <Login>{
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-		pageLoaded = true;
+		isPageLoaded = true;
 	}
        
 	/**
@@ -100,6 +108,34 @@ public class Login extends LoadableComponent <Login>{
     		throw e;
     	}
     }
+    
+    /**
+	 * selectVault : selects the vault
+	 * @param vaultName Name of the vault
+	 * @throws Exception 
+	 */
+    public void selectVault(String vaultName) {
+    	
+    	try {
+    	
+	    	WebElement vaultList = this.driver.findElement(By.id("vault_selection_list"));
+	    	List<WebElement> vaults = vaultList.findElements(By.id("component_string_list_text"));
+	    	 
+	    	int count = 0;
+	    	 
+	    	while(count < vaults.size()){		
+	    		if(vaults.get(count).getText().contentEquals(vaultName)){
+	    			vaults.get(count).click();
+	    			break;
+	    		} //End If
+	    		count++;
+	    	} //End While
+    	}
+    	catch (Exception e){
+    		throw e;
+    	}
+
+    } //End selectVault
 
     /**
 	 * setUserName : Sets the user name
@@ -113,6 +149,7 @@ public class Login extends LoadableComponent <Login>{
     	
         this.setUserName(userName); //Fill user name
         this.setPassword(strPasword); //Fill password
+        driver.navigate().back();
         this.clickLogin(); //Click Login button
         this.selectVault(vaultName);
     }

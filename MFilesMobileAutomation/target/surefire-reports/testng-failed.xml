@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [MFiles Mobile Access - Smoke]">
-  <parameter name="UserName" value="Alexk"/>
-  <parameter name="driverPort" value="4744"/>
   <parameter name="deviceHost" value="127.0.0.1"/>
-  <parameter name="VaultName" value="Sample Vault"/>
   <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
-  <parameter name="deviceName" value="ZY2225WC23"/>
-  <parameter name="UserFullName" value="John Stewart"/>
+  <parameter name="devicePort" value="4755"/>
+  <parameter name="deviceName" value="4d005018f4f24005"/>
   <parameter name="platform" value="ANDROID"/>
-  <parameter name="Password" value="test"/>
-  <test name="Mobile access - Smoke Test cases(failed)">
+  <test name="Samsung(failed)">
+    <parameter name="deviceHost" value="127.0.0.1"/>
+    <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
+    <parameter name="devicePort" value="4755"/>
+    <parameter name="deviceName" value="4d005018f4f24005"/>
+    <parameter name="platform" value="ANDROID"/>
     <classes>
       <class name="MFMA.Tests.SmokeTestCases">
         <methods>
+          <include name="SmokeCaseTest1_3"/>
+          <include name="SmokeCaseTest1_2"/>
           <include name="afterSuite"/>
+          <include name="SmokeCaseTest1_4"/>
           <include name="SmokeCaseTest1_1"/>
           <include name="beforeSuite"/>
-          <include name="init"/>
-          <include name="init"/>
-          <include name="init"/>
           <include name="init"/>
         </methods>
       </class> <!-- MFMA.Tests.SmokeTestCases -->
     </classes>
-  </test> <!-- Mobile access - Smoke Test cases(failed) -->
+  </test> <!-- Samsung(failed) -->
 </suite> <!-- Failed suite [MFiles Mobile Access - Smoke] -->

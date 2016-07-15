@@ -31,8 +31,7 @@ public class MobileDriverUtils {
 			String driverHost = test.getParameter("deviceHost");
 			String driverPort = test.getParameter("devicePort");
 			String appName = test.getParameter("appName");
-			
-			hubURL = new URL("http://127.0.0.1:4723/wd/hub");
+			hubURL = new URL("http://" + driverHost + ":" + driverPort + "/wd/hub");
 			
 			switch (platform.toUpperCase()) {
 				
@@ -44,7 +43,6 @@ public class MobileDriverUtils {
 	    	    	capabilities.setCapability("appPackage", "com.mfiles.mobile"); 
 	    	    	capabilities.setCapability("app", appPath + "Android\\" + appName);
 	    	    	driver =  new AndroidDriver(hubURL, capabilities);
-	    	    	
 	    	    	break;
 	    		}	
 	    		case "IOS":{
@@ -52,8 +50,8 @@ public class MobileDriverUtils {
 	    	    	capabilities.setCapability("device",platform);
 	    	    	capabilities.setCapability("deviceName",device);
 	    	    	capabilities.setCapability("platformName", platform);
-	    	    	capabilities.setCapability("appPackage", "com.mfiles.mobile"); 
-	    	    	capabilities.setCapability("app", appPath + "IoS\\" + appName);
+	    	    	//capabilities.setCapability("appPackage", "com.mfiles.mobile"); 
+	    	    	capabilities.setCapability("app", "/Users/builds/APKS/IOS/" + appName);
 	    	    	driver =  new IOSDriver(hubURL, capabilities);
 	    	    	break;
 	    		}	

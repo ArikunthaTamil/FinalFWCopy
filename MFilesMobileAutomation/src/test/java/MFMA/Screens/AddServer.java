@@ -1,4 +1,5 @@
 package MFMA.Screens;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -6,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 
+import com.relevantcodes.extentreports.ExtentTest;
+
+import genericLibrary.Log;
 import genericLibrary.Utils;
 
 public class AddServer extends LoadableComponent <AddServer>{
@@ -13,10 +17,10 @@ public class AddServer extends LoadableComponent <AddServer>{
 	RemoteWebDriver driver;
 	
 	@FindBy(id="login_server")
-    WebElement txtServername;
+	WebElement txtServername;
 	
 	@FindBy(id="login_log_in")
-    WebElement btnConnect;
+	WebElement btnConnect;
 	
 	@FindBy(id="message")
 	WebElement txtEmptyErrorMessage;
@@ -42,8 +46,7 @@ public class AddServer extends LoadableComponent <AddServer>{
         PageFactory.initElements(driver, this);
 
     }
-
-    
+       
     //Set server name in textbox
     public void setServerName(String strServerName){
     	
@@ -71,17 +74,23 @@ public class AddServer extends LoadableComponent <AddServer>{
     {
     	Utils.waitForElement(driver, txtEmptyErrorMessage);
 		if (!(txtEmptyErrorMessage.getText()).equalsIgnoreCase("Server is required."))
-			throw new Exception("Add Server Error Message Mismatches!");
+			throw new Exception("Add Server Empty Error Message Mismatches!");
     }
     
-    public void verifyInvalidError() throws Exception
+    public void verifyInvalidError(ExtentTest extentedReport) throws Exception
     {
     	Utils.waitForElement(driver, txtInvalidErrorMessage);
-		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase("Server is required."))
-			throw new Exception("Add Server Error Message Mismatches!");
+		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase("Please check your username, password and server address, and confirm you have a valid license on the server."))
+			Log.failWithExtentScreenshot("Add Server Invalid Error Message Mismatches!", driver, extentedReport, true);
     }
-
-	@Override
+    
+    public Login navigateToLoginPage() throws Exception
+    {
+    	Log.event("Navigated to Manage Contact Page!");
+		return new Login(driver).get();
+    }
+    
+  	@Override
 	protected void isLoaded() throws Error {
 		// TODO Auto-generated method stub
 		

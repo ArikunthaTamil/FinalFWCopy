@@ -77,27 +77,34 @@ public class Utils {
     /// <param name="driver">RemoteWebDriver Object</param>
     /// <param name="pElement">element to be exist</param>
     /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
-    public static Boolean waitForElement(RemoteWebDriver driver, WebElement pElement) throws InterruptedException
+    public static Boolean waitForElement(RemoteWebDriver driver, WebElement pElement)
     {
-        Boolean isFound = false;
-        int _TimeToWait = 60;
-        for (int i = 0; i < _TimeToWait; i++)
-        {
-            Thread.sleep(1000); //Wait for 1 second
-
-            try
+    	Boolean isFound = false;
+    	try
+    	{
+            int _TimeToWait = 60;
+            for (int i = 0; i < _TimeToWait; i++)
             {
-                isFound = pElement.isDisplayed();
-                if (isFound) break;
-                System.out.println("Searching the Element..." + pElement);
-            }
-            catch (Exception ex)
-            {
-            	System.out.println(ex.getMessage());
-            }
-        }
+                Thread.sleep(1000); //Wait for 1 second
 
-        return isFound;
+                try
+                {
+                    isFound = pElement.isDisplayed();
+                    if (isFound) break;
+                    System.out.println("Searching the Element..." + pElement);
+                }
+                catch (Exception ex)
+                {
+                	System.out.println(ex.getMessage());
+                }
+            }
+    	}
+        catch(Exception e)
+    	{
+        	isFound = false;
+			Log.event("Unable to find a element after ");
+    	}
+    	return isFound;
     }
     
     
