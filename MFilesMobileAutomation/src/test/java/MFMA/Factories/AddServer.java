@@ -1,53 +1,25 @@
-package MFMA.Screens;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+package MFMA.Factories;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.LoadableComponent;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
+import MFMA.Screens.AddServerScreen;
 import genericLibrary.Log;
 import genericLibrary.Utils;
 
-public class AddServer extends LoadableComponent <AddServer>{
-	
+public class AddServer extends AddServerScreen
+{
 	RemoteWebDriver driver;
 	
-	@FindBy(id="login_server")
-	WebElement txtServername;
-	
-	@FindBy(id="login_log_in")
-	WebElement btnConnect;
-	
-	@FindBy(id="message")
-	WebElement txtEmptyErrorMessage;
-	
-	@FindBy(id="button1")
-	WebElement btnEmptyErrorOK;
-	
-	@FindBy(id="fragment_error_title")
-	WebElement txtInvalidErrorTitle;
-	
-	@FindBy(id="fragment_error_message")
-	WebElement txtInvalidErrorMessage;
-	
-	@FindBy(id="fragment_error_ok")
-	WebElement btnInvalidErrorOK;
-	
-	@FindBy(id="fragment_error_details")
-	WebElement btnInvalidErrorDetails;
-
-    public AddServer(RemoteWebDriver driver){
-
+	public AddServer(RemoteWebDriver driver)
+	{
         this.driver = driver;
         PageFactory.initElements(driver, this);
-
     }
-       
-    //Set server name in textbox
+	
+	//Set server name in textbox
     public void setServerName(String strServerName){
     	
     	txtServername.sendKeys(strServerName);
@@ -55,9 +27,7 @@ public class AddServer extends LoadableComponent <AddServer>{
     
     //Click on connect button
     public void clickConnect(){
-
     	btnConnect.click();
-
     }
     
     public void connectToServer(String strServerName){
@@ -68,6 +38,16 @@ public class AddServer extends LoadableComponent <AddServer>{
         //Click Connect button
         this.clickConnect();
 
+    }
+    
+    public void tapOkButton()
+    {
+    	btnEmptyErrorOK.click();
+    }
+    
+    public void tapInvalidOkButton()
+    {
+    	btnInvalidErrorOK.click();
     }
     
     public void verifyEmptyError() throws Exception
@@ -86,20 +66,7 @@ public class AddServer extends LoadableComponent <AddServer>{
     
     public Login navigateToLoginPage() throws Exception
     {
-    	Log.event("Navigated to Manage Contact Page!");
-		return new Login(driver).get();
+    	Log.event("Navigated to Login Page!");
+		return (Login) new Login(driver).get();
     }
-    
-  	@Override
-	protected void isLoaded() throws Error {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	protected void load() {
-		// TODO Auto-generated method stub
-		
-	}
 }

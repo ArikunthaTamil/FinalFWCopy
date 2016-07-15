@@ -1,36 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 5.85 sec <<< FAILURE! - in TestSuite
-SmokeCaseTest1_1(MFMA.Tests.SmokeTestCases)  Time elapsed: 1.702 sec  <<< FAILURE!
-java.lang.Exception: 
-Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: driver.version: AndroidDriver
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_1(SmokeTestCases.java:74)
-
-SmokeCaseTest1_2(MFMA.Tests.SmokeTestCases)  Time elapsed: 1.008 sec  <<< FAILURE!
-java.lang.Exception: 
-Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: driver.version: AndroidDriver
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_2(SmokeTestCases.java:105)
-
-SmokeCaseTest1_3(MFMA.Tests.SmokeTestCases)  Time elapsed: 1.022 sec  <<< FAILURE!
-java.lang.Exception: 
-Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: driver.version: AndroidDriver
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_3(SmokeTestCases.java:136)
-
-SmokeCaseTest1_4(MFMA.Tests.SmokeTestCases)  Time elapsed: 1.003 sec  <<< FAILURE!
-java.lang.Exception: 
-Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: driver.version: AndroidDriver
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_4(SmokeTestCases.java:168)
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 205.422 sec <<< FAILURE! - in TestSuite
+SmokeCaseTest1_7(MFMA.Tests.SmokeTestCases)  Time elapsed: 10.213 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:283)
 

@@ -1,48 +1,35 @@
-package MFMA.Screens;
+package MFMA.Factories;
+
 import java.util.List;
-
-
-import genericLibrary.Log;
-import genericLibrary.Utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
-import org.openqa.selenium.support.ui.LoadableComponent;
 import org.testng.Assert;
 
-public class Login extends LoadableComponent <Login>{
-	
+import com.relevantcodes.extentreports.ExtentTest;
+
+import MFMA.Screens.LoginScreen;
+import genericLibrary.Log;
+import genericLibrary.Utils;
+
+public class Login extends LoginScreen 
+{
+	RemoteWebDriver driver;
 	private boolean isPageLoaded = false;
-	private final RemoteWebDriver driver;
 	
-    @FindBy(id="login_username")
-    WebElement txtUsername;
-    
-    @FindBy(id="login_password")
-    WebElement txtPassword;
-
-    @FindBy(id="barone")
-    WebElement titleText;
-
-    @FindBy(id="login_log_in")
-    WebElement btnLogin;
-
-    public Login(RemoteWebDriver driver){
+	public Login(RemoteWebDriver driver){
 
     	this.driver = driver;
-		ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
-		PageFactory.initElements(finder, this);
+		//ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
+		PageFactory.initElements(driver, this);
     }
-    
-    @Override
-    final public void isLoaded(){
+	
+	final public void isLoaded(){
     	if (!isPageLoaded) {
 			Assert.fail();
 		}
@@ -63,7 +50,17 @@ public class Login extends LoadableComponent <Login>{
 		}
 		isPageLoaded = true;
 	}
-       
+	
+	public void tapOkButton()
+    {
+    	btnEmptyErrorOK.click();
+    }
+    
+    public void tapInvalidOkButton()
+    {
+    	btnInvalidErrorOK.click();
+    }
+    
 	/**
 	 * setUserName : Sets the user name
 	 * @param userName - Name of the user
@@ -108,34 +105,6 @@ public class Login extends LoadableComponent <Login>{
     		throw e;
     	}
     }
-    
-    /**
-	 * selectVault : selects the vault
-	 * @param vaultName Name of the vault
-	 * @throws Exception 
-	 */
-    public void selectVault(String vaultName) {
-    	
-    	try {
-    	
-	    	WebElement vaultList = this.driver.findElement(By.id("vault_selection_list"));
-	    	List<WebElement> vaults = vaultList.findElements(By.id("component_string_list_text"));
-	    	 
-	    	int count = 0;
-	    	 
-	    	while(count < vaults.size()){		
-	    		if(vaults.get(count).getText().contentEquals(vaultName)){
-	    			vaults.get(count).click();
-	    			break;
-	    		} //End If
-	    		count++;
-	    	} //End While
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-
-    } //End selectVault
 
     /**
 	 * setUserName : Sets the user name
@@ -145,12 +114,32 @@ public class Login extends LoadableComponent <Login>{
 	 * @return Instance of home page
 	 * @throws Exception 
 	 */
-    public void loginToMfiles(String userName,String strPasword,String vaultName){
+    public void loginToMfiles(String userName,String strPasword){
     	
         this.setUserName(userName); //Fill user name
         this.setPassword(strPasword); //Fill password
         driver.navigate().back();
         this.clickLogin(); //Click Login button
-        this.selectVault(vaultName);
+        //this.selectVault(vaultName);
+    }
+    
+    public void verifyEmptyError() throws Exception
+    {
+    	Utils.waitForElement(driver, txtEmptyErrorMessage);
+		if (!(txtEmptyErrorMessage.getText()).equalsIgnoreCase("Username is required."))
+			throw new Exception("Empty Login Error Message Mismatches!");
+    }
+    
+    public void verifyInvalidError(ExtentTest extentedReport) throws Exception
+    {
+    	Utils.waitForElement(driver, txtInvalidErrorMessage);
+		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase("Please check your username, password and server address, and confirm you have a valid license on the server."))
+			Log.failWithExtentScreenshot("Invalid Login Error Message Mismatches!", driver, extentedReport, true);
+    }
+    
+    public Vault navigateToVaultPage() throws Exception
+    {
+    	Log.event("Navigated to Vault Screen!");
+		return (Vault) new Vault(driver).get();
     }
 }

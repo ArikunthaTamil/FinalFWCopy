@@ -326,10 +326,26 @@ public class Log extends BaseTest {
 	 *            test case
 	 */
 	public static void message(String description, ExtentTest extentedReport) {
-
+		
 		Reporter.log(MESSAGE_HTML_BEGIN + description + MESSAGE_HTML_END);
 		lsLog4j().log(callerClass(), Level.INFO, description, null);
 		extentedReport.log(LogStatus.INFO, description);
+
+	}
+	
+	/**
+	 * message print the test case custom message in the log with default screeshot(level=info)
+	 * 
+	 * @param description
+	 *            test case
+	 */
+	public static void message(String description, WebDriver driver, ExtentTest extentedReport) {
+		
+		//Reporter.log(MESSAGE_HTML_BEGIN + description + MESSAGE_HTML_END);
+		String inputFile = takeScreenShot(driver);
+		Reporter.log(MESSAGE_HTML_BEGIN + description + "&emsp;" + getScreenShotHyperLink(inputFile) + MESSAGE_HTML_END);
+		lsLog4j().log(callerClass(), Level.INFO, description, null);
+		extentedReport.log(LogStatus.INFO, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
 
 	}
 
@@ -564,6 +580,18 @@ public class Log extends BaseTest {
 		lsLog4j().log(callerClass(), Level.INFO, description, null);
 	}
 	
+	public static void pass(String description, WebDriver driver, ExtentTest extentedReport) {
+		String inputFile = "";
+		if (configProperty.getProperty("isTakeScreenShot") != null && configProperty.getProperty("isTakeScreenShot").equalsIgnoreCase("true")) {
+			inputFile = takeScreenShot(driver);
+			Reporter.log(PASS_HTML_BEGIN + description + PASS_HTML_END1 + getScreenShotHyperLink(inputFile) + PASS_HTML_END2);
+		}
+		else {
+			Reporter.log(PASS_HTML_BEGIN + description + PASS_HTML_END1 + PASS_HTML_END2);
+		}
+		lsLog4j().log(callerClass(), Level.INFO, description, null);
+		extentedReport.log(LogStatus.PASS, description +"&emsp;" + getScreenShotHyperLink(inputFile));
+	}
 	
 	public static void pass(String description, WebDriver driver, Boolean... takeScreenShot) {
 
