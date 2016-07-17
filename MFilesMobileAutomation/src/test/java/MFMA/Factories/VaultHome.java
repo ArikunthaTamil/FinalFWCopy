@@ -87,5 +87,4 @@ public class VaultHome extends VaultHomeScreen
     		throw e;
     	}
 
-    } //End clickCreateNewObject
-}
+    } //End selectObjectType}
