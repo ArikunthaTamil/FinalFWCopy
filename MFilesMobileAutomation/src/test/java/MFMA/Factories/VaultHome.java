@@ -46,4 +46,46 @@ public class VaultHome extends VaultHomeScreen
 		isPageLoaded = true;
 	}
 
+	/**
+	 * vaultHome : click CreateNewObject
+	 * @param Null
+	 * @throws Exception 
+	 */
+    public void clickCreateNewObject() {
+    	Utils.waitForElement(driver, btnCreateObject);
+    	try {    	 
+	    	
+    		btnCreateObject.click();
+    	}
+    	catch (Exception e){
+    		throw e;
+    	}
+
+    } //End clickCreateNewObject
+    
+    /**
+	 * vaultHome : select ObjectType
+	 * @param Null
+	 * @throws Exception 
+	 */
+    public void selectObjectType(String objectTypeName) {
+    	Utils.waitForElement(driver, objectTypeList);
+    	try {    	 
+	    	
+    		int count = 0;
+	    	 
+	    	while(count < objectListItems.size()){		
+	    		if(objectListItems.get(count).getText().contentEquals(objectTypeName)){
+	    			objectListItems.get(count).click();
+	    			break;
+	    		} //End If
+	    		
+	    		count++;
+	    	} //End While
+    	}
+    	catch (Exception e){
+    		throw e;
+    	}
+
+    } //End clickCreateNewObject
 }

@@ -31,6 +31,7 @@ public class MobileDriverUtils {
 			String driverHost = test.getParameter("deviceHost");
 			String driverPort = test.getParameter("devicePort");
 			String appName = test.getParameter("appName");
+			
 			hubURL = new URL("http://" + driverHost + ":" + driverPort + "/wd/hub");
 			
 			switch (platform.toUpperCase()) {
@@ -40,6 +41,7 @@ public class MobileDriverUtils {
 	    	    	capabilities.setCapability("device",platform);
 	    	    	capabilities.setCapability("deviceName",device);
 	    	    	capabilities.setCapability("platformName", platform);
+	    	    	capabilities.setCapability("hideKeyboard", "true"); 
 	    	    	capabilities.setCapability("appPackage", "com.mfiles.mobile"); 
 	    	    	capabilities.setCapability("app", appPath + "Android\\" + appName);
 	    	    	driver =  new AndroidDriver(hubURL, capabilities);

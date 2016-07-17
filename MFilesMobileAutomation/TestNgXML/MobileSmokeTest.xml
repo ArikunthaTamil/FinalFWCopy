@@ -41,6 +41,16 @@
 			<class name="MFMA.Tests.SmokeTestCases"></class>
 		</classes>
 	</test> <!-- TestMFMA -->
+	<test name="Emulator">
+	<parameter name="platform" value="ANDROID" />
+	<parameter name="deviceName" value="emulator-5554" />
+	<parameter name="deviceHost" value="127.0.0.1" />
+	<parameter name="devicePort" value="4723" />
+	<parameter name="appName" value="mFiles-production-release-Q2.apk" />
+		<classes>
+			<class name="MFMA.Tests.SmokeTestCases"></class>
+		</classes>
+	</test> <!-- TestMFMA -->
 	
 	<test name="Ios">
 	<parameter name="platform" value="IOS" />

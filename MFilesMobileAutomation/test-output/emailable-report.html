@@ -1,141 +1,138 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>TestNG Report</title>
-<style type="text/css">
-table {
-	margin-bottom: 10px;
-	border-collapse: collapse;
-	empty-cells: show
-}
-
-th, td {
-	border: 1px solid #009;
-	padding: .25em .5em
-}
-
-th {
-	vertical-align: bottom
-}
-
-td {
-	vertical-align: top
-}
-
-table a {
-	font-weight: bold
-}
-
-.stripe td {
-	background-color: #E6EBF9
-}
-
-.num {
-	text-align: right
-}
-
-.passedodd td {
-	background-color: #3F3
-}
-
-.passedeven td {
-	background-color: #0A0
-}
-
-.skippedodd td {
-	background-color: #DDD
-}
-
-.skippedeven td {
-	background-color: #CCC
-}
-
-.failedodd td, .attn {
-	background-color: #F33
-}
-
-.failedeven td, .stripe .attn {
-	background-color: #D00
-}
-
-.stacktrace {
-	white-space: pre;
-	font-family: monospace
-}
-
-.totop {
-	font-size: 85%;
-	text-align: center;
-	border-bottom: 2px solid #000
-}
-</style>
-</head>
-<body>
-	<table>
-		<tr>
-			<th>Test</th>
-			<th># Passed</th>
-			<th># Skipped</th>
-			<th># Failed</th>
-			<th>Time (ms)</th>
-			<th>Included Groups</th>
-			<th>Excluded Groups</th>
-		</tr>
-		<tr>
-			<th colspan="7">MFiles Mobile Access - Smoke</th>
-		</tr>
-		<tr>
-			<td><a href="#t0">Mobile access - Smoke Test cases</a></td>
-			<td class="num">0</td>
-			<td class="num">0</td>
-			<td class="num attn">1</td>
-			<td class="num">24</td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<table>
-		<thead>
-			<tr>
-				<th>Class</th>
-				<th>Method</th>
-				<th>Start</th>
-				<th>Time (ms)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th colspan="4">MFiles Mobile Access - Smoke</th>
-			</tr>
-		</tbody>
-		<tbody id="t0">
-			<tr>
-				<th colspan="4">Mobile access - Smoke Test cases &#8212; failed</th>
-			</tr>
-			<tr class="failedeven">
-				<td rowspan="1">MFMA.Tests.SmokeTestCases</td>
-				<td><a href="#m0">AdvancedUseCaseTest1_1_10A</a></td>
-				<td rowspan="1">1468241445574</td>
-				<td rowspan="1">0</td>
-			</tr>
-		</tbody>
-	</table>
-	<h2>Mobile access - Smoke Test cases</h2>
-	<h3 id="m0">MFMA.Tests.SmokeTestCases#AdvancedUseCaseTest1_1_10A</h3>
-	<table class="result">
-		<tr>
-			<th>Exception</th>
-		</tr>
-		<tr>
-			<td><div class="stacktrace">java.lang.RuntimeException:
-					org.testng.SkipException: Test data sheet &apos;&apos; does not
-					exists. at
-					genericLibrary.DataProviderUtils.excelDataReader(DataProviderUtils.java:95)
-					... 20 more ... Removed 28 stack frames</div></td>
-		</tr>
-	</table>
-	<p class="totop">
-		<a href="#summary">back to summary</a>
-	</p>
-</body>
-</html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">MFiles Mobile Access - Smoke</th></tr><tr><td><a href="#t0">Honor</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">2</td><td class="num">376,009</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t1">MiNote</a></td><td class="num">0</td><td class="num attn">7</td><td class="num">0</td><td class="num">1,021</td><td></td><td></td></tr><tr><td><a href="#t2">Moto</a></td><td class="num">0</td><td class="num attn">7</td><td class="num">0</td><td class="num">1,015</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t3">Samsung</a></td><td class="num">0</td><td class="num attn">7</td><td class="num">0</td><td class="num">1,027</td><td></td><td></td></tr><tr><td><a href="#t4">Emulator</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">4</td><td class="num">380,942</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t5">Ios</a></td><td class="num">0</td><td class="num attn">7</td><td class="num">0</td><td class="num">21,012</td><td></td><td></td></tr><tr><th>Total</th><th class="num">8</th><th class="num attn">28</th><th class="num attn">6</th><th class="num">781,026</th><th colspan="2"></th></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MFiles Mobile Access - Smoke</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Honor &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">MFMA.Tests.SmokeTestCases</td><td><a href="#m0">SmokeCaseTest1_4</a></td><td rowspan="1">1468672181752</td><td rowspan="1">79725</td></tr><tr class="failedeven"><td><a href="#m1">SmokeCaseTest1_7</a></td><td rowspan="1">1468672338520</td><td rowspan="1">5486</td></tr><tr><th colspan="4">Honor &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">MFMA.Tests.SmokeTestCases</td><td><a href="#m2">SmokeCaseTest1_1</a></td><td rowspan="1">1468672080527</td><td rowspan="1">28663</td></tr><tr class="passedeven"><td><a href="#m3">SmokeCaseTest1_2</a></td><td rowspan="1">1468672109191</td><td rowspan="1">17101</td></tr><tr class="passedeven"><td><a href="#m4">SmokeCaseTest1_3</a></td><td rowspan="1">1468672126293</td><td rowspan="1">55458</td></tr><tr class="passedeven"><td><a href="#m5">SmokeCaseTest1_5</a></td><td rowspan="1">1468672261479</td><td rowspan="1">32717</td></tr><tr class="passedeven"><td><a href="#m6">SmokeCaseTest1_6</a></td><td rowspan="1">1468672294197</td><td rowspan="1">44322</td></tr></tbody><tbody id="t1"><tr><th colspan="4">MiNote &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m7">init</a></td><td rowspan="1">1468672349997</td><td rowspan="1">0</td></tr><tr><th colspan="4">MiNote &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m8">tearDown</a></td><td rowspan="1">1468672351016</td><td rowspan="1">0</td></tr><tr><th colspan="4">MiNote &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="7">MFMA.Tests.SmokeTestCases</td><td><a href="#m9">SmokeCaseTest1_1</a></td><td rowspan="1">1468672351005</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m10">SmokeCaseTest1_2</a></td><td rowspan="1">1468672351007</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m11">SmokeCaseTest1_3</a></td><td rowspan="1">1468672351008</td><td rowspan="1">2</td></tr><tr class="skippedeven"><td><a href="#m12">SmokeCaseTest1_4</a></td><td rowspan="1">1468672351012</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m13">SmokeCaseTest1_5</a></td><td rowspan="1">1468672351013</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m14">SmokeCaseTest1_6</a></td><td rowspan="1">1468672351014</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m15">SmokeCaseTest1_7</a></td><td rowspan="1">1468672351015</td><td rowspan="1">1</td></tr></tbody><tbody id="t2"><tr><th colspan="4">Moto &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m16">init</a></td><td rowspan="1">1468672351028</td><td rowspan="1">0</td></tr><tr><th colspan="4">Moto &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m17">tearDown</a></td><td rowspan="1">1468672352042</td><td rowspan="1">0</td></tr><tr><th colspan="4">Moto &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="7">MFMA.Tests.SmokeTestCases</td><td><a href="#m18">SmokeCaseTest1_1</a></td><td rowspan="1">1468672352035</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m19">SmokeCaseTest1_2</a></td><td rowspan="1">1468672352035</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m20">SmokeCaseTest1_3</a></td><td rowspan="1">1468672352037</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m21">SmokeCaseTest1_4</a></td><td rowspan="1">1468672352038</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m22">SmokeCaseTest1_5</a></td><td rowspan="1">1468672352039</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m23">SmokeCaseTest1_6</a></td><td rowspan="1">1468672352040</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m24">SmokeCaseTest1_7</a></td><td rowspan="1">1468672352041</td><td rowspan="1">0</td></tr></tbody><tbody id="t3"><tr><th colspan="4">Samsung &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m25">init</a></td><td rowspan="1">1468672352126</td><td rowspan="1">0</td></tr><tr><th colspan="4">Samsung &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m26">tearDown</a></td><td rowspan="1">1468672353151</td><td rowspan="1">0</td></tr><tr><th colspan="4">Samsung &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="7">MFMA.Tests.SmokeTestCases</td><td><a href="#m27">SmokeCaseTest1_1</a></td><td rowspan="1">1468672353138</td><td rowspan="1">3</td></tr><tr class="skippedeven"><td><a href="#m28">SmokeCaseTest1_2</a></td><td rowspan="1">1468672353143</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m29">SmokeCaseTest1_3</a></td><td rowspan="1">1468672353145</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m30">SmokeCaseTest1_4</a></td><td rowspan="1">1468672353147</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m31">SmokeCaseTest1_5</a></td><td rowspan="1">1468672353148</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m32">SmokeCaseTest1_6</a></td><td rowspan="1">1468672353149</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m33">SmokeCaseTest1_7</a></td><td rowspan="1">1468672353150</td><td rowspan="1">1</td></tr></tbody><tbody id="t4"><tr><th colspan="4">Emulator &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">MFMA.Tests.SmokeTestCases</td><td><a href="#m34">SmokeCaseTest1_4</a></td><td rowspan="1">1468672417744</td><td rowspan="1">80435</td></tr><tr class="failedeven"><td><a href="#m35">SmokeCaseTest1_5</a></td><td rowspan="1">1468672498180</td><td rowspan="1">80379</td></tr><tr class="failedeven"><td><a href="#m36">SmokeCaseTest1_6</a></td><td rowspan="1">1468672578561</td><td rowspan="1">83457</td></tr><tr class="failedeven"><td><a href="#m37">SmokeCaseTest1_7</a></td><td rowspan="1">1468672662019</td><td rowspan="1">70571</td></tr><tr><th colspan="4">Emulator &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">MFMA.Tests.SmokeTestCases</td><td><a href="#m38">SmokeCaseTest1_1</a></td><td rowspan="1">1468672370160</td><td rowspan="1">18470</td></tr><tr class="passedeven"><td><a href="#m39">SmokeCaseTest1_2</a></td><td rowspan="1">1468672388630</td><td rowspan="1">15851</td></tr><tr class="passedeven"><td><a href="#m40">SmokeCaseTest1_3</a></td><td rowspan="1">1468672404481</td><td rowspan="1">13262</td></tr></tbody><tbody id="t5"><tr><th colspan="4">Ios &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">MFMA.Tests.SmokeTestCases</td><td><a href="#m41">init</a></td><td rowspan="1">1468672734114</td><td rowspan="1">0</td></tr><tr><th colspan="4">Ios &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">MFMA.Tests.SmokeTestCases</td><td><a href="#m42">afterSuite</a></td><td rowspan="1">1468672755150</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m43">tearDown</a></td><td rowspan="1">1468672755125</td><td rowspan="1">0</td></tr><tr><th colspan="4">Ios &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="7">MFMA.Tests.SmokeTestCases</td><td><a href="#m44">SmokeCaseTest1_1</a></td><td rowspan="1">1468672755122</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m45">SmokeCaseTest1_2</a></td><td rowspan="1">1468672755122</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m46">SmokeCaseTest1_3</a></td><td rowspan="1">1468672755123</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m47">SmokeCaseTest1_4</a></td><td rowspan="1">1468672755123</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m48">SmokeCaseTest1_5</a></td><td rowspan="1">1468672755124</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m49">SmokeCaseTest1_6</a></td><td rowspan="1">1468672755124</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m50">SmokeCaseTest1_7</a></td><td rowspan="1">1468672755125</td><td rowspan="1">0</td></tr></tbody></table><h2>Honor</h2><h3 id="m0">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_4</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest004&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-1: Logging into MFiles with empty string&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_4_13.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information) &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_4_14.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 56 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{hideKeyboard=true, appPackage=com.mfiles.mobile, app=D:\MFMA12\FinalFWCopy-master\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, desired={hideKeyboard=true, appPackage=com.mfiles.mobile, app=D:\MFMA12\FinalFWCopy-master\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, platformName=Android, device=ANDROID, deviceName=90671c7ea75c}, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, device=ANDROID}]
+Session ID: e3ba01d5-d583-4cef-b1ab-118c1a99e048
+*** Element info: {Using=id, value=message}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:75)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.getText(Unknown Source)
+	at MFMA.Factories.Login.verifyEmptyError(Login.java:129)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_4(SmokeTestCases.java:184)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_7</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest007&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: Started with Vault Screen&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_7_21.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-2: Selecting Vault&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_7_22.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-event&quot;&gt; &lt;font color=&quot;maroon&quot;&gt; &lt;small&gt; &amp;emsp; &amp;emsp;--- 16 Jul 18:02:22 488 - Navigated to Vault Home Screen!&lt;/small&gt; &lt;/font&gt; &lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; null &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_7_23.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at MFMA.Screens.VaultHomeScreen.&lt;init&gt;(VaultHomeScreen.java:22)
+	at MFMA.Factories.VaultHome.&lt;init&gt;(VaultHome.java:20)
+	at MFMA.Factories.Vault.navigateToVaultHomeScreen(Vault.java:77)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:283)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_1</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest001&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: MFiles Mobile Application launched successfully!!&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_1.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-2: Entered nothing in the server testbox&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_2.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-3: Verified Empty Error Message &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_3.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-4: Tapped Empty Error Message Dialog Box&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_4.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_2</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest002&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: MFiles Mobile Application launched successfully!!&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_5.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-2: Entered nothing in the server testbox&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_6.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; Add Server Invalid Error Message Mismatches! &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-3: Verified Invalid Error Message &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_8.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-4: Tapped Invalid Error Message Dialog Box&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_9.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_3</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest003&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: MFiles Mobile Application launched successfully!!&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_3_10.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-2: Entered nothing in the server testbox&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_3_11.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-event&quot;&gt; &lt;font color=&quot;maroon&quot;&gt; &lt;small&gt; &amp;emsp; &amp;emsp;--- 16 Jul 17:58:56 752 - Navigated to Login Page!&lt;/small&gt; &lt;/font&gt; &lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-3: Successfully Navigated to Login Page &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_3_12.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_5</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest005&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-1: Logging into MFiles with invalid username&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_5_15.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; Invalid Login Error Message Mismatches! &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-2: Verified Invalid Error Message &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_5_17.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-3: Tapped Invalid Error Message Dialog Box&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_5_18.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_6</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest006&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-1: Logging into MFiles with valid credentials&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_6_19.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-event&quot;&gt; &lt;font color=&quot;maroon&quot;&gt; &lt;small&gt; &amp;emsp; &amp;emsp;--- 16 Jul 18:01:49 617 - Navigated to Vault Screen!&lt;/small&gt; &lt;/font&gt; &lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-2: Navigated to Vault Page&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_6_20.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>MiNote</h2><h3 id="m7">MFMA.Tests.SmokeTestCases#init</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: driver.version: AndroidDriver
+	at genericLibrary.MobileDriverUtils.getDriver(MobileDriverUtils.java:74)
+	at MFMA.Tests.SmokeTestCases.init(SmokeTestCases.java:49)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m8">MFMA.Tests.SmokeTestCases#tearDown</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m9">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_1</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m10">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_2</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m11">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_3</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m12">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_4</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m13">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_5</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m14">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_6</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m15">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_7</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Moto</h2><h3 id="m16">MFMA.Tests.SmokeTestCases#init</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: driver.version: AndroidDriver
+	at genericLibrary.MobileDriverUtils.getDriver(MobileDriverUtils.java:74)
+	at MFMA.Tests.SmokeTestCases.init(SmokeTestCases.java:49)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m17">MFMA.Tests.SmokeTestCases#tearDown</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m18">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_1</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m19">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_2</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m20">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_3</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m21">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_4</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m22">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_5</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m23">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_6</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m24">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_7</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Samsung</h2><h3 id="m25">MFMA.Tests.SmokeTestCases#init</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: driver.version: AndroidDriver
+	at genericLibrary.MobileDriverUtils.getDriver(MobileDriverUtils.java:74)
+	at MFMA.Tests.SmokeTestCases.init(SmokeTestCases.java:49)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m26">MFMA.Tests.SmokeTestCases#tearDown</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m27">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_1</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m28">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_2</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m29">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_3</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m30">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_4</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m31">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_5</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m32">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_6</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m33">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_7</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Emulator</h2><h3 id="m34">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_4</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest004&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-1: Logging into MFiles with empty string&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_4_36.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information) &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_4_37.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 149 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{hideKeyboard=true, appPackage=com.mfiles.mobile, app=D:\MFMA12\FinalFWCopy-master\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, desired={hideKeyboard=true, appPackage=com.mfiles.mobile, app=D:\MFMA12\FinalFWCopy-master\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, platformName=Android, device=ANDROID, deviceName=emulator-5554}, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, device=ANDROID}]
+Session ID: 0bd3c8ad-e553-43ee-90b3-74955e36541f
+*** Element info: {Using=id, value=message}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:75)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.getText(Unknown Source)
+	at MFMA.Factories.Login.verifyEmptyError(Login.java:129)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_4(SmokeTestCases.java:184)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m35">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_5</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest005&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-1: Logging into MFiles with invalid username&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_5_38.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information) &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_5_39.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 112 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{hideKeyboard=true, appPackage=com.mfiles.mobile, app=D:\MFMA12\FinalFWCopy-master\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, desired={hideKeyboard=true, appPackage=com.mfiles.mobile, app=D:\MFMA12\FinalFWCopy-master\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, platformName=Android, device=ANDROID, deviceName=emulator-5554}, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android, device=ANDROID}]
+Session ID: 0bd3c8ad-e553-43ee-90b3-74955e36541f
+*** Element info: {Using=id, value=fragment_error_message}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:75)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.getText(Unknown Source)
+	at MFMA.Factories.Login.verifyInvalidError(Login.java:136)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_5(SmokeTestCases.java:217)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m36">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_6</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest006&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-1: Logging into MFiles with valid credentials&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_6_40.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-event&quot;&gt; &lt;font color=&quot;maroon&quot;&gt; &lt;small&gt; &amp;emsp; &amp;emsp;--- 16 Jul 18:06:37 483 - Navigated to Vault Screen!&lt;/small&gt; &lt;/font&gt; &lt;/div&gt;</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: null
+	at MFMA.Factories.Vault.isLoaded(Vault.java:30)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_6(SmokeTestCases.java:251)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m37">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_7</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest007&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: Started with Vault Screen&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_7_41.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;step-2: Selecting Vault&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_7_42.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-event&quot;&gt; &lt;font color=&quot;maroon&quot;&gt; &lt;small&gt; &amp;emsp; &amp;emsp;--- 16 Jul 18:08:51 004 - Navigated to Vault Home Screen!&lt;/small&gt; &lt;/font&gt; &lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; null &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_7_43.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at MFMA.Screens.VaultHomeScreen.&lt;init&gt;(VaultHomeScreen.java:22)
+	at MFMA.Factories.VaultHome.&lt;init&gt;(VaultHome.java:20)
+	at MFMA.Factories.Vault.navigateToVaultHomeScreen(Vault.java:77)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:283)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m38">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_1</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest001&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: MFiles Mobile Application launched successfully!!&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_24.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-2: Entered nothing in the server testbox&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_25.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-3: Verified Empty Error Message &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_26.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-4: Tapped Empty Error Message Dialog Box&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_1_27.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m39">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_2</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest002&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: MFiles Mobile Application launched successfully!!&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_28.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-2: Entered nothing in the server testbox&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_29.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;red&quot;&gt;&lt;strong&gt; Add Server Invalid Error Message Mismatches! &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-3: Verified Invalid Error Message &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_31.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-4: Tapped Invalid Error Message Dialog Box&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_2_32.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m40">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_3</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">&amp;emsp;&lt;div class=&quot;test-title&quot;&gt; &lt;strong&gt;&lt;font size = &quot;3&quot; color = &quot;#000080&quot;&gt;MFMATest003&lt;/font&gt; &lt;/strong&gt; &lt;/div&gt;&amp;emsp;&lt;div&gt;&lt;strong&gt;Steps:&lt;/strong&gt;&lt;/div&gt;&lt;!-- Report --&gt;&amp;emsp;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-1: MFiles Mobile Application launched successfully!!&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_3_33.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-message&quot;&gt;&amp;emsp;Step-2: Entered nothing in the server testbox&amp;emsp;&lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_3_34.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;<br/>&lt;div class=&quot;test-event&quot;&gt; &lt;font color=&quot;maroon&quot;&gt; &lt;small&gt; &amp;emsp; &amp;emsp;--- 16 Jul 18:03:34 550 - Navigated to Login Page!&lt;/small&gt; &lt;/font&gt; &lt;/div&gt;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Step-3: Successfully Navigated to Login Page &lt;/strong&gt;&lt;/font&gt; &lt;a href=&quot;.\ScreenShot\SmokeCaseTest1_3_35.png&quot; target=&quot;_blank&quot; &gt;[ScreenShot]&lt;/a&gt;&lt;/div&gt;&amp;emsp;<br/>&lt;div class=&quot;test-result&quot;&gt;&lt;br&gt;&lt;font color=&quot;green&quot;&gt;&lt;strong&gt; Test Passed.  &lt;/strong&gt;&lt;/font&gt; &lt;/div&gt;&amp;emsp;</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Ios</h2><h3 id="m41">MFMA.Tests.SmokeTestCases#init</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: Exception encountered in getDriver Method.Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;aspire1355&apos;, ip: &apos;172.24.166.141&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: driver.version: IOSDriver
+	at genericLibrary.MobileDriverUtils.getDriver(MobileDriverUtils.java:74)
+	at MFMA.Tests.SmokeTestCases.init(SmokeTestCases.java:49)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m42">MFMA.Tests.SmokeTestCases#afterSuite</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m43">MFMA.Tests.SmokeTestCases#tearDown</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m44">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_1</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m45">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_2</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m46">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_3</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m47">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_4</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m48">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_5</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m49">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_6</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m50">MFMA.Tests.SmokeTestCases#SmokeCaseTest1_7</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

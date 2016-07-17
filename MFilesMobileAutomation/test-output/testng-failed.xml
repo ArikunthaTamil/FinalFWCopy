@@ -1,21 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MFiles Mobile Access - Smoke]">
-	<parameter name="UserName" value="JohnS" />
-	<parameter name="VaultName" value="Sample Vault" />
-	<parameter name="deviceName" value="emulator-5554" />
-	<parameter name="UserFullName" value="John Stewart" />
-	<parameter name="platform" value="ANDROID" />
-	<parameter name="Password" value="test" />
-	<test name="Mobile access - Smoke Test cases(failed)">
-		<classes>
-			<class name="MFMA.Tests.SmokeTestCases">
-				<methods>
-					<include name="onSuiteStart" />
-					<include name="AdvancedUseCaseTest1_1_10A" />
-					<include name="init" />
-				</methods>
-			</class> <!-- MFMA.Tests.SmokeTestCases -->
-		</classes>
-	</test> <!-- Mobile access - Smoke Test cases(failed) -->
+  <parameter name="deviceHost" value="172.24.212.195"/>
+  <parameter name="appName" value="M-Files.app"/>
+  <parameter name="devicePort" value="4766"/>
+  <parameter name="deviceName" value="iPhone5s"/>
+  <parameter name="platform" value="IOS"/>
+  <test name="Honor(failed)">
+    <parameter name="deviceHost" value="127.0.0.1"/>
+    <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
+    <parameter name="devicePort" value="4723"/>
+    <parameter name="deviceName" value="90671c7ea75c"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="MFMA.Tests.SmokeTestCases">
+        <methods>
+          <include name="SmokeCaseTest1_4"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="SmokeCaseTest1_7"/>
+        </methods>
+      </class> <!-- MFMA.Tests.SmokeTestCases -->
+    </classes>
+  </test> <!-- Honor(failed) -->
+  <test name="MiNote(failed)">
+    <parameter name="deviceHost" value="127.0.0.1"/>
+    <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
+    <parameter name="devicePort" value="4733"/>
+    <parameter name="deviceName" value="9fe142c2"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="MFMA.Tests.SmokeTestCases">
+        <methods>
+          <include name="SmokeCaseTest1_3"/>
+          <include name="SmokeCaseTest1_2"/>
+          <include name="SmokeCaseTest1_5"/>
+          <include name="SmokeCaseTest1_4"/>
+          <include name="SmokeCaseTest1_1"/>
+          <include name="beforeSuite"/>
+          <include name="SmokeCaseTest1_7"/>
+          <include name="SmokeCaseTest1_6"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- MFMA.Tests.SmokeTestCases -->
+    </classes>
+  </test> <!-- MiNote(failed) -->
+  <test name="Moto(failed)">
+    <parameter name="deviceHost" value="127.0.0.1"/>
+    <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
+    <parameter name="devicePort" value="4744"/>
+    <parameter name="deviceName" value="ZY2225WC23"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="MFMA.Tests.SmokeTestCases">
+        <methods>
+          <include name="SmokeCaseTest1_3"/>
+          <include name="SmokeCaseTest1_2"/>
+          <include name="SmokeCaseTest1_5"/>
+          <include name="SmokeCaseTest1_4"/>
+          <include name="SmokeCaseTest1_1"/>
+          <include name="beforeSuite"/>
+          <include name="SmokeCaseTest1_7"/>
+          <include name="SmokeCaseTest1_6"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- MFMA.Tests.SmokeTestCases -->
+    </classes>
+  </test> <!-- Moto(failed) -->
+  <test name="Samsung(failed)">
+    <parameter name="deviceHost" value="127.0.0.1"/>
+    <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
+    <parameter name="devicePort" value="4755"/>
+    <parameter name="deviceName" value="4d00804e4b1c41a5"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="MFMA.Tests.SmokeTestCases">
+        <methods>
+          <include name="SmokeCaseTest1_3"/>
+          <include name="SmokeCaseTest1_2"/>
+          <include name="SmokeCaseTest1_5"/>
+          <include name="SmokeCaseTest1_4"/>
+          <include name="SmokeCaseTest1_1"/>
+          <include name="beforeSuite"/>
+          <include name="SmokeCaseTest1_7"/>
+          <include name="SmokeCaseTest1_6"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- MFMA.Tests.SmokeTestCases -->
+    </classes>
+  </test> <!-- Samsung(failed) -->
+  <test name="Emulator(failed)">
+    <parameter name="deviceHost" value="127.0.0.1"/>
+    <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
+    <parameter name="devicePort" value="4723"/>
+    <parameter name="deviceName" value="emulator-5554"/>
+    <parameter name="platform" value="ANDROID"/>
+    <classes>
+      <class name="MFMA.Tests.SmokeTestCases">
+        <methods>
+          <include name="SmokeCaseTest1_5"/>
+          <include name="SmokeCaseTest1_4"/>
+          <include name="beforeSuite"/>
+          <include name="SmokeCaseTest1_7"/>
+          <include name="SmokeCaseTest1_6"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- MFMA.Tests.SmokeTestCases -->
+    </classes>
+  </test> <!-- Emulator(failed) -->
+  <test name="Ios(failed)">
+    <parameter name="deviceHost" value="172.24.212.195"/>
+    <parameter name="appName" value="M-Files.app"/>
+    <parameter name="devicePort" value="4766"/>
+    <parameter name="deviceName" value="iPhone5s"/>
+    <parameter name="platform" value="IOS"/>
+    <classes>
+      <class name="MFMA.Tests.SmokeTestCases">
+        <methods>
+          <include name="SmokeCaseTest1_3"/>
+          <include name="SmokeCaseTest1_2"/>
+          <include name="SmokeCaseTest1_5"/>
+          <include name="SmokeCaseTest1_4"/>
+          <include name="SmokeCaseTest1_1"/>
+          <include name="beforeSuite"/>
+          <include name="SmokeCaseTest1_7"/>
+          <include name="SmokeCaseTest1_6"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- MFMA.Tests.SmokeTestCases -->
+    </classes>
+  </test> <!-- Ios(failed) -->
 </suite> <!-- Failed suite [MFiles Mobile Access - Smoke] -->
