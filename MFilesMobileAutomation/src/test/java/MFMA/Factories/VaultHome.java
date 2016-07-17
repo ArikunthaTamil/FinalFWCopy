@@ -62,7 +62,7 @@ public class VaultHome extends VaultHomeScreen
     	}
 
     } //End clickCreateNewObject
-    
+        
     /**
 	 * vaultHome : select ObjectType
 	 * @param Null
@@ -73,18 +73,59 @@ public class VaultHome extends VaultHomeScreen
     	try {    	 
 	    	
     		int count = 0;
+    		int listCount = objectListItems.size();
 	    	 
-	    	while(count < objectListItems.size()){		
+	    	while(count < listCount){		
 	    		if(objectListItems.get(count).getText().contentEquals(objectTypeName)){
 	    			objectListItems.get(count).click();
 	    			break;
 	    		} //End If
-	    		
 	    		count++;
 	    	} //End While
+	    	
+	    	if(count >= listCount)	{
+	    		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
+	    		Utils.waitForElement(driver, objectTypeList);
+	    		selectObjectType(objectTypeName);
+	    	}
+	    	
     	}
     	catch (Exception e){
     		throw e;
     	}
 
-    } //End selectObjectType}
+    } //End selectObjectType
+    
+    /**
+	 * vaultHome : select ClassName
+	 * @param Null
+	 * @throws Exception 
+	 */
+    public void selectClassName(String ClassName) {
+    	Utils.waitForElement(driver, objectTypeList);
+    	try {    	 
+	    	
+    		int count = 0;
+    		int listCount = objectListItems.size();
+	    	 
+	    	while(count < listCount){		
+	    		if(objectListItems.get(count).getText().contentEquals(ClassName)){
+	    			objectListItems.get(count).click();
+	    			break;
+	    		} //End If
+	    		count++;
+	    	} //End While
+	    	
+	    	if(count >= listCount)	{
+	    		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
+	    		Utils.waitForElement(driver, objectTypeList);
+	    		selectObjectType(ClassName);
+	    	}
+	    	
+    	}
+    	catch (Exception e){
+    		throw e;
+    	}
+
+    } //End selectClassName
+}

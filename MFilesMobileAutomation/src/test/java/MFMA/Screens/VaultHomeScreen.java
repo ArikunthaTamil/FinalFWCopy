@@ -1,131 +1,49 @@
-package MFMA.Factories;
+package MFMA.Screens;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.LoadableComponent;
 
-import MFMA.Screens.VaultHomeScreen;
-import genericLibrary.Utils;
-
-public class VaultHome extends VaultHomeScreen
+public class VaultHomeScreen extends LoadableComponent<VaultHomeScreen>
 {
-	RemoteWebDriver driver;
-	private boolean isPageLoaded = false;
-	
-	public VaultHome(RemoteWebDriver driver){
-
-    	this.driver = driver;
-		//ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
-		PageFactory.initElements(driver, this);
-    }
-	
-	final public void isLoaded(){
-    	if (!isPageLoaded) {
-			Assert.fail();
-		}
-		try {
-			isPageLoaded = Utils.waitForElement(driver, vaultTitle);
-		}
-		catch (TimeoutException e) {
-			throw e;
-		}
-	}
-	
-	final protected void load(){
-		try {
-			//Utils.fluentWait(driver);
-		} 
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		isPageLoaded = true;
-	}
-
-	/**
-	 * vaultHome : click CreateNewObject
-	 * @param Null
-	 * @throws Exception 
-	 */
-    public void clickCreateNewObject() {
-    	Utils.waitForElement(driver, btnCreateObject);
-    	try {    	 
-	    	
-    		btnCreateObject.click();
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-
-    } //End clickCreateNewObject
-        
-    /**
-	 * vaultHome : select ObjectType
-	 * @param Null
-	 * @throws Exception 
-	 */
-    public void selectObjectType(String objectTypeName) {
-    	Utils.waitForElement(driver, objectTypeList);
-    	try {    	 
-	    	
-    		int count = 0;
-    		int listCount = objectListItems.size();
-	    	 
-	    	while(count < listCount){		
-	    		if(objectListItems.get(count).getText().contentEquals(objectTypeName)){
-	    			objectListItems.get(count).click();
-	    			break;
-	    		} //End If
-	    		count++;
-	    	} //End While
-	    	
-	    	if(count >= listCount)	{
-	    		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
-	    		Utils.waitForElement(driver, objectTypeList);
-	    		selectObjectType(objectTypeName);
-	    	}
-	    	
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-
-    } //End selectObjectType
+	@FindBy(id="home_vault_name")
+    protected WebElement vaultTitle;
     
-    /**
-	 * vaultHome : select ClassName
-	 * @param Null
-	 * @throws Exception 
-	 */
-    public void selectClassName(String ClassName) {
-    	Utils.waitForElement(driver, objectTypeList);
-    	try {    	 
-	    	
-    		int count = 0;
-    		int listCount = objectListItems.size();
-	    	 
-	    	while(count < listCount){		
-	    		if(objectListItems.get(count).getText().contentEquals(ClassName)){
-	    			objectListItems.get(count).click();
-	    			break;
-	    		} //End If
-	    		count++;
-	    	} //End While
-	    	
-	    	if(count >= listCount)	{
-	    		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
-	    		Utils.waitForElement(driver, objectTypeList);
-	    		selectObjectType(ClassName);
-	    	}
-	    	
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
+    @FindBy(id="component_home_item_text")
+    protected List<WebElement> vaultItems;
+    
+    @FindBy(id="component_string_list_text")
+    protected List<WebElement> objectListItems;
+    
+    @FindBy(id="menu_create_new_object")
+    protected WebElement btnCreateObject;
+    
+    @FindBy(className="android.widget.ListView")
+    protected WebElement objectTypeList;
+    
+    @FindBy(id="title")
+    protected WebElement titleText;
+    
+    @FindBy(id="component_object_list_section_title")
+    protected List<WebElement> sectionListItems;
+    
+    @FindBy(className="android.widget.ImageButton")
+    protected List<WebElement> imageElements;
+   // protected WebElement btnMenu = imageElements.get(0);
+    //protected WebElement extraOptions = imageElements.get(2);
+    
+	@Override
+	protected void isLoaded() throws Error {
+		// TODO Auto-generated method stub
+		
+	}
 
-    } //End selectClassName
+	@Override
+	protected void load() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
