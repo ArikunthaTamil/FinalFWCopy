@@ -29,6 +29,7 @@ import MFMA.Factories.*;
 import MFMA.Screens.AddServerScreen;
 import MFMA.Screens.LoginScreen;
 import genericLibrary.BaseTest;
+import genericLibrary.DataUtils;
 import genericLibrary.EmailReport;
 import genericLibrary.Log;
 import genericLibrary.MobileDriverUtils;
@@ -51,13 +52,13 @@ public class SmokeTestCases extends BaseTest {
 		
 		try {
 			driver = MobileDriverUtils.getDriver();
-			xlTestDataWorkBook = "SmokeTestCases.xls";
-			XmlTest xmlParameters = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
-			userName = xmlParameters.getParameter("UserName");
-			password = xmlParameters.getParameter("Password");
-			testVault = xmlParameters.getParameter("VaultName");
-			serverName = xmlParameters.getParameter("server");
-			
+			//xlTestDataWorkBook = "SmokeTestCases.xls";
+			//XmlTest xmlParameters = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
+			//userName = xmlParameters.getParameter("UserName");
+			//password = xmlParameters.getParameter("Password");
+			//testVault = xmlParameters.getParameter("VaultName");
+			//serverName = xmlParameters.getParameter("server");
+					
 		} //End try
 		
 		catch(Exception e) {
@@ -251,7 +252,6 @@ public class SmokeTestCases extends BaseTest {
 		try {
 			Login loginPage = new Login(driver);
 			loginPage.loginToMfiles("alexk", "test");
-			//loginPage.loginToMfiles("alexk", "password", "ENG 2015.2");
 			Log.message("step-1: Logging into MFiles with valid credentials", driver, extentedReport);
 			
 			Vault vault = loginPage.navigateToVaultPage();
