@@ -41,28 +41,28 @@
 			<class name="MFMA.Tests.SmokeTestCases"></class>
 		</classes>
 	</test> <!-- TestMFMA -->
-<<<<<<< 200644508b6c7ec74326a265df7d47a132129f6f
-	<test name="Emulator">
-	<parameter name="platform" value="ANDROID" />
-	<parameter name="deviceName" value="emulator-5554" />
-	<parameter name="deviceHost" value="127.0.0.1" />
-	<parameter name="devicePort" value="4723" />
-=======
+<<<<<<< HEAD
 	<test name="SamsungGalaxy">
 	<parameter name="platform" value="ANDROID" />
 	<parameter name="deviceName" value="4d005018f4f24005" />
 	<parameter name="deviceHost" value="127.0.0.1" />
 	<parameter name="devicePort" value="4766" />
->>>>>>> Added My Changes
+=======
+	<test name="Emulator">
+	<parameter name="platform" value="ANDROID" />
+	<parameter name="deviceName" value="emulator-5554" />
+	<parameter name="deviceHost" value="127.0.0.1" />
+	<parameter name="devicePort" value="4723" />
+>>>>>>> 200644508b6c7ec74326a265df7d47a132129f6f
 	<parameter name="appName" value="mFiles-production-release-Q2.apk" />
 		<classes>
 			<class name="MFMA.Tests.SmokeTestCases"></class>
 		</classes>
 	</test> <!-- TestMFMA -->
-<<<<<<< 200644508b6c7ec74326a265df7d47a132129f6f
-	
+<<<<<<< HEAD
 =======
->>>>>>> Added My Changes
+	
+>>>>>>> 200644508b6c7ec74326a265df7d47a132129f6f
 	<test name="Ios">
 	<parameter name="platform" value="IOS" />
 	<parameter name="deviceName" value="iPhone5s" />

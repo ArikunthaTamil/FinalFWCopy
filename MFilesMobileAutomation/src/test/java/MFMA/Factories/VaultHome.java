@@ -17,6 +17,12 @@ public class VaultHome extends VaultHomeScreen
 	RemoteWebDriver driver;
 	private boolean isPageLoaded = false;
 	
+	/**
+	 * constructor of the class
+	 * 
+	 * @param driver
+	 *            : RemoteWebdriver
+	 */
 	public VaultHome(RemoteWebDriver driver){
 
     	this.driver = driver;
@@ -34,7 +40,7 @@ public class VaultHome extends VaultHomeScreen
 		catch (TimeoutException e) {
 			throw e;
 		}
-	}
+	}//isLoaded
 	
 	final protected void load(){
 		try {
@@ -44,7 +50,7 @@ public class VaultHome extends VaultHomeScreen
 			e.printStackTrace();
 		}
 		isPageLoaded = true;
-	}
+	}//load
 
 	/**
 	 * vaultHome : click CreateNewObject

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="205.422" tests="7" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="187.637" tests="7" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
     <property name="java.vm.version" value="25.73-b02"/>
-    <property name="testName" value="Samsung"/>
+    <property name="testName" value="SamsungGalaxy"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="maven.multiModuleProjectDirectory" value="E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install test -DtestName=Samsung"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install test -DtestName=SamsungGalaxy"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,28 +63,28 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="SmokeCaseTest1_1" classname="MFMA.Tests.SmokeTestCases" time="19.113"/>
-  <testcase name="SmokeCaseTest1_2" classname="MFMA.Tests.SmokeTestCases" time="19.652"/>
-  <testcase name="SmokeCaseTest1_3" classname="MFMA.Tests.SmokeTestCases" time="22.364"/>
-  <testcase name="SmokeCaseTest1_4" classname="MFMA.Tests.SmokeTestCases" time="23.951"/>
-  <testcase name="SmokeCaseTest1_5" classname="MFMA.Tests.SmokeTestCases" time="25.901"/>
-  <testcase name="SmokeCaseTest1_6" classname="MFMA.Tests.SmokeTestCases" time="22.358"/>
-  <testcase name="SmokeCaseTest1_7" classname="MFMA.Tests.SmokeTestCases" time="10.213">
+  <testcase name="SmokeCaseTest1_1" classname="MFMA.Tests.SmokeTestCases" time="16.284"/>
+  <testcase name="SmokeCaseTest1_2" classname="MFMA.Tests.SmokeTestCases" time="21.252"/>
+  <testcase name="SmokeCaseTest1_3" classname="MFMA.Tests.SmokeTestCases" time="17.246"/>
+  <testcase name="SmokeCaseTest1_4" classname="MFMA.Tests.SmokeTestCases" time="20.431"/>
+  <testcase name="SmokeCaseTest1_5" classname="MFMA.Tests.SmokeTestCases" time="21.617"/>
+  <testcase name="SmokeCaseTest1_6" classname="MFMA.Tests.SmokeTestCases" time="21.671"/>
+  <testcase name="SmokeCaseTest1_7" classname="MFMA.Tests.SmokeTestCases" time="9.486">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:283)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:284)
 </failure>
-    <system-out><![CDATA[15-Jul-2016 18:15:03:307 INFO  [main]  
-15-Jul-2016 18:15:03:310 INFO  [main] ****             MFMATest007             ***** 
-15-Jul-2016 18:15:03:310 INFO  [main]  
-15-Jul-2016 18:15:05:291 INFO  [main] Step-1: Started with Vault Screen 
-15-Jul-2016 18:15:10:146 INFO  [main] step-2: Selecting Vault 
-15-Jul-2016 18:15:10:147 DEBUG [main] Navigated to Vault Home Screen! 
-15-Jul-2016 18:15:13:459 FATAL [main]  
+    <system-out><![CDATA[18-Jul-2016 11:17:28:980 INFO  [main]  
+18-Jul-2016 11:17:28:981 INFO  [main] ****             MFMATest007             ***** 
+18-Jul-2016 11:17:28:981 INFO  [main]  
+18-Jul-2016 11:17:30:374 INFO  [main] Step-1: Started with Vault Screen 
+18-Jul-2016 11:17:36:259 INFO  [main] step-2: Selecting Vault 
+18-Jul-2016 11:17:36:260 DEBUG [main] Navigated to Vault Home Screen! 
+18-Jul-2016 11:17:38:367 FATAL [main]  
 java.lang.NullPointerException
 	at MFMA.Screens.VaultHomeScreen.<init>(VaultHomeScreen.java:22)
-	at MFMA.Factories.VaultHome.<init>(VaultHome.java:20)
-	at MFMA.Factories.Vault.navigateToVaultHomeScreen(Vault.java:77)
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:283)
+	at MFMA.Factories.VaultHome.<init>(VaultHome.java:26)
+	at MFMA.Factories.Vault.navigateToVaultHomeScreen(Vault.java:82)
+	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:284)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,7 +112,7 @@ java.lang.NullPointerException
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-15-Jul-2016 18:15:13:498 INFO  [main] ****             -E---N---D-             ***** 
+18-Jul-2016 11:17:38:407 INFO  [main] ****             -E---N---D-             ***** 
 ]]></system-out>
   </testcase>
 </testsuite>

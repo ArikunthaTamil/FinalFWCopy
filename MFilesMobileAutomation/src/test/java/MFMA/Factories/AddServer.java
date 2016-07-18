@@ -13,43 +13,68 @@ public class AddServer extends AddServerScreen
 {
 	RemoteWebDriver driver;
 	
+	/**
+	 * constructor of the class
+	 * 
+	 * @param driver
+	 *            : RemoteWebdriver
+	 */
 	public AddServer(RemoteWebDriver driver)
 	{
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 	
-	//Set server name in textbox
-    public void setServerName(String strServerName){
-    	
+	/**
+	 * setServerName : Sets the server
+	 * @param setServerName - Name/Ipaddress of the server
+	 * @throws Exception 
+	 */
+    public void setServerName(String strServerName) throws Exception
+    {
     	txtServername.sendKeys(strServerName);
     }
     
-    //Click on connect button
-    public void clickConnect(){
+    /**
+	 * clickConnect : clicks the connect button
+	 * @throws Exception 
+	 */
+    public void clickConnect() throws Exception
+    {
     	btnConnect.click();
     }
     
-    public void connectToServer(String strServerName){
-
-        //Fill server name
-        this.setServerName(strServerName);
-        
-        //Click Connect button
+    /**
+	 * connectToServer : Connecting to the server
+	 * @param setServerName - Name/Ipaddress of the server
+	 * @throws Exception 
+	 */
+    public void connectToServer(String strServerName) throws Exception
+    {
+        this.setServerName(strServerName);   
         this.clickConnect();
-
     }
     
+    /**
+	 * Tapping Empty Error Dialog Box OK Button
+	 */
     public void tapOkButton()
     {
     	btnEmptyErrorOK.click();
     }
     
+    /**
+	 * Tapping Invalid Error Dialog Box OK Button
+	 */
     public void tapInvalidOkButton()
     {
     	btnInvalidErrorOK.click();
     }
     
+    /**
+	 * Verify Empty Error Message
+	 * @throws Exception 
+	 */
     public void verifyEmptyError() throws Exception
     {
     	Utils.waitForElement(driver, txtEmptyErrorMessage);
@@ -57,6 +82,10 @@ public class AddServer extends AddServerScreen
 			throw new Exception("Add Server Empty Error Message Mismatches!");
     }
     
+    /**
+	 * Verify Invalid Error Message
+	 * @throws Exception 
+	 */
     public void verifyInvalidError(ExtentTest extentedReport) throws Exception
     {
     	Utils.waitForElement(driver, txtInvalidErrorMessage);
@@ -64,6 +93,11 @@ public class AddServer extends AddServerScreen
 			Log.failWithExtentScreenshot("Add Server Invalid Error Message Mismatches!", driver, extentedReport, true);
     }
     
+    /**
+	 * Navigate to Login Screen
+	 * @return instance of Login Screen
+	 * @throws Exception 
+	 */
     public Login navigateToLoginPage() throws Exception
     {
     	Log.event("Navigated to Login Page!");

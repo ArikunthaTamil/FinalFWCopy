@@ -22,6 +22,13 @@ public class Login extends LoginScreen
 	RemoteWebDriver driver;
 	private boolean isPageLoaded = false;
 	
+	
+	/**
+	 * constructor of the class
+	 * 
+	 * @param driver
+	 *            : RemoteWebdriver
+	 */
 	public Login(RemoteWebDriver driver){
 
     	this.driver = driver;
@@ -39,7 +46,7 @@ public class Login extends LoginScreen
 		catch (TimeoutException e) {
 			throw e;
 		}
-	}
+	}//isLoaded
 	
 	final protected void load(){
 		try {
@@ -49,13 +56,19 @@ public class Login extends LoginScreen
 			e.printStackTrace();
 		}
 		isPageLoaded = true;
-	}
+	}//load
 	
+	/**
+	 * Tapping Empty Error Dialog Box OK Button
+	 */
 	public void tapOkButton()
     {
     	btnEmptyErrorOK.click();
     }
-    
+	
+	/**
+	 * Tapping Invalid Error Dialog Box OK Button
+	 */
     public void tapInvalidOkButton()
     {
     	btnInvalidErrorOK.click();
@@ -66,14 +79,9 @@ public class Login extends LoginScreen
 	 * @param userName - Name of the user
 	 * @throws Exception 
 	 */
-    public void setUserName(String strUserName){
-    	try {
-    		txtUsername.sendKeys(strUserName);
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-    	
+    public void setUserName(String strUserName) throws Exception
+    {
+    	txtUsername.sendKeys(strUserName);
     }
 
     /**
@@ -81,41 +89,28 @@ public class Login extends LoginScreen
 	 * @param password - Password
 	 * @throws Exception 
 	 */
-    public void setPassword(String password){
-    	
-    	try {
-    		txtPassword.sendKeys(password);
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-    	
+    public void setPassword(String password) throws Exception
+    {
+    	txtPassword.sendKeys(password);
     }
 
     /**
 	 * clickLogin : Clicks login button
 	 * @throws Exception 
 	 */
-    public void clickLogin(){
-    	
-    	try {
-    		btnLogin.click();
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
+    public void clickLogin() throws Exception
+    {
+    	btnLogin.click();
     }
 
     /**
 	 * setUserName : Sets the user name
 	 * @param userName - Name of the user
 	 * @param password - Password of the user
-	 * @param vaultName - Test vault to select for login
-	 * @return Instance of home page
 	 * @throws Exception 
 	 */
-    public void loginToMfiles(String userName,String strPasword){
-    	
+    public void loginToMfiles(String userName,String strPasword) throws Exception
+    {
         this.setUserName(userName); //Fill user name
         this.setPassword(strPasword); //Fill password
         driver.navigate().back();
@@ -123,6 +118,10 @@ public class Login extends LoginScreen
         //this.selectVault(vaultName);
     }
     
+    /**
+	 * Verify Empty Error Message
+	 * @throws Exception 
+	 */
     public void verifyEmptyError() throws Exception
     {
     	Utils.waitForElement(driver, txtEmptyErrorMessage);
@@ -130,6 +129,10 @@ public class Login extends LoginScreen
 			throw new Exception("Empty Login Error Message Mismatches!");
     }
     
+    /**
+	 * Verify Invalid Error Message
+	 * @throws Exception 
+	 */
     public void verifyInvalidError(ExtentTest extentedReport) throws Exception
     {
     	Utils.waitForElement(driver, txtInvalidErrorMessage);
@@ -137,6 +140,11 @@ public class Login extends LoginScreen
 			Log.failWithExtentScreenshot("Invalid Login Error Message Mismatches!", driver, extentedReport, true);
     }
     
+    /**
+	 * Navigate to Vault Page
+	 * @return instance of Vault Page
+	 * @throws Exception 
+	 */
     public Vault navigateToVaultPage() throws Exception
     {
     	Log.event("Navigated to Vault Screen!");

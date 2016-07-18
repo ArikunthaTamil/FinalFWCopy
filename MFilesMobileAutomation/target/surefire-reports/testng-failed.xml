@@ -3,14 +3,14 @@
 <suite verbose="0" name="Failed suite [MFiles Mobile Access - Smoke]">
   <parameter name="deviceHost" value="127.0.0.1"/>
   <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
-  <parameter name="devicePort" value="4755"/>
-  <parameter name="deviceName" value="4d00804e4b1c41a5"/>
+  <parameter name="devicePort" value="4766"/>
+  <parameter name="deviceName" value="4d005018f4f24005"/>
   <parameter name="platform" value="ANDROID"/>
-  <test name="Samsung(failed)">
+  <test name="SamsungGalaxy(failed)">
     <parameter name="deviceHost" value="127.0.0.1"/>
     <parameter name="appName" value="mFiles-production-release-Q2.apk"/>
-    <parameter name="devicePort" value="4755"/>
-    <parameter name="deviceName" value="4d00804e4b1c41a5"/>
+    <parameter name="devicePort" value="4766"/>
+    <parameter name="deviceName" value="4d005018f4f24005"/>
     <parameter name="platform" value="ANDROID"/>
     <classes>
       <class name="MFMA.Tests.SmokeTestCases">
@@ -23,5 +23,5 @@
         </methods>
       </class> <!-- MFMA.Tests.SmokeTestCases -->
     </classes>
-  </test> <!-- Samsung(failed) -->
+  </test> <!-- SamsungGalaxy(failed) -->
 </suite> <!-- Failed suite [MFiles Mobile Access - Smoke] -->

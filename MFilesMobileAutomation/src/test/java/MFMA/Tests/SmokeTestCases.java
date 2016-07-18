@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -373,7 +374,7 @@ public class SmokeTestCases extends BaseTest {
 		
 	} //End AdvancedUseCaseTest1_1_10A
 */	
-	@AfterTest
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();

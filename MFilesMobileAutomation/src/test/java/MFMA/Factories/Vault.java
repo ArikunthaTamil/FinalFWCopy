@@ -18,6 +18,12 @@ public class Vault extends VaultScreen
 	RemoteWebDriver driver;
 	private boolean isPageLoaded = false;
 	
+	/**
+	 * constructor of the class
+	 * 
+	 * @param driver
+	 *            : RemoteWebdriver
+	 */
 	public Vault(RemoteWebDriver driver){
 
     	this.driver = driver;
@@ -35,7 +41,7 @@ public class Vault extends VaultScreen
 		catch (TimeoutException e) {
 			throw e;
 		}
-	}
+	}//isLoaded
 	
 	final protected void load(){
 		try {
@@ -45,32 +51,31 @@ public class Vault extends VaultScreen
 			e.printStackTrace();
 		}
 		isPageLoaded = true;
-	}
+	}//load
 	
 	/**
 	 * selectVault : selects the vault
 	 * @param vaultName Name of the vault
 	 * @throws Exception 
 	 */
-    public void selectVault(String vaultName) {
-    	Utils.waitForElement(driver, vaultList);
-    	try {    	 
-	    	int count = 0;
-	    	 
-	    	while(count < vaults.size()){		
-	    		if(vaults.get(count).getText().contentEquals(vaultName)){
-	    			vaults.get(count).click();
-	    			break;
-	    		} //End If
-	    		count++;
-	    	} //End While
-    	}
-    	catch (Exception e){
-    		throw e;
-    	}
-
+    public void selectVault(String vaultName) throws Exception
+    {
+    	Utils.waitForElement(driver, vaultList);   	 
+	    int count = 0; 
+    	while(count < vaults.size()){		
+    		if(vaults.get(count).getText().contentEquals(vaultName)){
+    			vaults.get(count).click();
+    			break;
+    		} //End If
+    		count++;
+    	} //End While
     } //End selectVault
     
+    /**
+	 * Navigate to Vault Home Screen
+	 * @return instance of VaultHome Screen
+	 * @throws Exception 
+	 */
     public VaultHome navigateToVaultHomeScreen() throws Exception
     {
     	Log.event("Navigated to Vault Home Screen!");
