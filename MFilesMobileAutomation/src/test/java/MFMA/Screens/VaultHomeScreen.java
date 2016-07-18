@@ -24,15 +24,16 @@ public class VaultHomeScreen extends LoadableComponent<VaultHomeScreen>
     protected WebElement objectTypeList;
     
     @FindBy(id="title")
-    protected WebElement titleText;
+    protected WebElement txtSelectClassTitle;
     
     @FindBy(id="component_object_list_section_title")
     protected List<WebElement> sectionListItems;
     
-    @FindBy(className="android.widget.ImageButton")
-    protected List<WebElement> imageElements;
-   // protected WebElement btnMenu = imageElements.get(0);
-    //protected WebElement extraOptions = imageElements.get(2);
+    @FindBy(xpath="//android.widget.ImageButton[@content-desc='Navigate up']")
+    protected WebElement btnMenu;
+
+    @FindBy(xpath="//android.widget.ImageButton[@content-desc='More options']")
+    protected WebElement btnMoreOptions;
     
 	@Override
 	protected void isLoaded() throws Error {

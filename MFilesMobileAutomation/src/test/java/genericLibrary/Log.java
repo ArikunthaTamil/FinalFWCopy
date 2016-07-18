@@ -590,7 +590,7 @@ public class Log extends BaseTest {
 			Reporter.log(PASS_HTML_BEGIN + description + PASS_HTML_END1 + PASS_HTML_END2);
 		}
 		lsLog4j().log(callerClass(), Level.INFO, description, null);
-		extentedReport.log(LogStatus.PASS, description +"&emsp;" + getScreenShotHyperLink(inputFile));
+		extentedReport.log(LogStatus.PASS, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
 	}
 	
 	public static void pass(String description, WebDriver driver, Boolean... takeScreenShot) {

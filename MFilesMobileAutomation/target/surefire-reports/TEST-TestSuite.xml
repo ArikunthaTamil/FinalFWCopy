@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="187.637" tests="7" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="276.947" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
@@ -63,56 +63,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="SmokeCaseTest1_1" classname="MFMA.Tests.SmokeTestCases" time="16.284"/>
-  <testcase name="SmokeCaseTest1_2" classname="MFMA.Tests.SmokeTestCases" time="21.252"/>
-  <testcase name="SmokeCaseTest1_3" classname="MFMA.Tests.SmokeTestCases" time="17.246"/>
-  <testcase name="SmokeCaseTest1_4" classname="MFMA.Tests.SmokeTestCases" time="20.431"/>
-  <testcase name="SmokeCaseTest1_5" classname="MFMA.Tests.SmokeTestCases" time="21.617"/>
-  <testcase name="SmokeCaseTest1_6" classname="MFMA.Tests.SmokeTestCases" time="21.671"/>
-  <testcase name="SmokeCaseTest1_7" classname="MFMA.Tests.SmokeTestCases" time="9.486">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:284)
-</failure>
-    <system-out><![CDATA[18-Jul-2016 11:17:28:980 INFO  [main]  
-18-Jul-2016 11:17:28:981 INFO  [main] ****             MFMATest007             ***** 
-18-Jul-2016 11:17:28:981 INFO  [main]  
-18-Jul-2016 11:17:30:374 INFO  [main] Step-1: Started with Vault Screen 
-18-Jul-2016 11:17:36:259 INFO  [main] step-2: Selecting Vault 
-18-Jul-2016 11:17:36:260 DEBUG [main] Navigated to Vault Home Screen! 
-18-Jul-2016 11:17:38:367 FATAL [main]  
-java.lang.NullPointerException
-	at MFMA.Screens.VaultHomeScreen.<init>(VaultHomeScreen.java:22)
-	at MFMA.Factories.VaultHome.<init>(VaultHome.java:26)
-	at MFMA.Factories.Vault.navigateToVaultHomeScreen(Vault.java:82)
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:284)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-18-Jul-2016 11:17:38:407 INFO  [main] ****             -E---N---D-             ***** 
-]]></system-out>
-  </testcase>
+  <testcase name="SmokeCaseTest1_1" classname="MFMA.Tests.SmokeTestCases" time="16.541"/>
+  <testcase name="SmokeCaseTest1_2" classname="MFMA.Tests.SmokeTestCases" time="16.191"/>
+  <testcase name="SmokeCaseTest1_3" classname="MFMA.Tests.SmokeTestCases" time="13.468"/>
+  <testcase name="SmokeCaseTest1_4" classname="MFMA.Tests.SmokeTestCases" time="20.805"/>
+  <testcase name="SmokeCaseTest1_5" classname="MFMA.Tests.SmokeTestCases" time="21.59"/>
+  <testcase name="SmokeCaseTest1_6" classname="MFMA.Tests.SmokeTestCases" time="18.77"/>
+  <testcase name="SmokeCaseTest1_7" classname="MFMA.Tests.SmokeTestCases" time="11.431"/>
+  <testcase name="SmokeCaseTest1_8" classname="MFMA.Tests.SmokeTestCases" time="29.357"/>
+  <testcase name="SmokeCaseTest1_9" classname="MFMA.Tests.SmokeTestCases" time="74.7"/>
 </testsuite>

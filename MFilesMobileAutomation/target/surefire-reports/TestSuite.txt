@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 187.637 sec <<< FAILURE! - in TestSuite
-SmokeCaseTest1_7(MFMA.Tests.SmokeTestCases)  Time elapsed: 9.486 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:284)
-
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 276.947 sec - in TestSuite

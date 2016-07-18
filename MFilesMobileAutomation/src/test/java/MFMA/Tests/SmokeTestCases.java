@@ -2,6 +2,7 @@ package MFMA.Tests;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -40,6 +42,7 @@ public class SmokeTestCases extends BaseTest {
 	public static String testVault = null;
 	public static String serverName = null;
 	RemoteWebDriver driver = null;
+	ITestResult result;
 	/**
 	 * init : Before Class method to perform initial operations.
 	 */
@@ -110,6 +113,9 @@ public class SmokeTestCases extends BaseTest {
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
 		ExtentTest extentedReport = Log.testCaseInfo("MFMATest002", "Connect to server with invalid address", "MFMA_SmokeTest", "MFMA - AspireQA");
 		try {
+			//int status = result.getStatus();
+			//System.out.println(status);
+			
 			AddServer addServerPage = new AddServer(driver);
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", driver, extentedReport);
 			
@@ -250,7 +256,7 @@ public class SmokeTestCases extends BaseTest {
 			
 			Vault vault = loginPage.navigateToVaultPage();
 			vault.isLoaded();
-			Log.message("step-2: Navigated to Vault Page", driver, extentedReport);
+			Log.pass("step-2: Navigated to Vault Page", driver, extentedReport);
 			
 			Log.testCaseResult(extentedReport);
 		}
@@ -279,7 +285,7 @@ public class SmokeTestCases extends BaseTest {
 			Log.message("Step-1: Started with Vault Screen", driver, extentedReport);
 			
 			vault.selectVault("Sample Vault");
-			Log.message("step-2: Selecting Vault", driver, extentedReport);
+			Log.message("Step-2: Selecting Vault", driver, extentedReport);
 			
 			VaultHome vaultHome = vault.navigateToVaultHomeScreen();
 			vaultHome.isLoaded();
@@ -296,7 +302,87 @@ public class SmokeTestCases extends BaseTest {
 			//driver.quit();
 		} //End finally
 		
-	} //End SmokeCaseTest1_6
+	} //End SmokeCaseTest1_7
+	
+	/**
+	 * TC_008 : Object Creation
+	 */
+	@Test(description = "Object Creation")
+	public void SmokeCaseTest1_8() throws Exception {
+		
+		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest008", "Creating Object", "MFMA_SmokeTest", "MFMA - AspireQA");
+		try {
+		
+			VaultHome vaultHome = new VaultHome(driver);
+			Log.message("Step-1: Started with Vault Home Screen", driver, extentedReport);
+			
+			vaultHome.clickCreateNewObject();
+			Log.message("Step-2: Clicks on create object button", driver, extentedReport);
+			
+			vaultHome.selectObjectType("Assignment");
+			vaultHome.selectClassName("Customer");
+			vaultHome.selectTemplate("Empty");
+			Log.message("Step-3: Selecting object Type, class and template if any", driver, extentedReport);
+			
+			ObjectCreation objectCreation = vaultHome.navigateToObjectCreationScreen();
+			objectCreation.isLoaded();
+			Log.pass("Step-4: Navigated to Object Creation Screen Successfully!!", driver, extentedReport);
+			
+			Log.testCaseResult(extentedReport);
+		}
+		catch (Exception e) {
+			Log.exception(e, driver, extentedReport);
+		} //End catch
+		
+		finally {
+			Log.endTestCase(extentedReport);
+			//driver.quit();
+		} //End finally
+		
+	} //End SmokeCaseTest1_8
+	
+	/**
+	 * TC_009 : Populating properties
+	 */
+	@Test(description = "Populating properties")
+	public void SmokeCaseTest1_9() throws Exception {
+		
+		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest009", "Populating properties", "MFMA_SmokeTest", "MFMA - AspireQA");
+		try {
+		
+			ObjectCreation objectCreation = new ObjectCreation(driver);
+			Log.message("Step-1: Started with Object Creation Screen", driver, extentedReport);
+			
+			LinkedHashMap<String, String> propertyList = new LinkedHashMap<String, String>();
+			propertyList.put("text_Name or title *", "sample");
+			propertyList.put("text_Assignment description", "assignment");
+			propertyList.put("list_Assigned to *", "ext");
+			propertyList.put("date_Deadline", "Sep_28_2016");
+			
+			objectCreation.populatingValues(propertyList);
+			Log.message("Step-2: Populated values", driver, extentedReport);
+			
+			objectCreation.tapOnSaveButton();
+			Log.pass("Step-3: Tap on Save Button", driver, extentedReport);
+			
+			//ObjectCreation objectCreation = vaultHome.navigateToObjectCreationScreen();
+			//objectCreation.isLoaded();
+			//Log.pass("Step-4: Navigated to Object Creation Screen Successfully!!", driver, extentedReport);
+			
+			Log.testCaseResult(extentedReport);
+		}
+		catch (Exception e) {
+			Log.exception(e, driver, extentedReport);
+		} //End catch
+		
+		finally {
+			Log.endTestCase(extentedReport);
+			//driver.quit();
+		} //End finally
+		
+	} //End SmokeCaseTest1_9
 	/*
 	@Test(description = "Connect to invalid server")
 	public void AdvancedUseCaseTest1_2() throws Exception {

@@ -107,6 +107,79 @@ public class Utils {
     	return isFound;
     }
     
+  /// <summary>
+    /// Method to wait for the Web Element
+    /// </summary>
+    /// <param name="driver">RemoteWebDriver Object</param>
+    /// <param name="pElement">element to be exist</param>
+    /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
+    public static Boolean doesElementExist(RemoteWebDriver driver, WebElement pElement, int _timeToWait)
+    {
+    	Boolean isFound = false;
+    	try
+    	{
+            //int _TimeToWait = 60;
+            for (int i = 0; i < _timeToWait; i++)
+            {
+                Thread.sleep(1000); //Wait for 1 second
+
+                try
+                {
+                    isFound = pElement.isDisplayed();
+                    if (isFound) break;
+                    System.out.println("Searching the Element..." + pElement);
+                }
+                catch (Exception ex)
+                {
+                	System.out.println(ex.getMessage());
+                }
+            }
+    	}
+        catch(Exception e)
+    	{
+        	isFound = false;
+			Log.event("Unable to find a element after ");
+    	}
+    	return isFound;
+    }
+    
+  /// <summary>
+    /// Method to wait for the Web Element
+    /// </summary>
+    /// <param name="driver">RemoteWebDriver Object</param>
+    /// <param name="pElement">element to be exist</param>
+    /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
+    public static Boolean doesElementNotExist(RemoteWebDriver driver, WebElement pElement, int _timeToWait)
+    {
+    	Boolean isNotFound = false;
+    	try
+    	{
+            //int _TimeToWait = 60;
+            for (int i = 0; i < _timeToWait; i++)
+            {
+                Thread.sleep(1000); //Wait for 1 second
+
+                try
+                {
+                	isNotFound = pElement.isDisplayed();
+                    if (!isNotFound) break;
+                    System.out.println("Searching the Element..." + pElement);
+                }
+                catch (Exception ex)
+                {
+                	isNotFound=true;
+                	System.out.println(ex.getMessage());
+                }
+            }
+    	}
+        catch(Exception e)
+    	{
+        	isNotFound = true;
+			Log.event("Unable to find a element after ");
+    	}
+    	return isNotFound;
+    }
+    
     
 	/// <summary>
     /// To swipe across elements

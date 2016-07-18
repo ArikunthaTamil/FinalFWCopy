@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="7" passed="6">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
     <line>
       <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest001</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -47,7 +47,7 @@
       <![CDATA[<div class="test-message">&emsp;Step-2: Entered nothing in the server testbox&emsp;<a href=".\ScreenShot\SmokeCaseTest1_3_10.png" target="_blank" >[ScreenShot]</a></div>]]>
     </line>
     <line>
-      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 11:16:20 666 - Navigated to Login Page!</small> </font> </div>]]>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:36:01 861 - Navigated to Login Page!</small> </font> </div>]]>
     </line>
     <line>
       <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-3: Successfully Navigated to Login Page </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_3_11.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
@@ -92,10 +92,10 @@
       <![CDATA[<div class="test-message">&emsp;step-1: Logging into MFiles with valid credentials&emsp;<a href=".\ScreenShot\SmokeCaseTest1_6_18.png" target="_blank" >[ScreenShot]</a></div>]]>
     </line>
     <line>
-      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 11:17:25 445 - Navigated to Vault Screen!</small> </font> </div>]]>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:37:02 934 - Navigated to Vault Screen!</small> </font> </div>]]>
     </line>
     <line>
-      <![CDATA[<div class="test-message">&emsp;step-2: Navigated to Vault Page&emsp;<a href=".\ScreenShot\SmokeCaseTest1_6_19.png" target="_blank" >[ScreenShot]</a></div>]]>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> step-2: Navigated to Vault Page </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_6_19.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
     </line>
     <line>
       <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
@@ -107,29 +107,68 @@
       <![CDATA[<div class="test-message">&emsp;Step-1: Started with Vault Screen&emsp;<a href=".\ScreenShot\SmokeCaseTest1_7_20.png" target="_blank" >[ScreenShot]</a></div>]]>
     </line>
     <line>
-      <![CDATA[<div class="test-message">&emsp;step-2: Selecting Vault&emsp;<a href=".\ScreenShot\SmokeCaseTest1_7_21.png" target="_blank" >[ScreenShot]</a></div>]]>
+      <![CDATA[<div class="test-message">&emsp;Step-2: Selecting Vault&emsp;<a href=".\ScreenShot\SmokeCaseTest1_7_21.png" target="_blank" >[ScreenShot]</a></div>]]>
     </line>
     <line>
-      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 11:17:36 260 - Navigated to Vault Home Screen!</small> </font> </div>]]>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:37:13 634 - Navigated to Vault Home Screen!</small> </font> </div>]]>
     </line>
     <line>
-      <![CDATA[<div class="test-result"><br><font color="red"><strong> null </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_7_22.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-3: Navigated to Vault Home Screen Successfully!! </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_7_22.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest008</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-message">&emsp;Step-1: Started with Vault Home Screen&emsp;<a href=".\ScreenShot\SmokeCaseTest1_8_23.png" target="_blank" >[ScreenShot]</a></div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-message">&emsp;Step-2: Clicks on create object button&emsp;<a href=".\ScreenShot\SmokeCaseTest1_8_24.png" target="_blank" >[ScreenShot]</a></div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-message">&emsp;Step-3: Selecting object Type, class and template if any&emsp;<a href=".\ScreenShot\SmokeCaseTest1_8_25.png" target="_blank" >[ScreenShot]</a></div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:37:43 874 - Navigated to Object Creation Screen!</small> </font> </div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-4: Navigated to Object Creation Screen Successfully!! </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_8_26.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest009</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-message">&emsp;Step-1: Started with Object Creation Screen&emsp;<a href=".\ScreenShot\SmokeCaseTest1_9_27.png" target="_blank" >[ScreenShot]</a></div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-message">&emsp;Step-2: Populated values&emsp;<a href=".\ScreenShot\SmokeCaseTest1_9_28.png" target="_blank" >[ScreenShot]</a></div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-3: Tap on Save Button </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_9_29.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
     </line>
   </reporter-output>
-  <suite name="MFiles Mobile Access - Smoke" duration-ms="184557" started-at="2016-07-18T05:44:35Z" finished-at="2016-07-18T05:47:40Z">
+  <suite name="MFiles Mobile Access - Smoke" duration-ms="273526" started-at="2016-07-18T12:04:30Z" finished-at="2016-07-18T12:09:03Z">
     <groups>
     </groups>
-    <test name="SamsungGalaxy" duration-ms="184557" started-at="2016-07-18T05:44:35Z" finished-at="2016-07-18T05:47:40Z">
+    <test name="SamsungGalaxy" duration-ms="273526" started-at="2016-07-18T12:04:30Z" finished-at="2016-07-18T12:09:03Z">
       <class name="MFMA.Tests.SmokeTestCases">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="beforeSuite" is-config="true" duration-ms="523" started-at="2016-07-18T11:14:35Z" finished-at="2016-07-18T11:14:35Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="beforeSuite" is-config="true" duration-ms="560" started-at="2016-07-18T17:34:29Z" finished-at="2016-07-18T17:34:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="init()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="init" is-config="true" duration-ms="54794" started-at="2016-07-18T11:14:35Z" finished-at="2016-07-18T11:15:30Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="init" is-config="true" duration-ms="48753" started-at="2016-07-18T17:34:30Z" finished-at="2016-07-18T17:35:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="SmokeCaseTest1_1()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_1" duration-ms="16268" started-at="2016-07-18T11:15:30Z" description="Connect to server with empty string" finished-at="2016-07-18T11:15:46Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_1()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_1" duration-ms="16535" started-at="2016-07-18T17:35:19Z" description="Connect to server with empty string" finished-at="2016-07-18T17:35:35Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest001</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -151,7 +190,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_1 -->
-        <test-method status="PASS" signature="SmokeCaseTest1_2()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_2" duration-ms="21255" started-at="2016-07-18T11:15:46Z" description="Connect to server with invalid address" finished-at="2016-07-18T11:16:08Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_2()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_2" duration-ms="16198" started-at="2016-07-18T17:35:35Z" description="Connect to server with invalid address" finished-at="2016-07-18T17:35:51Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest002</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -173,7 +212,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_2 -->
-        <test-method status="PASS" signature="SmokeCaseTest1_3()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_3" duration-ms="17250" started-at="2016-07-18T11:16:08Z" description="Connect to server with valid address" finished-at="2016-07-18T11:16:25Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_3()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_3" duration-ms="13458" started-at="2016-07-18T17:35:51Z" description="Connect to server with valid address" finished-at="2016-07-18T17:36:05Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest003</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -185,7 +224,7 @@
               <![CDATA[<div class="test-message">&emsp;Step-2: Entered nothing in the server testbox&emsp;<a href=".\ScreenShot\SmokeCaseTest1_3_10.png" target="_blank" >[ScreenShot]</a></div>]]>
             </line>
             <line>
-              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 11:16:20 666 - Navigated to Login Page!</small> </font> </div>]]>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:36:01 861 - Navigated to Login Page!</small> </font> </div>]]>
             </line>
             <line>
               <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-3: Successfully Navigated to Login Page </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_3_11.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
@@ -195,7 +234,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_3 -->
-        <test-method status="PASS" signature="SmokeCaseTest1_4()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_4" duration-ms="20429" started-at="2016-07-18T11:16:25Z" description="Login to application with empty username and password" finished-at="2016-07-18T11:16:45Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_4()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_4" duration-ms="20812" started-at="2016-07-18T17:36:05Z" description="Login to application with empty username and password" finished-at="2016-07-18T17:36:26Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest004</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -214,7 +253,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_4 -->
-        <test-method status="PASS" signature="SmokeCaseTest1_5()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_5" duration-ms="21617" started-at="2016-07-18T11:16:45Z" description="Login to application with invalid username" finished-at="2016-07-18T11:17:07Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_5()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_5" duration-ms="21581" started-at="2016-07-18T17:36:26Z" description="Login to application with invalid username" finished-at="2016-07-18T17:36:47Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest005</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -233,7 +272,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_5 -->
-        <test-method status="PASS" signature="SmokeCaseTest1_6()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_6" duration-ms="21673" started-at="2016-07-18T11:17:07Z" description="Login to application with valid credentials" finished-at="2016-07-18T11:17:28Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_6()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_6" duration-ms="18769" started-at="2016-07-18T17:36:47Z" description="Login to application with valid credentials" finished-at="2016-07-18T17:37:06Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest006</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -242,54 +281,17 @@
               <![CDATA[<div class="test-message">&emsp;step-1: Logging into MFiles with valid credentials&emsp;<a href=".\ScreenShot\SmokeCaseTest1_6_18.png" target="_blank" >[ScreenShot]</a></div>]]>
             </line>
             <line>
-              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 11:17:25 445 - Navigated to Vault Screen!</small> </font> </div>]]>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:37:02 934 - Navigated to Vault Screen!</small> </font> </div>]]>
             </line>
             <line>
-              <![CDATA[<div class="test-message">&emsp;step-2: Navigated to Vault Page&emsp;<a href=".\ScreenShot\SmokeCaseTest1_6_19.png" target="_blank" >[ScreenShot]</a></div>]]>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> step-2: Navigated to Vault Page </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_6_19.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
             </line>
             <line>
               <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_6 -->
-        <test-method status="FAIL" signature="SmokeCaseTest1_7()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="SmokeCaseTest1_7" duration-ms="9427" started-at="2016-07-18T11:17:28Z" description="Vault Selection" finished-at="2016-07-18T11:17:38Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at MFMA.Screens.VaultHomeScreen.<init>(VaultHomeScreen.java:22)
-	at MFMA.Factories.VaultHome.<init>(VaultHome.java:26)
-	at MFMA.Factories.Vault.navigateToVaultHomeScreen(Vault.java:82)
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_7(SmokeTestCases.java:284)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="SmokeCaseTest1_7()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_7" duration-ms="11436" started-at="2016-07-18T17:37:06Z" description="Vault Selection" finished-at="2016-07-18T17:37:18Z">
           <reporter-output>
             <line>
               <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest007</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
@@ -298,21 +300,68 @@
               <![CDATA[<div class="test-message">&emsp;Step-1: Started with Vault Screen&emsp;<a href=".\ScreenShot\SmokeCaseTest1_7_20.png" target="_blank" >[ScreenShot]</a></div>]]>
             </line>
             <line>
-              <![CDATA[<div class="test-message">&emsp;step-2: Selecting Vault&emsp;<a href=".\ScreenShot\SmokeCaseTest1_7_21.png" target="_blank" >[ScreenShot]</a></div>]]>
+              <![CDATA[<div class="test-message">&emsp;Step-2: Selecting Vault&emsp;<a href=".\ScreenShot\SmokeCaseTest1_7_21.png" target="_blank" >[ScreenShot]</a></div>]]>
             </line>
             <line>
-              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 11:17:36 260 - Navigated to Vault Home Screen!</small> </font> </div>]]>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:37:13 634 - Navigated to Vault Home Screen!</small> </font> </div>]]>
             </line>
             <line>
-              <![CDATA[<div class="test-result"><br><font color="red"><strong> null </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_7_22.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-3: Navigated to Vault Home Screen Successfully!! </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_7_22.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
             </line>
           </reporter-output>
         </test-method> <!-- SmokeCaseTest1_7 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="tearDown" is-config="true" duration-ms="1762" started-at="2016-07-18T11:17:38Z" finished-at="2016-07-18T11:17:40Z">
+        <test-method status="PASS" signature="SmokeCaseTest1_8()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_8" duration-ms="29353" started-at="2016-07-18T17:37:18Z" description="Object Creation" finished-at="2016-07-18T17:37:47Z">
+          <reporter-output>
+            <line>
+              <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest008</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-message">&emsp;Step-1: Started with Vault Home Screen&emsp;<a href=".\ScreenShot\SmokeCaseTest1_8_23.png" target="_blank" >[ScreenShot]</a></div>]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-message">&emsp;Step-2: Clicks on create object button&emsp;<a href=".\ScreenShot\SmokeCaseTest1_8_24.png" target="_blank" >[ScreenShot]</a></div>]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-message">&emsp;Step-3: Selecting object Type, class and template if any&emsp;<a href=".\ScreenShot\SmokeCaseTest1_8_25.png" target="_blank" >[ScreenShot]</a></div>]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 18 Jul 17:37:43 874 - Navigated to Object Creation Screen!</small> </font> </div>]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-4: Navigated to Object Creation Screen Successfully!! </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_8_26.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SmokeCaseTest1_8 -->
+        <test-method status="PASS" signature="SmokeCaseTest1_9()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="SmokeCaseTest1_9" duration-ms="74705" started-at="2016-07-18T17:37:47Z" description="Populating properties" finished-at="2016-07-18T17:39:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">MFMATest009</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-message">&emsp;Step-1: Started with Object Creation Screen&emsp;<a href=".\ScreenShot\SmokeCaseTest1_9_27.png" target="_blank" >[ScreenShot]</a></div>]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-message">&emsp;Step-2: Populated values&emsp;<a href=".\ScreenShot\SmokeCaseTest1_9_28.png" target="_blank" >[ScreenShot]</a></div>]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> Step-3: Tap on Save Button </strong></font> <a href=".\ScreenShot\SmokeCaseTest1_9_29.png" target="_blank" >[ScreenShot]</a></div>&emsp;]]>
+            </line>
+            <line>
+              <![CDATA[<div class="test-result"><br><font color="green"><strong> Test Passed.  </strong></font> </div>&emsp;]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SmokeCaseTest1_9 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="tearDown" is-config="true" duration-ms="1890" started-at="2016-07-18T17:39:02Z" finished-at="2016-07-18T17:39:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:MFMA.Tests.SmokeTestCases@90f6bfd]" name="afterSuite" is-config="true" duration-ms="881" started-at="2016-07-18T11:17:40Z" finished-at="2016-07-18T11:17:41Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:MFMA.Tests.SmokeTestCases@15975490]" name="afterSuite" is-config="true" duration-ms="772" started-at="2016-07-18T17:39:04Z" finished-at="2016-07-18T17:39:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
