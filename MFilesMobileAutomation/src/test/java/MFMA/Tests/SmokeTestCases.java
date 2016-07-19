@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -31,6 +32,7 @@ import MFMA.Screens.LoginScreen;
 import genericLibrary.BaseTest;
 import genericLibrary.DataUtils;
 import genericLibrary.EmailReport;
+import genericLibrary.EnvironmentPropertiesReader;
 import genericLibrary.Log;
 import genericLibrary.MobileDriverUtils;
 
@@ -42,8 +44,10 @@ public class SmokeTestCases extends BaseTest {
 	public static String password = null;
 	public static String testVault = null;
 	public static String serverName = null;
+	public static Boolean testResult = null;
 	RemoteWebDriver driver = null;
 	ITestResult result;
+	public static String deviceName = null;
 	/**
 	 * init : Before Class method to perform initial operations.
 	 */
@@ -51,7 +55,11 @@ public class SmokeTestCases extends BaseTest {
 	public void init() throws Exception {
 		
 		try {
+			MobileDriverUtils.startHub();
+			MobileDriverUtils.startNode();
+			Thread.sleep(5000);
 			driver = MobileDriverUtils.getDriver();
+			deviceName = MobileDriverUtils.testName;
 			//xlTestDataWorkBook = "SmokeTestCases.xls";
 			//XmlTest xmlParameters = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
 			//userName = xmlParameters.getParameter("UserName");
@@ -72,13 +80,36 @@ public class SmokeTestCases extends BaseTest {
 		
 	} //End init
 	
+	@AfterMethod
+	public void writeResult(ITestResult result)
+	{
+		try
+		{
+			if(result.getStatus() == ITestResult.SUCCESS)
+			{
+				testResult = true;
+			}
+			else
+			{
+				testResult = false;
+				driver.quit();
+				driver = MobileDriverUtils.getDriver();
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception in aftermethod: " + e);
+		}
+		
+	}
+	
 	/**
 	 * TC_001 : Connect to server
 	 */
 	@Test(description = "Connect to server with empty string")
 	public void SmokeCaseTest1_1() throws Exception {
 		
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest001", "Connect to server with empty string", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest001", "Connect to server with empty string", "MFMA_SmokeTest", deviceName);
 		try {
 			AddServer addServerPage = new AddServer(driver);
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", driver, extentedReport);
@@ -112,11 +143,9 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_2() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest002", "Connect to server with invalid address", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest002", "Connect to server with invalid address", "MFMA_SmokeTest", deviceName);
 		try {
-			//int status = result.getStatus();
-			//System.out.println(status);
-			
+				
 			AddServer addServerPage = new AddServer(driver);
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", driver, extentedReport);
 			
@@ -148,9 +177,10 @@ public class SmokeTestCases extends BaseTest {
 	@Test(description = "Connect to server with valid address")
 	public void SmokeCaseTest1_3() throws Exception {
 		
-		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest003", "Connect to server with valid address", "MFMA_SmokeTest", "MFMA - AspireQA");
+		
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest003", "Connect to server with valid address", "MFMA_SmokeTest", deviceName);
 		try {
+
 			AddServer addServerPage = new AddServer(driver);
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", driver, extentedReport);
 			
@@ -182,8 +212,14 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_4() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest004", "Login to application with empty username and password", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest004", "Login to application with empty username and password", "MFMA_SmokeTest", deviceName);
 		try {
+			if(!testResult)
+			{
+				AddServer addServerPage = new AddServer(driver);
+				addServerPage.connectToServer("http://172.24.166.141");
+			}
+			
 			Login loginPage = new Login(driver);
 			loginPage.loginToMfiles("", "");
 			//loginPage.loginToMfiles("alexk", "password", "ENG 2015.2");
@@ -215,8 +251,14 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_5() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest005", "Login to application with invalid username", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest005", "Login to application with invalid username", "MFMA_SmokeTest", deviceName);
 		try {
+			if(!testResult)
+			{
+				AddServer addServerPage = new AddServer(driver);
+				addServerPage.connectToServer("http://172.24.166.141");
+			}
+			
 			Login loginPage = new Login(driver);
 			loginPage.loginToMfiles("asfb4565", "test");
 			//loginPage.loginToMfiles("alexk", "password", "ENG 2015.2");
@@ -248,8 +290,14 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_6() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest006", "Login to application with valid credentials", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest006", "Login to application with valid credentials", "MFMA_SmokeTest", deviceName);
 		try {
+			if(!testResult)
+			{
+				AddServer addServerPage = new AddServer(driver);
+				addServerPage.connectToServer("http://172.24.166.141");
+			}
+			
 			Login loginPage = new Login(driver);
 			loginPage.loginToMfiles("alexk", "test");
 			Log.message("step-1: Logging into MFiles with valid credentials", driver, extentedReport);
@@ -278,8 +326,15 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_7() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest007", "Login to application with valid credentials", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest007", "Login to application with valid credentials", "MFMA_SmokeTest", deviceName);
 		try {
+			if(!testResult)
+			{
+				AddServer addServerPage = new AddServer(driver);
+				addServerPage.connectToServer("http://172.24.166.141");
+				Login loginPage = addServerPage.navigateToLoginPage();
+				loginPage.loginToMfiles("alexk", "test");
+			}
 		
 			Vault vault = new Vault(driver);
 			Log.message("Step-1: Started with Vault Screen", driver, extentedReport);
@@ -288,8 +343,10 @@ public class SmokeTestCases extends BaseTest {
 			Log.message("Step-2: Selecting Vault", driver, extentedReport);
 			
 			VaultHome vaultHome = vault.navigateToVaultHomeScreen();
-			vaultHome.isLoaded();
+			if(!vaultHome.pageLoaded())
+				Log.fail("Vault Home not loaded", driver, extentedReport);
 			Log.pass("Step-3: Navigated to Vault Home Screen Successfully!!", driver, extentedReport);
+				
 			
 			Log.testCaseResult(extentedReport);
 		}
@@ -311,8 +368,17 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_8() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest008", "Creating Object", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest008", "Creating Object", "MFMA_SmokeTest", deviceName);
 		try {
+			if(!testResult)
+			{
+				AddServer addServerPage = new AddServer(driver);
+				addServerPage.connectToServer("http://172.24.166.141");
+				Login loginPage = addServerPage.navigateToLoginPage();
+				loginPage.loginToMfiles("alexk", "test");
+				Vault vault = loginPage.navigateToVaultPage();
+				vault.selectVault("Sample Vault");
+			}
 		
 			VaultHome vaultHome = new VaultHome(driver);
 			Log.message("Step-1: Started with Vault Home Screen", driver, extentedReport);
@@ -349,8 +415,22 @@ public class SmokeTestCases extends BaseTest {
 	public void SmokeCaseTest1_9() throws Exception {
 		
 		//RemoteWebDriver driver = MobileDriverUtils.getDriver();
-		ExtentTest extentedReport = Log.testCaseInfo("MFMATest009", "Populating properties", "MFMA_SmokeTest", "MFMA - AspireQA");
+		ExtentTest extentedReport = Log.testCaseInfo("MFMATest009", "Populating properties", "MFMA_SmokeTest", deviceName);
 		try {
+			if(!testResult)
+			{
+				AddServer addServerPage = new AddServer(driver);
+				addServerPage.connectToServer("http://172.24.166.141");
+				Login loginPage = addServerPage.navigateToLoginPage();
+				loginPage.loginToMfiles("alexk", "test");
+				Vault vault = loginPage.navigateToVaultPage();
+				vault.selectVault("Sample Vault");
+				VaultHome vaultHome = vault.navigateToVaultHomeScreen();
+				vaultHome.clickCreateNewObject();
+				vaultHome.selectObjectType("Assignment");
+				vaultHome.selectClassName("Customer");
+				vaultHome.selectTemplate("Empty");
+			}
 		
 			ObjectCreation objectCreation = new ObjectCreation(driver);
 			Log.message("Step-1: Started with Object Creation Screen", driver, extentedReport);
@@ -461,7 +541,7 @@ public class SmokeTestCases extends BaseTest {
 	} //End AdvancedUseCaseTest1_1_10A
 */	
 	@AfterClass
-	public void tearDown()
+	public void tearDown() throws Exception
 	{
 		driver.quit();
 	}

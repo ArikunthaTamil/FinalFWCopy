@@ -32,9 +32,9 @@ public class VaultHome extends VaultHomeScreen
     }
 	
 	final public void isLoaded(){
-    	if (!isPageLoaded) {
-			Assert.fail();
-		}
+    	//if (!isPageLoaded) {
+    	//	Log.fail("VaultHome not loaded");
+		//}
 		try {
 			isPageLoaded = Utils.waitForElement(driver, vaultTitle);
 		}
@@ -52,6 +52,12 @@ public class VaultHome extends VaultHomeScreen
 		}
 		isPageLoaded = true;
 	}//load
+	
+	public Boolean pageLoaded()
+	{
+		isLoaded();
+		return isPageLoaded;
+	}
 
 	/**
 	 * vaultHome : click CreateNewObject
@@ -97,7 +103,7 @@ public class VaultHome extends VaultHomeScreen
 	 */
     public void selectClassName(String className) throws Exception
     {
-    	if(Utils.doesElementExist(driver, txtSelectClassTitle, 5))
+    	if(Utils.doesElementExist(driver, txtSelectClassTitle))
     	{
     		if(txtSelectClassTitle.getText().equalsIgnoreCase("Select class"))
     		{
@@ -129,7 +135,7 @@ public class VaultHome extends VaultHomeScreen
 	 */
     public void selectTemplate(String template) throws Exception
     {
-    	if(Utils.doesElementExist(driver, txtSelectClassTitle, 5))
+    	if(Utils.doesElementExist(driver, txtSelectClassTitle))
     	{
     		if(txtSelectClassTitle.getText().equalsIgnoreCase("Select Template"))
     		{

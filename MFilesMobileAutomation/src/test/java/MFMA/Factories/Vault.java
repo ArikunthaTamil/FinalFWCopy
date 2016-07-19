@@ -32,9 +32,9 @@ public class Vault extends VaultScreen
     }
 	
 	final public void isLoaded(){
-    	if (!isPageLoaded) {
-			Assert.fail();
-		}
+    	/*if (!isPageLoaded) {
+    		Log.fail("Vault screen not loaded", driver);
+		}*/
 		try {
 			isPageLoaded = Utils.waitForElement(driver, vaultList);
 		}
@@ -53,6 +53,11 @@ public class Vault extends VaultScreen
 		isPageLoaded = true;
 	}//load
 	
+	public Boolean pageLoaded()
+	{
+		isLoaded();
+		return isPageLoaded;
+	}
 	/**
 	 * selectVault : selects the vault
 	 * @param vaultName Name of the vault

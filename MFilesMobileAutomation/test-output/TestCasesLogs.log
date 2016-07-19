@@ -1,238 +1,79 @@
-18-Jul-2016 20:36:29:990 INFO  [main]  
-18-Jul-2016 20:36:29:996 INFO  [main] ****             MFMATest001             ***** 
-18-Jul-2016 20:36:29:996 INFO  [main]  
-18-Jul-2016 20:36:31:166 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-18-Jul-2016 20:36:39:581 INFO  [main] Step-2: Entered nothing in the server testbox 
-18-Jul-2016 20:36:42:036 INFO  [main] Step-3: Verified Empty Error Message 
-18-Jul-2016 20:36:46:482 INFO  [main] Step-4: Tapped Empty Error Message Dialog Box 
-18-Jul-2016 20:36:46:482 INFO  [main] Test Passed.  
-18-Jul-2016 20:36:46:487 INFO  [main] ****             -E---N---D-             ***** 
-18-Jul-2016 20:36:46:488 INFO  [main]  
-18-Jul-2016 20:36:46:489 INFO  [main] ****             MFMATest002             ***** 
-18-Jul-2016 20:36:46:489 INFO  [main]  
-18-Jul-2016 20:36:47:724 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-18-Jul-2016 20:36:56:098 INFO  [main] Step-2: Entered nothing in the server testbox 
-18-Jul-2016 20:36:58:567 INFO  [main] Step-3: Verified Invalid Error Message 
-18-Jul-2016 20:37:03:177 INFO  [main] Step-4: Tapped Invalid Error Message Dialog Box 
-18-Jul-2016 20:37:03:180 INFO  [main] Test Passed.  
-18-Jul-2016 20:37:03:180 INFO  [main] ****             -E---N---D-             ***** 
-18-Jul-2016 20:37:03:181 INFO  [main]  
-18-Jul-2016 20:37:03:182 INFO  [main] ****             MFMATest003             ***** 
-18-Jul-2016 20:37:03:182 INFO  [main]  
-18-Jul-2016 20:37:04:483 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-18-Jul-2016 20:37:12:841 INFO  [main] Step-2: Entered nothing in the server testbox 
-18-Jul-2016 20:37:12:843 DEBUG [main] Navigated to Login Page! 
-18-Jul-2016 20:38:23:915 INFO  [main] ****             -E---N---D-             ***** 
-18-Jul-2016 20:38:23:928 INFO  [main]  
-18-Jul-2016 20:38:23:928 INFO  [main] ****             MFMATest004             ***** 
-18-Jul-2016 20:38:23:929 INFO  [main]  
-18-Jul-2016 20:38:25:372 FATAL [main] An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information) 
-org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 113 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{hideKeyboard=true, appPackage=com.mfiles.mobile, app=E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=4d005018f4f24005, platform=LINUX, desired={hideKeyboard=true, appPackage=com.mfiles.mobile, app=E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, platformName=Android, udid=4d005018f4f24005, device=ANDROID, deviceName=4d005018f4f24005}, platformVersion=4.3, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=4d005018f4f24005, device=ANDROID}]
-Session ID: 56a1c81c-41e3-4795-8c31-e8cda1510cfb
-*** Element info: {Using=id, value=login_username}
-	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:75)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
-	at MFMA.Factories.Login.setUserName(Login.java:84)
-	at MFMA.Factories.Login.loginToMfiles(Login.java:114)
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_4(SmokeTestCases.java:188)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-18-Jul-2016 20:38:25:395 INFO  [main] ****             -E---N---D-             ***** 
-18-Jul-2016 20:38:25:406 INFO  [main]  
-18-Jul-2016 20:38:25:407 INFO  [main] ****             MFMATest005             ***** 
-18-Jul-2016 20:38:25:412 INFO  [main]  
-18-Jul-2016 20:38:27:136 FATAL [main] An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information) 
-org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 314 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{hideKeyboard=true, appPackage=com.mfiles.mobile, app=E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=4d005018f4f24005, platform=LINUX, desired={hideKeyboard=true, appPackage=com.mfiles.mobile, app=E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, platformName=Android, udid=4d005018f4f24005, device=ANDROID, deviceName=4d005018f4f24005}, platformVersion=4.3, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=4d005018f4f24005, device=ANDROID}]
-Session ID: 56a1c81c-41e3-4795-8c31-e8cda1510cfb
-*** Element info: {Using=id, value=login_username}
-	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:75)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
-	at MFMA.Factories.Login.setUserName(Login.java:84)
-	at MFMA.Factories.Login.loginToMfiles(Login.java:114)
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_5(SmokeTestCases.java:221)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-18-Jul-2016 20:38:27:139 INFO  [main] ****             -E---N---D-             ***** 
-18-Jul-2016 20:38:27:143 INFO  [main]  
-18-Jul-2016 20:38:27:144 INFO  [main] ****             MFMATest006             ***** 
-18-Jul-2016 20:38:27:144 INFO  [main]  
-18-Jul-2016 20:38:28:844 FATAL [main] An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information) 
-org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 246 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'aspire742', ip: '172.24.130.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{hideKeyboard=true, appPackage=com.mfiles.mobile, app=E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=4d005018f4f24005, platform=LINUX, desired={hideKeyboard=true, appPackage=com.mfiles.mobile, app=E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\Application\Android\mFiles-production-release-Q2.apk, platformName=Android, udid=4d005018f4f24005, device=ANDROID, deviceName=4d005018f4f24005}, platformVersion=4.3, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, platformName=Android, udid=4d005018f4f24005, device=ANDROID}]
-Session ID: 56a1c81c-41e3-4795-8c31-e8cda1510cfb
-*** Element info: {Using=id, value=login_username}
-	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:75)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
-	at MFMA.Factories.Login.setUserName(Login.java:84)
-	at MFMA.Factories.Login.loginToMfiles(Login.java:114)
-	at MFMA.Tests.SmokeTestCases.SmokeCaseTest1_6(SmokeTestCases.java:254)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-18-Jul-2016 20:38:28:861 INFO  [main] ****             -E---N---D-             ***** 
-18-Jul-2016 20:38:28:866 INFO  [main]  
-18-Jul-2016 20:38:28:866 INFO  [main] ****             MFMATest007             ***** 
-18-Jul-2016 20:38:28:867 INFO  [main]  
-18-Jul-2016 20:38:30:259 INFO  [main] Step-1: Started with Vault Screen 
-18-Jul-2016 20:39:44:181 INFO  [main] Step-2: Selecting Vault 
-18-Jul-2016 20:39:44:182 DEBUG [main] Navigated to Vault Home Screen! 
+19-Jul-2016 20:50:07:701 INFO  [main]  
+19-Jul-2016 20:50:07:765 INFO  [main] ****             MFMATest001             ***** 
+19-Jul-2016 20:50:07:766 INFO  [main]  
+19-Jul-2016 20:50:09:188 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+19-Jul-2016 20:50:16:838 INFO  [main] Step-2: Entered nothing in the server testbox 
+19-Jul-2016 20:50:19:375 INFO  [main] Step-3: Verified Empty Error Message 
+19-Jul-2016 20:50:23:942 INFO  [main] Step-4: Tapped Empty Error Message Dialog Box 
+19-Jul-2016 20:50:23:942 INFO  [main] Test Passed.  
+19-Jul-2016 20:50:23:950 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:50:23:957 INFO  [main]  
+19-Jul-2016 20:50:23:958 INFO  [main] ****             MFMATest002             ***** 
+19-Jul-2016 20:50:23:958 INFO  [main]  
+19-Jul-2016 20:50:25:319 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+19-Jul-2016 20:50:33:446 INFO  [main] Step-2: Entered nothing in the server testbox 
+19-Jul-2016 20:50:35:868 INFO  [main] Step-3: Verified Invalid Error Message 
+19-Jul-2016 20:50:40:467 INFO  [main] Step-4: Tapped Invalid Error Message Dialog Box 
+19-Jul-2016 20:50:40:469 INFO  [main] Test Passed.  
+19-Jul-2016 20:50:40:469 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:50:40:473 INFO  [main]  
+19-Jul-2016 20:50:40:473 INFO  [main] ****             MFMATest003             ***** 
+19-Jul-2016 20:50:40:474 INFO  [main]  
+19-Jul-2016 20:50:41:789 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+19-Jul-2016 20:50:49:990 INFO  [main] Step-2: Entered nothing in the server testbox 
+19-Jul-2016 20:50:49:992 DEBUG [main] Navigated to Login Page! 
+19-Jul-2016 20:50:53:557 INFO  [main] Step-3: Successfully Navigated to Login Page 
+19-Jul-2016 20:50:53:558 INFO  [main] Test Passed.  
+19-Jul-2016 20:50:53:558 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:50:53:561 INFO  [main]  
+19-Jul-2016 20:50:53:561 INFO  [main] ****             MFMATest004             ***** 
+19-Jul-2016 20:50:53:561 INFO  [main]  
+19-Jul-2016 20:51:06:875 INFO  [main] step-1: Logging into MFiles with empty string 
+19-Jul-2016 20:51:09:288 INFO  [main] Step-2: Verified Empty Error Message 
+19-Jul-2016 20:51:14:530 INFO  [main] Step-3: Tapped Empty Error Message Dialog Box 
+19-Jul-2016 20:51:14:531 INFO  [main] Test Passed.  
+19-Jul-2016 20:51:14:531 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:51:14:533 INFO  [main]  
+19-Jul-2016 20:51:14:533 INFO  [main] ****             MFMATest005             ***** 
+19-Jul-2016 20:51:14:533 INFO  [main]  
+19-Jul-2016 20:51:28:842 INFO  [main] step-1: Logging into MFiles with invalid username 
+19-Jul-2016 20:51:31:259 INFO  [main] Step-2: Verified Invalid Error Message 
+19-Jul-2016 20:51:35:895 INFO  [main] Step-3: Tapped Invalid Error Message Dialog Box 
+19-Jul-2016 20:51:35:896 INFO  [main] Test Passed.  
+19-Jul-2016 20:51:35:898 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:51:35:901 INFO  [main]  
+19-Jul-2016 20:51:35:902 INFO  [main] ****             MFMATest006             ***** 
+19-Jul-2016 20:51:35:902 INFO  [main]  
+19-Jul-2016 20:51:51:171 INFO  [main] step-1: Logging into MFiles with valid credentials 
+19-Jul-2016 20:51:51:171 DEBUG [main] Navigated to Vault Screen! 
+19-Jul-2016 20:51:55:195 INFO  [main] step-2: Navigated to Vault Page 
+19-Jul-2016 20:51:55:195 INFO  [main] Test Passed.  
+19-Jul-2016 20:51:55:196 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:51:55:197 INFO  [main]  
+19-Jul-2016 20:51:55:197 INFO  [main] ****             MFMATest007             ***** 
+19-Jul-2016 20:51:55:197 INFO  [main]  
+19-Jul-2016 20:51:56:525 INFO  [main] Step-1: Started with Vault Screen 
+19-Jul-2016 20:52:01:600 INFO  [main] Step-2: Selecting Vault 
+19-Jul-2016 20:52:01:602 DEBUG [main] Navigated to Vault Home Screen! 
+19-Jul-2016 20:52:06:465 INFO  [main] Step-3: Navigated to Vault Home Screen Successfully!! 
+19-Jul-2016 20:52:06:465 INFO  [main] Test Passed.  
+19-Jul-2016 20:52:06:466 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:52:06:467 INFO  [main]  
+19-Jul-2016 20:52:06:467 INFO  [main] ****             MFMATest008             ***** 
+19-Jul-2016 20:52:06:467 INFO  [main]  
+19-Jul-2016 20:52:09:056 INFO  [main] Step-1: Started with Vault Home Screen 
+19-Jul-2016 20:52:12:247 INFO  [main] Step-2: Clicks on create object button 
+19-Jul-2016 20:52:32:161 INFO  [main] Step-3: Selecting object Type, class and template if any 
+19-Jul-2016 20:52:32:162 DEBUG [main] Navigated to Object Creation Screen! 
+19-Jul-2016 20:52:32:251 ERROR [main] Object Creation screen not loaded 
+19-Jul-2016 20:52:35:785 INFO  [main] Step-4: Navigated to Object Creation Screen Successfully!! 
+19-Jul-2016 20:52:35:785 INFO  [main] Test Passed.  
+19-Jul-2016 20:52:35:787 INFO  [main] ****             -E---N---D-             ***** 
+19-Jul-2016 20:52:35:788 INFO  [main]  
+19-Jul-2016 20:52:35:790 INFO  [main] ****             MFMATest009             ***** 
+19-Jul-2016 20:52:35:791 INFO  [main]  
+19-Jul-2016 20:52:37:069 INFO  [main] Step-1: Started with Object Creation Screen 
+19-Jul-2016 20:53:44:043 INFO  [main] Step-2: Populated values 
+19-Jul-2016 20:53:45:898 INFO  [main] Step-3: Tap on Save Button 
+19-Jul-2016 20:53:45:898 INFO  [main] Test Passed.  
+19-Jul-2016 20:53:45:901 INFO  [main] ****             -E---N---D-             ***** 

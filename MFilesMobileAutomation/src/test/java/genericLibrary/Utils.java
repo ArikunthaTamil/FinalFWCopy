@@ -42,8 +42,12 @@ public class Utils {
 	public static int snoozeTime = 0;
 	public static int snoozeIdx = 0;
 	
+	private static EnvironmentPropertiesReader configProperty = EnvironmentPropertiesReader.getInstance();
 	static XmlTest test = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
 	static String platform = test.getParameter("platform");
+	static int minTimeout = Integer.parseInt(configProperty.getProperty("minElementWait"));
+	static int maxTimeout = Integer.parseInt(configProperty.getProperty("maxElementWait"));
+	static int extraTimeout = Integer.parseInt(configProperty.getProperty("extraElementWait"));
 	/**
 	 * fluentWait: This method is to wait until the current progress gets completed
 	 * @param driver
@@ -82,7 +86,7 @@ public class Utils {
     	Boolean isFound = false;
     	try
     	{
-            int _TimeToWait = 60;
+            int _TimeToWait = maxTimeout;
             for (int i = 0; i < _TimeToWait; i++)
             {
                 Thread.sleep(1000); //Wait for 1 second
@@ -113,12 +117,12 @@ public class Utils {
     /// <param name="driver">RemoteWebDriver Object</param>
     /// <param name="pElement">element to be exist</param>
     /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
-    public static Boolean doesElementExist(RemoteWebDriver driver, WebElement pElement, int _timeToWait)
+    public static Boolean doesElementExist(RemoteWebDriver driver, WebElement pElement)
     {
     	Boolean isFound = false;
     	try
     	{
-            //int _TimeToWait = 60;
+            int _timeToWait = maxTimeout;
             for (int i = 0; i < _timeToWait; i++)
             {
                 Thread.sleep(1000); //Wait for 1 second
@@ -149,12 +153,12 @@ public class Utils {
     /// <param name="driver">RemoteWebDriver Object</param>
     /// <param name="pElement">element to be exist</param>
     /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
-    public static Boolean doesElementNotExist(RemoteWebDriver driver, WebElement pElement, int _timeToWait)
+    public static Boolean doesElementNotExist(RemoteWebDriver driver, WebElement pElement)
     {
     	Boolean isNotFound = false;
     	try
     	{
-            //int _TimeToWait = 60;
+            int _timeToWait = maxTimeout;
             for (int i = 0; i < _timeToWait; i++)
             {
                 Thread.sleep(1000); //Wait for 1 second

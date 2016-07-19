@@ -12,6 +12,17 @@ import org.testng.Reporter;
 import org.testng.xml.XmlTest;
 
 public class MobileDriverUtils {
+	
+	private static EnvironmentPropertiesReader configProperty = EnvironmentPropertiesReader.getInstance();
+	public static XmlTest test = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
+	public static String platform = test.getParameter("platform");
+	public static String device = test.getParameter("deviceName");
+	public static String appPath = System.getProperty("user.dir") + "\\Application\\";
+	public static String driverHost = test.getParameter("deviceHost");
+	public static String driverPort = test.getParameter("devicePort");
+	public static String appName = test.getParameter("appName");
+	public static String testName = test.getName();
+	
 	/**
 	 * getDriver : Launches driver and returns the instance of the driver
 	 * @return Instance of the driver
@@ -21,17 +32,8 @@ public class MobileDriverUtils {
 
 		RemoteWebDriver driver = null;
 		URL hubURL = null;
-		
+
 		try {
-			
-			XmlTest test = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
-			String platform = test.getParameter("platform");
-			String device = test.getParameter("deviceName");
-			String appPath = System.getProperty("user.dir") + "\\Application\\";
-			String driverHost = test.getParameter("deviceHost");
-			String driverPort = test.getParameter("devicePort");
-			String appName = test.getParameter("appName");
-			
 			hubURL = new URL("http://" + driverHost + ":" + driverPort + "/wd/hub");
 			
 			switch (platform.toUpperCase()) {
@@ -77,6 +79,23 @@ public class MobileDriverUtils {
 		return driver;
 
 	} //End getDriver
+	
+	
+	public static void startHub() throws Exception 
+	{
+		String hubDrive = configProperty.getProperty("hubDrive");
+		String cmd = "cmd /c start cmd.exe /K \""+"cd " + hubDrive + "/ && " + "java -jar selenium-server-standalone-2.52.0.jar -role hub";
+		Runtime.getRuntime().exec(cmd);
+		//Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd E:/ && java -jar selenium-server-standalone-2.52.0.jar -role hub\"");
+	}
+	
+	public static void startNode() throws Exception 
+	{
+		String jsonPath = configProperty.getProperty("jsonPath");
+		String cmd = "cmd /c start cmd.exe /K \""+"appium --nodeconfig "+ jsonPath + testName +".json" + " -p " + driverPort + " -U " + device + " --session-override";
+		Runtime.getRuntime().exec(cmd);
+		//Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"appium --nodeconfig D:\\TTBooking\\SamsungGalaxyAndroid.json -p 4766 -U 4d005018f4f24005 --session-override\"");
+	}
 	
 	/*
 	/**

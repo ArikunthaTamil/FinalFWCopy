@@ -37,9 +37,6 @@ public class Login extends LoginScreen
     }
 	
 	final public void isLoaded(){
-    	if (!isPageLoaded) {
-			Assert.fail();
-		}
 		try {
 			isPageLoaded = Utils.waitForElement(driver, txtPassword);
 		}
@@ -58,6 +55,11 @@ public class Login extends LoginScreen
 		isPageLoaded = true;
 	}//load
 	
+	public Boolean pageLoaded()
+	{
+		isLoaded();
+		return isPageLoaded;
+	}
 	/**
 	 * Tapping Empty Error Dialog Box OK Button
 	 */

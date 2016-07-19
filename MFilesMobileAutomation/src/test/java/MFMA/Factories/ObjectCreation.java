@@ -38,7 +38,7 @@ public class ObjectCreation extends ObjectCreationScreen
 	
 	final public void isLoaded(){
     	if (!isPageLoaded) {
-			Assert.fail();
+    		Log.fail("Object Creation screen not loaded");
 		}
 		try {
 			isPageLoaded = Utils.waitForElement(driver, btnAddFile);

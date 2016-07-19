@@ -49,7 +49,6 @@ public class LoginScreen extends LoadableComponent <LoginScreen>{
 	@FindBy(id="fragment_error_details")
 	protected WebElement btnInvalidErrorDetails;
 
-
     @Override
     public void isLoaded(){
     }

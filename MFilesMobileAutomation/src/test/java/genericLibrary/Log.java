@@ -684,6 +684,25 @@ public class Log extends BaseTest {
 		lsLog4j().log(callerClass(), Level.ERROR, description, null);
 		Assert.fail(description);
 	}
+	
+	/**
+	 * fail print test case status as Fail with custom message and take screenshot (level=error)
+	 * 
+	 * @param description
+	 *            custom message in the test case
+	 * @param driver
+	 *            to take screenshot
+	 */
+	public static void fail(String description, WebDriver driver,ExtentTest extentedReport) {
+		
+		String inputFile = "";
+		inputFile = takeScreenShot(driver);
+		getScreenShotHyperLink(inputFile);
+		Reporter.log(FAIL_HTML_BEGIN + description + FAIL_HTML_END1 + FAIL_HTML_END2);
+		lsLog4j().log(callerClass(), Level.INFO, description, null);
+		extentedReport.log(LogStatus.FAIL, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
+		Assert.fail(description);
+	}
 
 	/**
 	 * fail print test case status as Fail with custom message (level=error)
@@ -830,13 +849,13 @@ public class Log extends BaseTest {
 		lsLog4j().log(callerClass(), Level.FATAL, eMessage, e);
 		if (e instanceof SkipException) {
 			Reporter.log(SKIP_EXCEPTION_HTML_BEGIN + eMessage + SKIP_HTML_END1 + getScreenShotHyperLink(inputFile) + SKIP_HTML_END2);
-			extentedReport.log(LogStatus.FAIL, eMessage +"&emsp;" + getScreenShotHyperLink(inputFile));
-//			extentedReport.log(LogStatus.SKIP, eMessage + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
+			//extentedReport.log(LogStatus.FAIL, eMessage +"&emsp;" + getScreenShotHyperLink(inputFile));
+			extentedReport.log(LogStatus.SKIP, eMessage + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
 		}
 		else {
 			Reporter.log(FAIL_HTML_BEGIN + eMessage + FAIL_HTML_END1 + getScreenShotHyperLink(inputFile) + FAIL_HTML_END2);
-			extentedReport.log(LogStatus.FAIL, eMessage +"&emsp;" + getScreenShotHyperLink(inputFile));
-//			extentedReport.log(LogStatus.FAIL, eMessage + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
+			//extentedReport.log(LogStatus.FAIL, eMessage +"&emsp;" + getScreenShotHyperLink(inputFile));
+			extentedReport.log(LogStatus.FAIL, eMessage + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
 		}
 		
 		throw e;
