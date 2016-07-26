@@ -2,6 +2,7 @@ package genericLibrary;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -150,8 +151,9 @@ public class DataUtils {
 
 			String basePath = new File(".").getCanonicalPath() + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "testdata" + File.separator;
 			logger.info("data utils base path: " + basePath);
-			String configFilePath = basePath + "Config-TD.xls";
-			POIFSFileSystem fs = new POIFSFileSystem(new FileInputStream(configFilePath));
+			String configFilePath = basePath + "ConfigTD.xls";
+			logger.info("Final path:" + configFilePath);
+			POIFSFileSystem fs = new POIFSFileSystem(new FileInputStream("E:\\POC\\MerlinQA\\150716\\FinalFWCopy\\MFilesMobileAutomation\\src\\test\\resources\\testdata\\ConfigTD.xls"));
 			HSSFWorkbook wb = new HSSFWorkbook(fs);
 			HSSFSheet sheet = wb.getSheet(configSheetName);
 
@@ -172,6 +174,7 @@ public class DataUtils {
 							cell = sheet.getRow(r).getCell(1);
 							if (cell != null) {
 								fileName = convertHSSFCellToString(row.getCell(1));
+								Log.event("FileName:" + fileName);
 							}
 							cell = sheet.getRow(r).getCell(2);
 							if (cell != null) {
@@ -182,7 +185,8 @@ public class DataUtils {
 					}
 				}
 			}
-			filePath = basePath + fileName;
+			filePath = "E:\\POC\\MerlinQA\\150716\\FinalFWCopy\\MFilesMobileAutomation\\src\\test\\resources\\testdata" + File.separator + fileName;
+			Log.event("FilePath: " + filePath);
 			data = getTestData(filePath, fileName, sheetName, testCaseId);
 //			return data;
 		}

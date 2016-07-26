@@ -6,108 +6,130 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.LoadableComponent;
 
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
+
 public class ObjectCreationScreen extends LoadableComponent<ObjectCreationScreen>
 {
-	@FindBy(id="actionbar_title")
+	@AndroidFindBy(id="actionbar_title")
+	@iOSFindBy(xpath="//UIATableCell[2]/UIAStaticText[2]")
     protected WebElement objectCreationTitle;
     
-    @FindBy(xpath="//android.widget.ImageButton[@content-desc='Navigate up']")
+	@AndroidFindBy(xpath="//android.widget.ImageButton[@content-desc='Navigate up']")
     protected WebElement btnMenu;
     
-    @FindBy(id="menu_item_edit_save")
+	@AndroidFindBy(id="menu_item_edit_save")
+	@iOSFindBy(xpath="//UIAButton[@label='Create']")
     protected WebElement btnSave;
     
-    @FindBy(id="menu_item_edit_add")
+	@AndroidFindBy(id="menu_item_edit_add")
     protected WebElement btnCreateObject;
     
-    @FindBy(id="menu_item_edit_cancel")
+	@AndroidFindBy(id="menu_item_edit_cancel")
     protected WebElement btnCancelObject;
     
-    @FindBy(id="component_object_title_text")
+	@AndroidFindBy(id="component_object_title_text")
     protected WebElement txtObjectTitle;
     
-    @FindBy(id="fragment_properties_list")
+	@AndroidFindBy(id="fragment_properties_list")
+	@iOSFindBy(xpath="//UIATableView")
     protected WebElement listProperties;
     
-    @FindBy(id="component_object_title_class")
+	@AndroidFindBy(id="component_object_title_class")
     protected WebElement txtObjectClassTitle;
     
-    @FindBy(id="component_file_controls_add_file")
+	@AndroidFindBy(id="component_file_controls_add_file")
+	@iOSFindBy(xpath="//UIATableCell[2]/UIAButton")
     protected WebElement btnAddFile;
     
-    @FindBy(id="component_property_item_key")
+	@AndroidFindBy(id="component_property_item_key")
     protected List<WebElement> txtPropertyKeys;
-    
-    @FindBy(id="component_property_item_value_edit")
+	
+	@iOSFindBy(xpath="//UIATableCell")
+    protected List<WebElement> txtProperties;
+	
+	@iOSFindBy(xpath="//UIAButton[@label='Properties']")
+    protected WebElement btnProperty;
+	
+	@iOSFindBy(xpath="//UIATextView[1]")
+    protected WebElement txtProperty;
+	
+	@iOSFindBy(xpath="//UIAPickerWheel[1]")
+    protected WebElement txtDatePropertyMonth;
+	
+	@iOSFindBy(xpath="//UIAPickerWheel[2]")
+    protected WebElement txtDatePropertyDay;
+	
+	@iOSFindBy(xpath="//UIAPickerWheel[3]")
+    protected WebElement txtDatePropertyYear;
+	
+	@AndroidFindBy(id="component_property_item_value_edit")
     protected List<WebElement> txtPropertyValues;
     
-    @FindBy(id="property_lookup_value_add_button")
+	@AndroidFindBy(id="property_lookup_value_add_button")
     protected WebElement btnAddPropertyValue;
     
-    @FindBy(id="component_property_item_button_left")
+	@AndroidFindBy(id="component_property_item_button_left")
     protected WebElement btnPropertyRemove;
     
-    @FindBy(id="property_lookup_value_remove")
+	@AndroidFindBy(id="property_lookup_value_remove")
     protected WebElement btnPropertyValueRemove;
     
-    @FindBy(id="property_lookup_value_row")
+	@AndroidFindBy(id="property_lookup_value_row")
     protected WebElement btnListAddPropertyValue;
     
-    @FindBy(id="alertTitle")
+	@AndroidFindBy(id="alertTitle")
     protected WebElement txtAddPropertyAlertTitle;
     
-    @FindBy(id="select_dialog_listview")
+	@AndroidFindBy(id="select_dialog_listview")
     protected WebElement listAddPropertyAlertValues;
     
-    @FindBy(id="text1")
+	@AndroidFindBy(id="text1")
     protected List<WebElement> checkAddPropertyAlertValues;
     
-    @FindBy(id="button2")
+	@AndroidFindBy(id="button2")
     protected WebElement btnAddPropertyAlertCancel;
     
-    @FindBy(id="button1")
+	@AndroidFindBy(id="button1")
     protected WebElement btnAddPropertyAlertOk;
     
-    @FindBy(id="title")
+	@AndroidFindBy(id="title")
     protected WebElement txtAddValueAlertTitle;
     
-    @FindBy(id="component_progressbar_list_filter")
+	@AndroidFindBy(id="component_progressbar_list_filter")
     protected WebElement txtAddValueAlertFilter;
     
-    @FindBy(id="list")
+	@AndroidFindBy(id="list")
+	@iOSFindBy(xpath="//UIATableView")
     protected WebElement listAddValueAlertValues;
     
-    @FindBy(id="component_string_list_text")
+	@AndroidFindBy(id="component_string_list_text")
+	@iOSFindBy(xpath="//UIATableCell")
     protected List<WebElement> txtAddValueAlertValues;
     
-    @FindBy(id="datePicker")
+	@AndroidFindBy(id="datePicker")
     protected WebElement datePicker;
     
-    @FindBy(className="android.widget.NumberPicker")
+	@AndroidFindBy(className="android.widget.NumberPicker")
     protected List<WebElement> dateNumberPickers;
     
-    @FindBy(className="android.widget.Button")
+	@AndroidFindBy(className="android.widget.Button")
     protected List<WebElement> dateNumberButtons;
     
-    @FindBy(id="numberpicker_input")
+	@AndroidFindBy(id="numberpicker_input")
     protected List<WebElement> dateNumberSelectedText;
     
-    @FindBy(id="button1")
+	@AndroidFindBy(id="button1")
+	@iOSFindBy(xpath="//UIAButton[@label='mfiles icon done']")
     protected WebElement btnSetDate;
     
-    @FindBy(id="alertTitle")
+	@AndroidFindBy(id="alertTitle")
     protected WebElement txtSelectedDate;
     
     @Override
-	protected void isLoaded() throws Error {
-		// TODO Auto-generated method stub
-		
-	}
+	protected void isLoaded() throws Error {}
 
 	@Override
-	protected void load() {
-		// TODO Auto-generated method stub
-		
-	}
+	protected void load() {}
 
 }

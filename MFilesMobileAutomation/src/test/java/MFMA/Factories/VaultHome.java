@@ -11,7 +11,9 @@ import org.testng.Assert;
 
 import MFMA.Screens.VaultHomeScreen;
 import genericLibrary.Log;
+import genericLibrary.MobileDriverUtils;
 import genericLibrary.Utils;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class VaultHome extends VaultHomeScreen
 {
@@ -27,16 +29,12 @@ public class VaultHome extends VaultHomeScreen
 	public VaultHome(RemoteWebDriver driver){
 
     	this.driver = driver;
-		//ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 	
 	final public void isLoaded(){
-    	//if (!isPageLoaded) {
-    	//	Log.fail("VaultHome not loaded");
-		//}
 		try {
-			isPageLoaded = Utils.waitForElement(driver, vaultTitle);
+			isPageLoaded = Utils.waitForElement(driver, btnCreateObject);
 		}
 		catch (TimeoutException e) {
 			throw e;
@@ -53,6 +51,10 @@ public class VaultHome extends VaultHomeScreen
 		isPageLoaded = true;
 	}//load
 	
+	/**
+	 * Verifying whether page loaded properly
+	 * @return true if page loaded
+	 */
 	public Boolean pageLoaded()
 	{
 		isLoaded();
@@ -77,21 +79,32 @@ public class VaultHome extends VaultHomeScreen
 	 */
     public void selectObjectType(String objectTypeName) throws Exception
     {
-    	Utils.waitForElement(driver, objectTypeList);
+    	Utils.waitForElement(driver, objectListItems.get(1));
 		int count = 0;
 		int listCount = objectListItems.size();
     	 
-    	while(count < listCount){		
-    		if(objectListItems.get(count).getText().contentEquals(objectTypeName)){
-    			objectListItems.get(count).click();
-    			break;
-    		} //End If
+    	while(count < listCount){
+    		
+    		if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    		{
+    			if(objectListItems.get(count).getText().contentEquals(objectTypeName)){
+    				objectListItems.get(count).click();
+    				break;
+    			} //End If
+    		}
+    		else
+    		{	
+    			if(objectListItems.get(count).findElement(By.className("UIAStaticText")).getText().contentEquals(objectTypeName)){
+				objectListItems.get(count).click();
+				break;
+				} //End If		
+    		}
     		count++;
     	} //End While
     	
     	if(count >= listCount)	{
     		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
-    		Utils.waitForElement(driver, objectTypeList);
+    		Utils.waitForElement(driver, objectListItems.get(1));
     		selectObjectType(objectTypeName);
     	}
     } //End selectObjectType
@@ -107,21 +120,31 @@ public class VaultHome extends VaultHomeScreen
     	{
     		if(txtSelectClassTitle.getText().equalsIgnoreCase("Select class"))
     		{
-    			Utils.waitForElement(driver, objectTypeList);
+    			Utils.waitForElement(driver, objectListItems.get(1));
     			int count = 0;
     			int listCount = objectListItems.size();
     	    	 
     	    	while(count < listCount){		
-    	    		if(objectListItems.get(count).getText().contentEquals(className)){
-    	    			objectListItems.get(count).click();
-    	    			break;
-    	    		} //End If
+    	    		if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    	    		{
+    	    			if(objectListItems.get(count).getText().contentEquals(className)){
+    	    				objectListItems.get(count).click();
+    	    				break;
+    	    			} //End If
+    	    		}
+    	    		else
+    	    		{	
+    	    			if(objectListItems.get(count).findElement(By.className("UIAStaticText")).getText().contentEquals(className)){
+    					objectListItems.get(count).click();
+    					break;
+    					} //End If		
+    	    		}
     	    		count++;
     	    	} //End While
     	    	
     	    	if(count >= listCount)	{
     	    		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
-    	    		Utils.waitForElement(driver, objectTypeList);
+    	    		Utils.waitForElement(driver, objectListItems.get(1));
     	    		selectClassName(className);
     	    	}	
     		}
@@ -139,21 +162,31 @@ public class VaultHome extends VaultHomeScreen
     	{
     		if(txtSelectClassTitle.getText().equalsIgnoreCase("Select Template"))
     		{
-    			Utils.waitForElement(driver, objectTypeList);
+    			Utils.waitForElement(driver, objectListItems.get(1));
     			int count = 0;
     			int listCount = objectListItems.size();
     	    	 
     	    	while(count < listCount){		
-    	    		if(objectListItems.get(count).getText().contentEquals(template)){
-    	    			objectListItems.get(count).click();
-    	    			break;
-    	    		} //End If
+    	    		if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    	    		{
+    	    			if(objectListItems.get(count).getText().contentEquals(template)){
+    	    				objectListItems.get(count).click();
+    	    				break;
+    	    			} //End If
+    	    		}
+    	    		else
+    	    		{	
+    	    			if(objectListItems.get(count).findElement(By.className("UIAStaticText")).getText().contentEquals(template)){
+    					objectListItems.get(count).click();
+    					break;
+    					} //End If		
+    	    		}
     	    		count++;
     	    	} //End While
     	    	
     	    	if(count >= listCount)	{
     	    		Utils.swipe(driver, objectListItems.get(listCount-1), objectListItems.get(0), 3000);
-    	    		Utils.waitForElement(driver, objectTypeList);
+    	    		Utils.waitForElement(driver, objectListItems.get(1));
     	    		selectTemplate(template);
     	    	}
     		}	

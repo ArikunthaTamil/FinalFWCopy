@@ -1,79 +1,11 @@
-19-Jul-2016 20:50:07:701 INFO  [main]  
-19-Jul-2016 20:50:07:765 INFO  [main] ****             MFMATest001             ***** 
-19-Jul-2016 20:50:07:766 INFO  [main]  
-19-Jul-2016 20:50:09:188 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-19-Jul-2016 20:50:16:838 INFO  [main] Step-2: Entered nothing in the server testbox 
-19-Jul-2016 20:50:19:375 INFO  [main] Step-3: Verified Empty Error Message 
-19-Jul-2016 20:50:23:942 INFO  [main] Step-4: Tapped Empty Error Message Dialog Box 
-19-Jul-2016 20:50:23:942 INFO  [main] Test Passed.  
-19-Jul-2016 20:50:23:950 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:50:23:957 INFO  [main]  
-19-Jul-2016 20:50:23:958 INFO  [main] ****             MFMATest002             ***** 
-19-Jul-2016 20:50:23:958 INFO  [main]  
-19-Jul-2016 20:50:25:319 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-19-Jul-2016 20:50:33:446 INFO  [main] Step-2: Entered nothing in the server testbox 
-19-Jul-2016 20:50:35:868 INFO  [main] Step-3: Verified Invalid Error Message 
-19-Jul-2016 20:50:40:467 INFO  [main] Step-4: Tapped Invalid Error Message Dialog Box 
-19-Jul-2016 20:50:40:469 INFO  [main] Test Passed.  
-19-Jul-2016 20:50:40:469 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:50:40:473 INFO  [main]  
-19-Jul-2016 20:50:40:473 INFO  [main] ****             MFMATest003             ***** 
-19-Jul-2016 20:50:40:474 INFO  [main]  
-19-Jul-2016 20:50:41:789 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-19-Jul-2016 20:50:49:990 INFO  [main] Step-2: Entered nothing in the server testbox 
-19-Jul-2016 20:50:49:992 DEBUG [main] Navigated to Login Page! 
-19-Jul-2016 20:50:53:557 INFO  [main] Step-3: Successfully Navigated to Login Page 
-19-Jul-2016 20:50:53:558 INFO  [main] Test Passed.  
-19-Jul-2016 20:50:53:558 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:50:53:561 INFO  [main]  
-19-Jul-2016 20:50:53:561 INFO  [main] ****             MFMATest004             ***** 
-19-Jul-2016 20:50:53:561 INFO  [main]  
-19-Jul-2016 20:51:06:875 INFO  [main] step-1: Logging into MFiles with empty string 
-19-Jul-2016 20:51:09:288 INFO  [main] Step-2: Verified Empty Error Message 
-19-Jul-2016 20:51:14:530 INFO  [main] Step-3: Tapped Empty Error Message Dialog Box 
-19-Jul-2016 20:51:14:531 INFO  [main] Test Passed.  
-19-Jul-2016 20:51:14:531 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:51:14:533 INFO  [main]  
-19-Jul-2016 20:51:14:533 INFO  [main] ****             MFMATest005             ***** 
-19-Jul-2016 20:51:14:533 INFO  [main]  
-19-Jul-2016 20:51:28:842 INFO  [main] step-1: Logging into MFiles with invalid username 
-19-Jul-2016 20:51:31:259 INFO  [main] Step-2: Verified Invalid Error Message 
-19-Jul-2016 20:51:35:895 INFO  [main] Step-3: Tapped Invalid Error Message Dialog Box 
-19-Jul-2016 20:51:35:896 INFO  [main] Test Passed.  
-19-Jul-2016 20:51:35:898 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:51:35:901 INFO  [main]  
-19-Jul-2016 20:51:35:902 INFO  [main] ****             MFMATest006             ***** 
-19-Jul-2016 20:51:35:902 INFO  [main]  
-19-Jul-2016 20:51:51:171 INFO  [main] step-1: Logging into MFiles with valid credentials 
-19-Jul-2016 20:51:51:171 DEBUG [main] Navigated to Vault Screen! 
-19-Jul-2016 20:51:55:195 INFO  [main] step-2: Navigated to Vault Page 
-19-Jul-2016 20:51:55:195 INFO  [main] Test Passed.  
-19-Jul-2016 20:51:55:196 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:51:55:197 INFO  [main]  
-19-Jul-2016 20:51:55:197 INFO  [main] ****             MFMATest007             ***** 
-19-Jul-2016 20:51:55:197 INFO  [main]  
-19-Jul-2016 20:51:56:525 INFO  [main] Step-1: Started with Vault Screen 
-19-Jul-2016 20:52:01:600 INFO  [main] Step-2: Selecting Vault 
-19-Jul-2016 20:52:01:602 DEBUG [main] Navigated to Vault Home Screen! 
-19-Jul-2016 20:52:06:465 INFO  [main] Step-3: Navigated to Vault Home Screen Successfully!! 
-19-Jul-2016 20:52:06:465 INFO  [main] Test Passed.  
-19-Jul-2016 20:52:06:466 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:52:06:467 INFO  [main]  
-19-Jul-2016 20:52:06:467 INFO  [main] ****             MFMATest008             ***** 
-19-Jul-2016 20:52:06:467 INFO  [main]  
-19-Jul-2016 20:52:09:056 INFO  [main] Step-1: Started with Vault Home Screen 
-19-Jul-2016 20:52:12:247 INFO  [main] Step-2: Clicks on create object button 
-19-Jul-2016 20:52:32:161 INFO  [main] Step-3: Selecting object Type, class and template if any 
-19-Jul-2016 20:52:32:162 DEBUG [main] Navigated to Object Creation Screen! 
-19-Jul-2016 20:52:32:251 ERROR [main] Object Creation screen not loaded 
-19-Jul-2016 20:52:35:785 INFO  [main] Step-4: Navigated to Object Creation Screen Successfully!! 
-19-Jul-2016 20:52:35:785 INFO  [main] Test Passed.  
-19-Jul-2016 20:52:35:787 INFO  [main] ****             -E---N---D-             ***** 
-19-Jul-2016 20:52:35:788 INFO  [main]  
-19-Jul-2016 20:52:35:790 INFO  [main] ****             MFMATest009             ***** 
-19-Jul-2016 20:52:35:791 INFO  [main]  
-19-Jul-2016 20:52:37:069 INFO  [main] Step-1: Started with Object Creation Screen 
-19-Jul-2016 20:53:44:043 INFO  [main] Step-2: Populated values 
-19-Jul-2016 20:53:45:898 INFO  [main] Step-3: Tap on Save Button 
-19-Jul-2016 20:53:45:898 INFO  [main] Test Passed.  
-19-Jul-2016 20:53:45:901 INFO  [main] ****             -E---N---D-             ***** 
+26-Jul-2016 12:58:01:669 INFO  [main]  
+26-Jul-2016 12:58:01:673 INFO  [main] ****             MFMATest009             ***** 
+26-Jul-2016 12:58:01:673 INFO  [main]  
+26-Jul-2016 12:58:14:841 DEBUG [main] Navigated to Login Page! 
+26-Jul-2016 12:58:37:601 DEBUG [main] Navigated to Vault Screen! 
+26-Jul-2016 12:58:42:910 DEBUG [main] Navigated to Vault Home Screen! 
+26-Jul-2016 12:59:15:978 INFO  [main] Step-1: Started with Object Creation Screen 
+26-Jul-2016 13:03:42:001 INFO  [main] Step-2: Populated values 
+26-Jul-2016 13:03:47:403 INFO  [main] Step-3: Tap on Save Button 
+26-Jul-2016 13:03:47:404 INFO  [main] Test Passed.  
+26-Jul-2016 13:03:47:405 INFO  [main] ****             -E---N---D-             ***** 

@@ -90,25 +90,7 @@ public class Log extends BaseTest {
 				screenShot.delete();
 			}
 		}
-/*
-		File securityHTML = new File(Reporter.getCurrentTestResult().getTestContext().getOutputDirectory());
-		securityHTMLFolderPath = securityHTML.getParent() + File.separator + "Security Scan Report" + File.separator;
-		System.out.println(securityHTMLFolderPath);
-		securityHTML = new File(securityHTMLFolderPath);
 
-		if (!securityHTML.exists()) {
-			securityHTML.mkdir();
-		}
-
-		File[] securityHtml = securityHTML.listFiles();
-
-		// delete files if the folder has any
-		if (securityHtml != null && securityHtml.length > 0) {
-			for (File secHTML : securityHtml) {
-				secHTML.delete();
-			}
-		}
-*/
 		final Map <String, String> params = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getAllParameters();
 
 		if (params.containsKey("printconsoleoutput")) {
@@ -149,23 +131,6 @@ public class Log extends BaseTest {
 		return screenShotLink;
 	}
 
-	/**
-	 * getSecurityScanHTMLHyperLink will convert the log status to hyper link
-	 * 
-	 * depends on system variable isTakeScreenShot status, if true it will take the screenshot, else return the empty string
-	 * 
-	 * @param inputFile
-	 *            converts log status to hyper link
-	 * 
-	 * @return String take Security Scan HTML link path
-	 */
-	/*
-	public static String getSecurityScanHTMLHyperLink(String inputFile) {
-		String securityLink = "";
-		securityLink = "<a href=\"." + File.separator + "Security Scan Report" + File.separator + inputFile + "\" target=\"_blank\" >[HTML Scan Report]</a>";
-		return securityLink;
-	}
-*/
 	/**
 	 * addTestRunMachineInfo will get the information of Hub/Node , browser details if executing through Grid
 	 * 
@@ -283,14 +248,14 @@ public class Log extends BaseTest {
 	 */
 	public static void testCaseResult(ExtentTest extentedReport) {
 		if (Reporter.getOutput(Reporter.getCurrentTestResult()).toString().contains("FAILSOFT")) {
-//			extentReporterTest.log(LogStatus.FAIL, "Test Failed");
+			//extentReporterTest.log(LogStatus.FAIL, "Test Failed");
 			fail("Test Failed. Check the steps above in red color.");			
 		}
 		else {
 			pass("Test Passed. ");
-//			extentReporterTest.log(LogStatus.INFO, "Test Passed");
+			//extentReporterTest.log(LogStatus.INFO, "Test Passed");
 		}
-		extent.endTest(extentedReport);
+		//extent.endTest(extentedReport);
 	}
 
 	/**
@@ -406,32 +371,6 @@ public class Log extends BaseTest {
 			
 	}
 
-	/**
-	 * message print the test case security test message in the log with screenshot (level=info)
-	 * 
-	 * @param description
-	 *            : test case
-	 * @param driver
-	 *            : to take screenshot
-	 * @param inputFile
-	 *            : HTML file name
-	 */
-	/*
-	public static void securityMessage(String description, WebDriver driver, String inputFile) {
-
-		Reporter.log(SECURITY_MESSAGE_HTML_BEGIN + description + "&emsp;" + getSecurityScanHTMLHyperLink(inputFile + ".html") + SECURITY_MESSAGE_HTML_END);
-		lsLog4j().log(callerClass(), Level.INFO, description, null);
-
-	}
-
-	public static void extentsecurityMessage(String description, WebDriver driver, String inputFile, ExtentTest extentedReport) {
-
-		Reporter.log(SECURITY_MESSAGE_HTML_BEGIN + description + "&emsp;" + getSecurityScanHTMLHyperLink(inputFile + ".html") + SECURITY_MESSAGE_HTML_END);
-		extentedReport.log(LogStatus.INFO, getSecurityScanHTMLHyperLink(inputFile + ".html"));
-		lsLog4j().log(callerClass(), Level.INFO, description, null);
-
-	}//securityLink
-	
 	/**
 	 * message print test case description along with hyper link provided to test case status linked to respective screenshot (level=info)
 	 * 
@@ -644,7 +583,7 @@ public class Log extends BaseTest {
 
 		lsLog4j().log(callerClass(), Level.INFO, description, null);
 
-//		extentedReport.log(LogStatus.PASS, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
+		//extentedReport.log(LogStatus.PASS, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
 		extentedReport.log(LogStatus.PASS, description +"&emsp;" + getScreenShotHyperLink(inputFile));
 		
 			
@@ -746,7 +685,7 @@ public class Log extends BaseTest {
 
 		lsLog4j().log(callerClass(), Level.INFO, description, null);
 
-//		extentedReport.log(LogStatus.FAIL, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
+		//extentedReport.log(LogStatus.FAIL, description + extentedReport.addScreenCapture(screenShotFolderPath +inputFile));
 		extentedReport.log(LogStatus.FAIL, description +"&emsp;" + getScreenShotHyperLink(inputFile));
 			
 	}
@@ -930,11 +869,11 @@ public class Log extends BaseTest {
 	public static void assertThatExtentReport(boolean status, String passmsg, String failmsg, WebDriver driver) {
 		if (!status) {
 			Log.fail(failmsg, driver);
-//			extentReporterTest.log(LogStatus.FAIL, failmsg);
+			//extentReporterTest.log(LogStatus.FAIL, failmsg);
 		}
 		else {
 			Log.message(passmsg, driver);
-//			extentReporterTest.log(LogStatus.INFO, passmsg);
+			//extentReporterTest.log(LogStatus.INFO, passmsg);
 		}
 	}
 	

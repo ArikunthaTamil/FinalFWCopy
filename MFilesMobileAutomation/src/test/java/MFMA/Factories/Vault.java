@@ -11,7 +11,9 @@ import org.testng.Assert;
 
 import MFMA.Screens.VaultScreen;
 import genericLibrary.Log;
+import genericLibrary.MobileDriverUtils;
 import genericLibrary.Utils;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Vault extends VaultScreen
 {
@@ -27,14 +29,10 @@ public class Vault extends VaultScreen
 	public Vault(RemoteWebDriver driver){
 
     	this.driver = driver;
-		//ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 	
 	final public void isLoaded(){
-    	/*if (!isPageLoaded) {
-    		Log.fail("Vault screen not loaded", driver);
-		}*/
 		try {
 			isPageLoaded = Utils.waitForElement(driver, vaultList);
 		}
@@ -53,6 +51,10 @@ public class Vault extends VaultScreen
 		isPageLoaded = true;
 	}//load
 	
+	/**
+	 * Verifying whether page loaded properly
+	 * @return true if page loaded
+	 */
 	public Boolean pageLoaded()
 	{
 		isLoaded();
@@ -67,11 +69,23 @@ public class Vault extends VaultScreen
     {
     	Utils.waitForElement(driver, vaultList);   	 
 	    int count = 0; 
-    	while(count < vaults.size()){		
-    		if(vaults.get(count).getText().contentEquals(vaultName)){
-    			vaults.get(count).click();
-    			break;
+    	while(count < vaults.size()){
+    		
+    		if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    		{
+    			if(vaults.get(count).getText().contentEquals(vaultName)){
+        			vaults.get(count).click();
+        			break;
+    			}
+    		}
+    		else
+    		{
+    			if(vaults.get(count).findElement(By.className("UIAStaticText")).getText().contentEquals(vaultName)){
+        			vaults.get(count).click();
+        			break;
+    			}
     		} //End If
+
     		count++;
     	} //End While
     } //End selectVault

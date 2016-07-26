@@ -11,43 +11,44 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import genericLibrary.Log;
 import genericLibrary.Utils;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class AddServerScreen extends LoadableComponent <AddServerScreen>{
 	
-	@FindBy(id="login_server")
+	@AndroidFindBy(id="login_server")
+	@iOSFindBy(xpath="//UIATextField[1]")
 	protected WebElement txtServername;
 	
-	@FindBy(id="login_log_in")
+	@AndroidFindBy(id="login_log_in")
+	@iOSFindBy(xpath="//UIAButton[@name='Connect'][1]")
 	protected WebElement btnConnect;
 	
-	@FindBy(id="message")
+	@AndroidFindBy(id="message")
+	@iOSFindBy(xpath="//UIAScrollView[1]/UIAStaticText[2]")
 	protected WebElement txtEmptyErrorMessage;
 	
-	@FindBy(id="button1")
+	@AndroidFindBy(id="button1")
+	@iOSFindBy(xpath="//UIACollectionCell[1]/UIAButton[1]")
 	protected WebElement btnEmptyErrorOK;
 	
-	@FindBy(id="fragment_error_title")
+	@AndroidFindBy(id="fragment_error_title")
 	protected WebElement txtInvalidErrorTitle;
 	
-	@FindBy(id="fragment_error_message")
+	@AndroidFindBy(id="fragment_error_message")
+	@iOSFindBy(xpath="//UIAScrollView[1]/UIAStaticText[2]")
 	protected WebElement txtInvalidErrorMessage;
 	
-	@FindBy(id="fragment_error_ok")
+	@AndroidFindBy(id="fragment_error_ok")
+	@iOSFindBy(xpath="//UIACollectionCell[1]/UIAButton[1]")
 	protected WebElement btnInvalidErrorOK;
 	
-	@FindBy(id="fragment_error_details")
+	@AndroidFindBy(id="fragment_error_details")
 	protected WebElement btnInvalidErrorDetails;
 
 	@Override
-	protected void isLoaded() throws Error {
-		// TODO Auto-generated method stub
-		
-	}
-
+	protected void isLoaded() throws Error{}
 
 	@Override
-	protected void load() {
-		// TODO Auto-generated method stub
-		
-	}
+	protected void load() {}
 }

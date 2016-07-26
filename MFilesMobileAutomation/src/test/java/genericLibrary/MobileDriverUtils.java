@@ -54,7 +54,6 @@ public class MobileDriverUtils {
 	    	    	capabilities.setCapability("device",platform);
 	    	    	capabilities.setCapability("deviceName",device);
 	    	    	capabilities.setCapability("platformName", platform);
-	    	    	//capabilities.setCapability("appPackage", "com.mfiles.mobile"); 
 	    	    	capabilities.setCapability("app", "/Users/builds/APKS/IOS/" + appName);
 	    	    	driver =  new IOSDriver(hubURL, capabilities);
 	    	    	break;
@@ -86,7 +85,6 @@ public class MobileDriverUtils {
 		String hubDrive = configProperty.getProperty("hubDrive");
 		String cmd = "cmd /c start cmd.exe /K \""+"cd " + hubDrive + "/ && " + "java -jar selenium-server-standalone-2.52.0.jar -role hub";
 		Runtime.getRuntime().exec(cmd);
-		//Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"cd E:/ && java -jar selenium-server-standalone-2.52.0.jar -role hub\"");
 	}
 	
 	public static void startNode() throws Exception 
@@ -94,61 +92,6 @@ public class MobileDriverUtils {
 		String jsonPath = configProperty.getProperty("jsonPath");
 		String cmd = "cmd /c start cmd.exe /K \""+"appium --nodeconfig "+ jsonPath + testName +".json" + " -p " + driverPort + " -U " + device + " --session-override";
 		Runtime.getRuntime().exec(cmd);
-		//Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"appium --nodeconfig D:\\TTBooking\\SamsungGalaxyAndroid.json -p 4766 -U 4d005018f4f24005 --session-override\"");
 	}
-	
-	/*
-	/**
-	 * Get the test session Node IP address,port when executing through Grid
-	 * 
-	 * @param driver
-	 *            : Webdriver
-	 * @return: Session ID
-	 * @throws Exception
-	 *             : Selenium Exception
-	 */
-	/*
-	public static final String getTestSessionNodeIP(final WebDriver driver) throws Exception {
 
-		XmlTest test = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
-		driverHost = System.getProperty("hubHost") != null ? System.getProperty("hubHost") : test.getParameter("deviceHost");
-		driverPort = test.getParameter("devicePort");
-		HttpHost host = new HttpHost(driverHost, Integer.parseInt(driverPort));
-		HttpClient client = HttpClientBuilder.create().build();
-		URL testSessionApi = new URL("http://" + driverHost + ":" + driverPort + "/grid/api/testsession?session=" + ((RemoteWebDriver) driver).getSessionId());
-		BasicHttpEntityEnclosingRequest r = new BasicHttpEntityEnclosingRequest("POST", testSessionApi.toExternalForm());
-		HttpResponse response = client.execute(host, r);
-		JSONObject object = new JSONObject(EntityUtils.toString(response.getEntity()));
-		String nodeIP = object.getString("proxyId").toLowerCase();
-		nodeIP = nodeIP.replace("http://", "");
-		nodeIP = nodeIP.replaceAll(":[0-9]{1,5}", "").trim();
-		return nodeIP;
-	}
-	
-	/**
-	 * Get the test session Hub IP address,port when executing through Grid
-	 * 
-	 * @param driver
-	 *            : Webdriver
-	 * @return: Session ID
-	 * @throws Exception
-	 *             : Selenium Exception
-	 
-	public static final String getHubSession(final WebDriver driver) throws Exception {
-
-		XmlTest test = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
-		driverHost = System.getProperty("hubHost") != null ? System.getProperty("hubHost") : test.getParameter("deviceHost");
-		driverPort = test.getParameter("devicePort");
-		HttpHost host = new HttpHost(driverHost, Integer.parseInt(driverPort));
-		HttpClient client = HttpClientBuilder.create().build();
-		URL testSessionApi = new URL("http://" + driverHost + ":" + driverPort + "/grid/api/testsession?session=" + ((RemoteWebDriver) driver).getSessionId());
-		BasicHttpEntityEnclosingRequest r = new BasicHttpEntityEnclosingRequest("POST", testSessionApi.toExternalForm());
-		HttpResponse response = client.execute(host, r);
-		JSONObject object = new JSONObject(EntityUtils.toString(response.getEntity()));
-		String nodeIP = object.getString("proxyId").toLowerCase();
-		nodeIP = nodeIP.replace("http://", "");
-		nodeIP = nodeIP.replaceAll(":[0-9]{1,5}", "").trim();
-		return nodeIP;
-	}
-	*/
 } //End getDriver

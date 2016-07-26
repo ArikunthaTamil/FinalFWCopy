@@ -7,7 +7,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import MFMA.Screens.AddServerScreen;
 import genericLibrary.Log;
+import genericLibrary.MobileDriverUtils;
 import genericLibrary.Utils;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class AddServer extends AddServerScreen
 {
@@ -22,7 +24,7 @@ public class AddServer extends AddServerScreen
 	public AddServer(RemoteWebDriver driver)
 	{
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 	
 	/**
@@ -32,6 +34,7 @@ public class AddServer extends AddServerScreen
 	 */
     public void setServerName(String strServerName) throws Exception
     {
+    	txtServername.clear();
     	txtServername.sendKeys(strServerName);
     }
     
@@ -78,7 +81,7 @@ public class AddServer extends AddServerScreen
     public void verifyEmptyError() throws Exception
     {
     	Utils.waitForElement(driver, txtEmptyErrorMessage);
-		if (!(txtEmptyErrorMessage.getText()).equalsIgnoreCase("Server is required."))
+		if (!(txtEmptyErrorMessage.getText()).contains("Server is required"))//.equalsIgnoreCase("Server is required."))
 			throw new Exception("Add Server Empty Error Message Mismatches!");
     }
     
@@ -88,8 +91,17 @@ public class AddServer extends AddServerScreen
 	 */
     public void verifyInvalidError(ExtentTest extentedReport) throws Exception
     {
+    	String errorMsg = null;
     	Utils.waitForElement(driver, txtInvalidErrorMessage);
-		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase("Please check your username, password and server address, and confirm you have a valid license on the server."))
+    	if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    	{
+    		errorMsg = "Please check your username, password and server address, and confirm you have a valid license on the server.";
+    	}
+    	else
+    	{
+    		errorMsg = "There was a problem communicating with the secure web proxy server (HTTPS).";
+    	}
+		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase(errorMsg))
 			Log.failWithExtentScreenshot("Add Server Invalid Error Message Mismatches!", driver, extentedReport, true);
     }
     

@@ -48,6 +48,7 @@ public class Utils {
 	static int minTimeout = Integer.parseInt(configProperty.getProperty("minElementWait"));
 	static int maxTimeout = Integer.parseInt(configProperty.getProperty("maxElementWait"));
 	static int extraTimeout = Integer.parseInt(configProperty.getProperty("extraElementWait"));
+	
 	/**
 	 * fluentWait: This method is to wait until the current progress gets completed
 	 * @param driver
@@ -75,12 +76,13 @@ public class Utils {
 
 	} // End fluentWait
 	
-	/// <summary>
-    /// Method to wait for the Web Element
-    /// </summary>
-    /// <param name="driver">RemoteWebDriver Object</param>
-    /// <param name="pElement">element to be exist</param>
-    /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
+	/**
+	 * waitForElement: Method to wait for the Web Element
+	 * @param driver: RemoteWebDriver Object
+	 * @param pElement: element to be exist
+	 * @return Boolean: True if the element exists, false otherwise
+	 * @throws Exception
+	 */
     public static Boolean waitForElement(RemoteWebDriver driver, WebElement pElement)
     {
     	Boolean isFound = false;
@@ -106,23 +108,24 @@ public class Utils {
         catch(Exception e)
     	{
         	isFound = false;
-			Log.event("Unable to find a element after ");
+			Log.event("Unable to find a element after waiting for " + maxTimeout);
     	}
     	return isFound;
     }
     
-  /// <summary>
-    /// Method to wait for the Web Element
-    /// </summary>
-    /// <param name="driver">RemoteWebDriver Object</param>
-    /// <param name="pElement">element to be exist</param>
-    /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
+    /**
+	 * doesElementExist: Method to verify for the existence of Web Element
+	 * @param driver: RemoteWebDriver Object
+	 * @param pElement: element to be exist
+	 * @return Boolean: True if the element exists, false otherwise
+	 * @throws Exception
+	 */
     public static Boolean doesElementExist(RemoteWebDriver driver, WebElement pElement)
     {
     	Boolean isFound = false;
     	try
     	{
-            int _timeToWait = maxTimeout;
+            int _timeToWait = minTimeout;
             for (int i = 0; i < _timeToWait; i++)
             {
                 Thread.sleep(1000); //Wait for 1 second
@@ -147,12 +150,50 @@ public class Utils {
     	return isFound;
     }
     
-  /// <summary>
-    /// Method to wait for the Web Element
-    /// </summary>
-    /// <param name="driver">RemoteWebDriver Object</param>
-    /// <param name="pElement">element to be exist</param>
-    /// <returns>Matching Web element if the element exists, raise exception otherwise</returns>
+    /**
+	 * doesElementExist: Method to verify for the existence of child Web Element
+	 * @param driver: RemoteWebDriver Object
+	 * @param pElement: parent element
+	 * @param by: locator of the child element
+	 * @return Boolean: True if the element exists, false otherwise
+	 * @throws Exception
+	 */
+    public static Boolean doesElementExist(RemoteWebDriver driver, WebElement pElement, By by)
+    {
+    	Boolean isFound = false;
+    	try
+    	{
+            int _timeToWait = minTimeout;
+            for (int i = 0; i < _timeToWait; i++)
+            {
+                Thread.sleep(1000); //Wait for 1 second
+
+                try
+                {
+                    WebElement element  = pElement.findElement(by);
+                    if (element.isDisplayed()) break;
+                    Log.event("Searching the Element..." + pElement);
+                }
+                catch (Exception ex)
+                {
+                	Log.event(ex.getMessage());
+                }
+            }
+    	}
+        catch(Exception e)
+    	{
+        	isFound = false;
+			Log.event("Unable to find a element after ");
+    	}
+    	return isFound;
+    }
+    
+    /**
+	 * doesElementExist: Method to verify for the non existence of the Web Element
+	 * @param driver: RemoteWebDriver Object
+	 * @param pElement: element not to be existed
+	 * @return Boolean: True if the element not exists, false otherwise
+	 */
     public static Boolean doesElementNotExist(RemoteWebDriver driver, WebElement pElement)
     {
     	Boolean isNotFound = false;
@@ -167,12 +208,12 @@ public class Utils {
                 {
                 	isNotFound = pElement.isDisplayed();
                     if (!isNotFound) break;
-                    System.out.println("Searching the Element..." + pElement);
+                    Log.event("Searching the Element..." + pElement);
                 }
                 catch (Exception ex)
                 {
                 	isNotFound=true;
-                	System.out.println(ex.getMessage());
+                	Log.event(ex.getMessage());
                 }
             }
     	}
@@ -184,14 +225,13 @@ public class Utils {
     	return isNotFound;
     }
     
-    
-	/// <summary>
-    /// To swipe across elements
-    /// </summary>
-    /// <param name="driver">RemoteWebDriver Object</param>
-    /// <param name="pFromElement">Starting Element</param>
-    /// <param name="pToElement">Ending Element</param>
-    /// <param name="duration">amount of time in milliseconds for the entire swipe action to take</param>
+    /**
+	 * swipe: To swipe across elements
+	 * @param driver: RemoteWebDriver Object
+	 * @param pFromElement: Starting Element
+	 * @param pToElement: Ending Element
+	 * @param duration: amount of time in milliseconds for the entire swipe action
+	 */
     @SuppressWarnings("unchecked")
 	public static void swipe(RemoteWebDriver driver, WebElement pFromElement, WebElement pToElement, int duration)
     {

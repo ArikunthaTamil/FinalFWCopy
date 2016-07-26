@@ -4,6 +4,8 @@ import java.util.List;
 
 import genericLibrary.Log;
 import genericLibrary.Utils;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSFindBy;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -19,41 +21,45 @@ import org.testng.Assert;
 
 public class LoginScreen extends LoadableComponent <LoginScreen>{
 	
-    @FindBy(id="login_username")
+    @AndroidFindBy(id="login_username")
+    @iOSFindBy(xpath="//UIATableCell[2]/UIATextField[1]")
     protected WebElement txtUsername;
     
-    @FindBy(id="login_password")
+    @AndroidFindBy(id="login_password")
+    @iOSFindBy(xpath="//UIATableCell[3]/UIASecureTextField[1]")
     protected WebElement txtPassword;
     
-    @FindBy(id="message")
+    @AndroidFindBy(id="message")
+    @iOSFindBy(xpath="//UIAScrollView[1]/UIAStaticText[2]")
 	protected WebElement txtEmptyErrorMessage;
 	
-	@FindBy(id="button1")
+    @AndroidFindBy(id="button1")
+    @iOSFindBy(xpath="//UIACollectionCell[1]/UIAButton[1]")
 	protected WebElement btnEmptyErrorOK;
 
-    @FindBy(id="barone")
+    @AndroidFindBy(id="barone")
     protected WebElement titleText;
 
-    @FindBy(id="login_log_in")
+    @AndroidFindBy(id="login_log_in")
+    @iOSFindBy(xpath="//UIAButton[@name='Log In']")
     protected WebElement btnLogin;
     
-    @FindBy(id="fragment_error_title")
+    @AndroidFindBy(id="fragment_error_title")
 	protected WebElement txtInvalidErrorTitle;
 	
-	@FindBy(id="fragment_error_message")
+    @AndroidFindBy(id="fragment_error_message")
+    @iOSFindBy(xpath="//UIAScrollView[1]/UIAStaticText[2]")
 	protected WebElement txtInvalidErrorMessage;
 	
-	@FindBy(id="fragment_error_ok")
+    @AndroidFindBy(id="fragment_error_ok")
+    @iOSFindBy(xpath="//UIACollectionCell[1]/UIAButton[1]")
 	protected WebElement btnInvalidErrorOK;
 	
-	@FindBy(id="fragment_error_details")
+    @AndroidFindBy(id="fragment_error_details")
 	protected WebElement btnInvalidErrorDetails;
 
     @Override
-    public void isLoaded(){
-    }
+    public void isLoaded() throws Error{}
 	
-	protected void load(){
-	
-	}
+	protected void load(){}
 }

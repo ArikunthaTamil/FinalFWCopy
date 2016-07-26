@@ -15,7 +15,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import MFMA.Screens.LoginScreen;
 import genericLibrary.Log;
+import genericLibrary.MobileDriverUtils;
 import genericLibrary.Utils;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Login extends LoginScreen 
 {
@@ -32,8 +36,7 @@ public class Login extends LoginScreen
 	public Login(RemoteWebDriver driver){
 
     	this.driver = driver;
-		//ElementLocatorFactory finder = new AjaxElementLocatorFactory(driver, 2);
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 	
 	final public void isLoaded(){
@@ -55,11 +58,16 @@ public class Login extends LoginScreen
 		isPageLoaded = true;
 	}//load
 	
+	/**
+	 * Verifying whether page loaded properly
+	 * @return true if page loaded
+	 */
 	public Boolean pageLoaded()
 	{
 		isLoaded();
 		return isPageLoaded;
 	}
+	
 	/**
 	 * Tapping Empty Error Dialog Box OK Button
 	 */
@@ -83,6 +91,7 @@ public class Login extends LoginScreen
 	 */
     public void setUserName(String strUserName) throws Exception
     {
+    	txtUsername.clear();
     	txtUsername.sendKeys(strUserName);
     }
 
@@ -93,6 +102,7 @@ public class Login extends LoginScreen
 	 */
     public void setPassword(String password) throws Exception
     {
+    	txtPassword.clear();
     	txtPassword.sendKeys(password);
     }
 
@@ -115,9 +125,11 @@ public class Login extends LoginScreen
     {
         this.setUserName(userName); //Fill user name
         this.setPassword(strPasword); //Fill password
-        driver.navigate().back();
+        if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    	{
+        	driver.navigate().back();
+    	}
         this.clickLogin(); //Click Login button
-        //this.selectVault(vaultName);
     }
     
     /**
@@ -127,7 +139,7 @@ public class Login extends LoginScreen
     public void verifyEmptyError() throws Exception
     {
     	Utils.waitForElement(driver, txtEmptyErrorMessage);
-		if (!(txtEmptyErrorMessage.getText()).equalsIgnoreCase("Username is required."))
+		if (!(txtEmptyErrorMessage.getText()).contains("Username is required"))
 			throw new Exception("Empty Login Error Message Mismatches!");
     }
     
@@ -137,8 +149,17 @@ public class Login extends LoginScreen
 	 */
     public void verifyInvalidError(ExtentTest extentedReport) throws Exception
     {
+    	String errorMsg;
     	Utils.waitForElement(driver, txtInvalidErrorMessage);
-		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase("Please check your username, password and server address, and confirm you have a valid license on the server."))
+    	if(MobileDriverUtils.platform.equalsIgnoreCase("Android"))
+    	{
+    		errorMsg = "Please check your username, password and server address, and confirm you have a valid license on the server.";
+    	}
+    	else
+    	{
+    		errorMsg = "Login to application failed";
+    	}
+		if (!(txtInvalidErrorMessage.getText()).equalsIgnoreCase(errorMsg))
 			Log.failWithExtentScreenshot("Invalid Login Error Message Mismatches!", driver, extentedReport, true);
     }
     
