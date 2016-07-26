@@ -1,11 +1,13 @@
-26-Jul-2016 12:58:01:669 INFO  [main]  
-26-Jul-2016 12:58:01:673 INFO  [main] ****             MFMATest009             ***** 
-26-Jul-2016 12:58:01:673 INFO  [main]  
-26-Jul-2016 12:58:14:841 DEBUG [main] Navigated to Login Page! 
-26-Jul-2016 12:58:37:601 DEBUG [main] Navigated to Vault Screen! 
-26-Jul-2016 12:58:42:910 DEBUG [main] Navigated to Vault Home Screen! 
-26-Jul-2016 12:59:15:978 INFO  [main] Step-1: Started with Object Creation Screen 
-26-Jul-2016 13:03:42:001 INFO  [main] Step-2: Populated values 
-26-Jul-2016 13:03:47:403 INFO  [main] Step-3: Tap on Save Button 
-26-Jul-2016 13:03:47:404 INFO  [main] Test Passed.  
-26-Jul-2016 13:03:47:405 INFO  [main] ****             -E---N---D-             ***** 
+26-Jul-2016 17:19:30:489 INFO  [main]  
+26-Jul-2016 17:19:30:494 INFO  [main] ****             MFMATest001             ***** 
+26-Jul-2016 17:19:30:495 INFO  [main]  
+26-Jul-2016 17:19:32:838 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+26-Jul-2016 17:19:43:906 INFO  [main] Step-2: Entered nothing in the server testbox 
+26-Jul-2016 17:19:47:457 INFO  [main] Step-3: Verified Empty Error Message 
+26-Jul-2016 17:19:53:024 INFO  [main] Step-4: Tapped Empty Error Message Dialog Box 
+26-Jul-2016 17:19:53:042 INFO  [main] Test Passed.  
+26-Jul-2016 17:19:53:043 INFO  [main] ****             -E---N---D-             ***** 
+26-Jul-2016 17:19:53:048 INFO  [main]  
+26-Jul-2016 17:19:53:048 INFO  [main] ****             MFMATest002             ***** 
+26-Jul-2016 17:19:53:049 INFO  [main]  
+26-Jul-2016 17:19:55:227 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 

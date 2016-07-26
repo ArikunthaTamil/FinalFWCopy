@@ -36,7 +36,8 @@ public class Log extends BaseTest {
 	private static String securityHTMLFolderPath;
 	private static AtomicInteger screenShotIndex = new AtomicInteger(0);
 	private static EnvironmentPropertiesReader configProperty = EnvironmentPropertiesReader.getInstance();
-
+	private static String testName = MobileDriverUtils.testName;
+	
 	static final String TEST_TITLE_HTML_BEGIN = "&emsp;<div class=\"test-title\"> <strong><font size = \"3\" color = \"#000080\">";
 	static final String TEST_TITLE_HTML_END = "</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>";
 
@@ -110,7 +111,7 @@ public class Log extends BaseTest {
 	 */
 	public static String takeScreenShot(WebDriver driver) {
 		String inputFile = "";
-		inputFile = Reporter.getCurrentTestResult().getName() + "_" + screenShotIndex.incrementAndGet() + ".png";
+		inputFile = Reporter.getCurrentTestResult().getName() + "_" + testName + "_"  + screenShotIndex.incrementAndGet() + ".png";
 		ScreenshotManager.takeScreenshot(driver, screenShotFolderPath + inputFile);
 		return inputFile;
 	}

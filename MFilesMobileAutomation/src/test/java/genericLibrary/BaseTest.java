@@ -6,8 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.xml.XmlTest;
 
 import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -15,7 +17,8 @@ import com.relevantcodes.extentreports.NetworkMode;
 
 public class BaseTest {
 	protected static ExtentReports extent;
-	String currentTimestamp = new SimpleDateFormat("dd_MM_yy_HH_mm_ss").format(new Date());
+	//protected String testName = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getName();
+	static String currentTimestamp = new SimpleDateFormat("dd_MM_yy_HH_mm_ss").format(new Date());
 	String path = "test-output/extent_report_" + currentTimestamp + "/Local_Extent_Report.html";
 	
 	@BeforeSuite(alwaysRun = true)
@@ -34,5 +37,4 @@ public class BaseTest {
 		File eReport1 = new File("test-output/jenkins-extent/Extent_Report.html");
 		FileUtils.copyFile(eReport, eReport1);
 	}
-
 }
