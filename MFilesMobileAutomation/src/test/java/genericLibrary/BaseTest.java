@@ -17,9 +17,9 @@ import com.relevantcodes.extentreports.NetworkMode;
 
 public class BaseTest {
 	protected static ExtentReports extent;
-	//protected String testName = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getName();
 	static String currentTimestamp = new SimpleDateFormat("dd_MM_yy_HH_mm_ss").format(new Date());
-	String path = "test-output/extent_report_" + currentTimestamp + "/Local_Extent_Report.html";
+	static String ccurrentTimestamp = new SimpleDateFormat("HH_mm_ss").format(new Date());
+	String path = "test-output/extent_report_" + currentTimestamp + "/Local_Extent_" + ccurrentTimestamp + "_Report.html";
 	
 	@BeforeSuite(alwaysRun = true)
 	public void beforeSuite() {

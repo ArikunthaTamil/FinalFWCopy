@@ -80,10 +80,12 @@ public class Vault extends VaultScreen
     		}
     		else
     		{
-    			if(vaults.get(count).findElement(By.className("UIAStaticText")).getText().contentEquals(vaultName)){
-        			vaults.get(count).click();
-        			break;
-    			}
+    			driver.findElement(By.xpath("//UIAStaticText[@name='" + vaultName + "']")).click();
+    			break;
+    			//if(vaults.get(count).findElement(By.className("UIAStaticText")).getText().contentEquals(vaultName)){
+        			//vaults.get(count).click();
+        			//break;
+    			//}
     		} //End If
 
     		count++;

@@ -37,6 +37,7 @@ import genericLibrary.EmailReport;
 import genericLibrary.EnvironmentPropertiesReader;
 import genericLibrary.Log;
 import genericLibrary.MobileDriverUtils;
+import genericLibrary.Utils;
 
 @Listeners(EmailReport.class)
 public class SmokeTestCases extends BaseTest {
@@ -65,6 +66,7 @@ public class SmokeTestCases extends BaseTest {
 			MobileDriverUtils.startNode();
 			Thread.sleep(10000);
 			driver = MobileDriverUtils.getDriver();
+			Utils.popupHandler(driver);
 			deviceName = MobileDriverUtils.testName;			
 		} //End try
 		
@@ -94,6 +96,7 @@ public class SmokeTestCases extends BaseTest {
 			testResult = false;
 			driver.quit();
 			driver = MobileDriverUtils.getDriver();
+			Utils.popupHandler(driver);
 		}
 	}
 	
@@ -109,7 +112,7 @@ public class SmokeTestCases extends BaseTest {
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", driver, extentedReport);
 			
 			addServerPage.connectToServer("");
-			Log.message("Step-2: Entered nothing in the server testbox", driver, extentedReport);
+			Log.message("Step-2: Entered nothing in the server textbox", driver, extentedReport);
 			
 			addServerPage.verifyEmptyError();
 			Log.pass("Step-3: Verified Empty Error Message", driver, extentedReport);
@@ -142,7 +145,7 @@ public class SmokeTestCases extends BaseTest {
 			Log.message("Step-1: MFiles Mobile Application launched successfully!!", driver, extentedReport);
 			
 			addServerPage.connectToServer("fghgh");
-			Log.message("Step-2: Entered nothing in the server testbox", driver, extentedReport);
+			Log.message("Step-2: Entered invalid text in the server textbox", driver, extentedReport);
 			
 			addServerPage.verifyInvalidError(extentedReport);
 			Log.pass("Step-3: Verified Invalid Error Message", driver, extentedReport);
@@ -330,12 +333,6 @@ public class SmokeTestCases extends BaseTest {
 				addServerPage.connectToServer(serverName);
 				Login loginPage = addServerPage.navigateToLoginPage();
 				loginPage.loginToMfiles(userName, password);
-				//addServerPage.connectToServer("http://172.24.166.141");
-				//Login loginPage = addServerPage.navigateToLoginPage();
-				//loginPage.loginToMfiles("alexk", "test");
-				//addServerPage.connectToServer("https://dmztr02.m-files.com:4443/mf11.2");
-				//Login loginPage = addServerPage.navigateToLoginPage();
-				//loginPage.loginToMfiles("alexk", "password");
 			}
 		
 			Vault vault = new Vault(driver);
@@ -425,19 +422,6 @@ public class SmokeTestCases extends BaseTest {
 				if(!testResult)
 				{
 					AddServer addServerPage = new AddServer(driver);
-					
-					/*
-					addServerPage.connectToServer("http://172.24.166.141");
-					Login loginPage = addServerPage.navigateToLoginPage();
-					loginPage.loginToMfiles("alexk", "test");
-					Vault vault = loginPage.navigateToVaultPage();
-					vault.selectVault("Sample Vault");
-					VaultHome vaultHome = vault.navigateToVaultHomeScreen();
-					vaultHome.clickCreateNewObject();
-					vaultHome.selectObjectType("Assignment");
-					vaultHome.selectClassName("Customer");
-					vaultHome.selectTemplate("Empty");
-					*/
 					addServerPage.connectToServer(serverName);
 					Login loginPage = addServerPage.navigateToLoginPage();
 					loginPage.loginToMfiles(userName, password);

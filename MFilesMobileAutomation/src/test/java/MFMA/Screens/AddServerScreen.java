@@ -45,6 +45,9 @@ public class AddServerScreen extends LoadableComponent <AddServerScreen>{
 	
 	@AndroidFindBy(id="fragment_error_details")
 	protected WebElement btnInvalidErrorDetails;
+	
+	@iOSFindBy(xpath="//UIAButton[@label='OK']")
+	protected WebElement btnPopupOk;
 
 	@Override
 	protected void isLoaded() throws Error{}

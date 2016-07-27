@@ -75,7 +75,7 @@ public class Log extends BaseTest {
 
 		PropertyConfigurator.configure("./src/test/resources/log4j.properties");
 		File screenShotFolder = new File(Reporter.getCurrentTestResult().getTestContext().getOutputDirectory());
-//		System.out.println(screenShotFolder);
+		System.out.println(screenShotFolder);
 		screenShotFolderPath = screenShotFolder.getParent() + File.separator +  "ScreenShot" + File.separator;
 		screenShotFolder = new File(screenShotFolderPath);
 		

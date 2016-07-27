@@ -11,7 +11,7 @@
 			<class name="MFMA.Tests.SmokeTestCases"></class>
 		</classes>
 	</test> <!-- TestMFMA -->
-	<test name="MiNote">
+	<test name="MiNote3">
 	<parameter name="platform" value="ANDROID" />
 	<parameter name="deviceName" value="9fe142c2" />
 	<parameter name="deviceHost" value="127.0.0.1" />

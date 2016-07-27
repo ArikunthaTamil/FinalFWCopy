@@ -250,4 +250,10 @@ public class Utils {
         }
     }
     
+    public static void popupHandler(RemoteWebDriver driver)
+    {
+    	if(!platform.equalsIgnoreCase("ANDROID"))
+    		driver.findElement(By.xpath("//UIAButton[@label='OK']")).click();
+    }
+    
 }

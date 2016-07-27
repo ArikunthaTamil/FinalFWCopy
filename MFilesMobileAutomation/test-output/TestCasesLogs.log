@@ -1,13 +1,41 @@
-26-Jul-2016 17:19:30:489 INFO  [main]  
-26-Jul-2016 17:19:30:494 INFO  [main] ****             MFMATest001             ***** 
-26-Jul-2016 17:19:30:495 INFO  [main]  
-26-Jul-2016 17:19:32:838 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
-26-Jul-2016 17:19:43:906 INFO  [main] Step-2: Entered nothing in the server testbox 
-26-Jul-2016 17:19:47:457 INFO  [main] Step-3: Verified Empty Error Message 
-26-Jul-2016 17:19:53:024 INFO  [main] Step-4: Tapped Empty Error Message Dialog Box 
-26-Jul-2016 17:19:53:042 INFO  [main] Test Passed.  
-26-Jul-2016 17:19:53:043 INFO  [main] ****             -E---N---D-             ***** 
-26-Jul-2016 17:19:53:048 INFO  [main]  
-26-Jul-2016 17:19:53:048 INFO  [main] ****             MFMATest002             ***** 
-26-Jul-2016 17:19:53:049 INFO  [main]  
-26-Jul-2016 17:19:55:227 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+27-Jul-2016 13:27:39:406 INFO  [main]  
+27-Jul-2016 13:27:39:410 INFO  [main] ****             MFMATest001             ***** 
+27-Jul-2016 13:27:39:410 INFO  [main]  
+27-Jul-2016 13:27:41:529 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+27-Jul-2016 13:27:54:205 INFO  [main] Step-2: Entered nothing in the server textbox 
+27-Jul-2016 13:28:03:391 INFO  [main] Step-3: Verified Empty Error Message 
+27-Jul-2016 13:28:08:636 INFO  [main] Step-4: Tapped Empty Error Message Dialog Box 
+27-Jul-2016 13:28:08:637 INFO  [main] Test Passed.  
+27-Jul-2016 13:28:08:637 INFO  [main] ****             -E---N---D-             ***** 
+27-Jul-2016 13:28:08:642 INFO  [main]  
+27-Jul-2016 13:28:08:642 INFO  [main] ****             MFMATest003             ***** 
+27-Jul-2016 13:28:08:642 INFO  [main]  
+27-Jul-2016 13:28:08:904 DEBUG [main] FileName:data/SmokeTestCases.xls 
+27-Jul-2016 13:28:08:904 DEBUG [main] FilePath: E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\src\test\resources\testdata\data/SmokeTestCases.xls 
+27-Jul-2016 13:28:11:728 INFO  [main] Step-1: MFiles Mobile Application launched successfully!! 
+27-Jul-2016 13:28:31:502 INFO  [main] Step-2: Entered nothing in the server testbox 
+27-Jul-2016 13:28:31:502 DEBUG [main] Navigated to Login Page! 
+27-Jul-2016 13:28:41:752 INFO  [main] Step-3: Successfully Navigated to Login Page 
+27-Jul-2016 13:28:41:752 INFO  [main] Test Passed.  
+27-Jul-2016 13:28:41:752 INFO  [main] ****             -E---N---D-             ***** 
+27-Jul-2016 13:28:41:752 INFO  [main]  
+27-Jul-2016 13:28:41:752 INFO  [main] ****             MFMATest006             ***** 
+27-Jul-2016 13:28:41:752 INFO  [main]  
+27-Jul-2016 13:28:41:767 DEBUG [main] FileName:data/SmokeTestCases.xls 
+27-Jul-2016 13:28:41:767 DEBUG [main] FilePath: E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\src\test\resources\testdata\data/SmokeTestCases.xls 
+27-Jul-2016 13:29:03:270 INFO  [main] step-1: Logging into MFiles with valid credentials 
+27-Jul-2016 13:29:03:270 DEBUG [main] Navigated to Vault Screen! 
+27-Jul-2016 13:29:11:374 INFO  [main] step-2: Navigated to Vault Page 
+27-Jul-2016 13:29:11:374 INFO  [main] Test Passed.  
+27-Jul-2016 13:29:11:374 INFO  [main] ****             -E---N---D-             ***** 
+27-Jul-2016 13:29:11:374 INFO  [main]  
+27-Jul-2016 13:29:11:374 INFO  [main] ****             MFMATest007             ***** 
+27-Jul-2016 13:29:11:374 INFO  [main]  
+27-Jul-2016 13:29:11:390 DEBUG [main] FileName:data/SmokeTestCases.xls 
+27-Jul-2016 13:29:11:390 DEBUG [main] FilePath: E:\POC\MerlinQA\150716\FinalFWCopy\MFilesMobileAutomation\src\test\resources\testdata\data/SmokeTestCases.xls 
+27-Jul-2016 13:29:13:395 INFO  [main] Step-1: Started with Vault Screen 
+27-Jul-2016 13:29:24:754 INFO  [main] Step-2: Selecting Vault 
+27-Jul-2016 13:29:24:755 DEBUG [main] Navigated to Vault Home Screen! 
+27-Jul-2016 13:29:34:874 INFO  [main] Step-3: Navigated to Vault Home Screen Successfully!! 
+27-Jul-2016 13:29:34:874 INFO  [main] Test Passed.  
+27-Jul-2016 13:29:34:874 INFO  [main] ****             -E---N---D-             ***** 
